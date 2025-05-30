@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft } from 'lucide-react';
+import { Circle } from 'lucide-react';
 
 interface BlogPost {
   id: number;
@@ -89,15 +88,15 @@ const BlogPost = () => {
 
   if (!post) {
     return (
-      <div className="min-h-screen bg-gray-50 py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Post Not Found</h1>
-          <p className="text-xl text-gray-600 mb-8">The blog post you're looking for doesn't exist.</p>
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white py-32">
+        <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
+          <h1 className="text-5xl md:text-6xl font-light text-gray-900 mb-8 tracking-tight">Post Not Found</h1>
+          <p className="text-xl text-gray-600 mb-12 font-light">The blog post you're looking for doesn't exist.</p>
           <Link
             to="/"
-            className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
+            className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-2xl font-medium transition-all duration-300 transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/25 tracking-wide"
           >
-            <ArrowLeft size={20} />
+            <Circle size={20} />
             Back to Home
           </Link>
         </div>
@@ -106,47 +105,49 @@ const BlogPost = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="mb-8">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
+      <article className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 py-32">
+        <div className="mb-12">
           <Link
             to="/"
-            className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium transition-colors duration-200"
+            className="inline-flex items-center gap-3 text-blue-600 hover:text-blue-700 font-medium transition-all duration-300 hover:scale-[1.02] tracking-wide"
           >
-            <ArrowLeft size={20} />
+            <Circle size={20} />
             Back to Home
           </Link>
         </div>
 
-        <header className="mb-12">
-          <div className="mb-4">
-            <span className="inline-block bg-blue-100 text-blue-800 text-sm font-semibold px-3 py-1 rounded-full">
+        <header className="mb-16 space-y-8">
+          <div className="flex items-center gap-4">
+            <span className="inline-block bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 text-sm font-medium px-4 py-2 rounded-full tracking-wide">
               {post.category}
             </span>
           </div>
           
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
+          <h1 className="text-5xl md:text-7xl font-light text-gray-900 leading-tight tracking-tight">
             {post.title}
           </h1>
           
-          <div className="flex items-center gap-4 text-gray-500">
+          <div className="flex items-center gap-6 text-gray-500 font-light tracking-wide">
             <span>{post.date}</span>
-            <span>•</span>
+            <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
             <span>{post.readTime}</span>
           </div>
+
+          <div className="w-24 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
         </header>
 
         <div 
-          className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-700 prose-p:leading-relaxed"
+          className="prose prose-xl max-w-none prose-headings:text-gray-900 prose-headings:font-light prose-headings:tracking-wide prose-p:text-gray-700 prose-p:leading-relaxed prose-p:font-light prose-p:text-lg"
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
 
-        <div className="mt-16 pt-8 border-t border-gray-200">
+        <div className="mt-20 pt-12 border-t border-gray-200">
           <Link
             to="/"
-            className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
+            className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-2xl font-medium transition-all duration-300 transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/25 tracking-wide"
           >
-            <ArrowLeft size={20} />
+            <Circle size={20} />
             Back to Home
           </Link>
         </div>

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Github, Menu, X } from 'lucide-react';
+import { Circle, Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
 const Header = () => {
@@ -17,49 +17,41 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-gray-900/95 backdrop-blur-sm border-b border-gray-800">
-      <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex-shrink-0">
-            <h1 className="text-xl font-bold text-white">DevName</h1>
+    <header className="fixed top-0 left-0 right-0 z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+      <nav className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="flex justify-between items-center h-20">
+          <div className="flex-shrink-0 group">
+            <h1 className="text-xl font-light text-white tracking-wide flex items-center gap-2">
+              <Circle className="w-2 h-2 fill-blue-400 text-blue-400" />
+              DevName
+            </h1>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
-              <button
-                onClick={() => scrollToSection('home')}
-                className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors"
-              >
-                Home
-              </button>
-              <button
-                onClick={() => scrollToSection('about')}
-                className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors"
-              >
-                About
-              </button>
-              <button
-                onClick={() => scrollToSection('blog')}
-                className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors"
-              >
-                Blog
-              </button>
-              <button
-                onClick={() => scrollToSection('contact')}
-                className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors"
-              >
-                Contact
-              </button>
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors flex items-center gap-2"
-              >
-                <Github size={16} />
-                GitHub
-              </a>
+            <div className="flex items-center space-x-1">
+              {['home', 'about', 'blog', 'contact'].map((section) => (
+                <button
+                  key={section}
+                  onClick={() => scrollToSection(section)}
+                  className="relative px-6 py-3 text-gray-300 hover:text-white text-sm font-light tracking-wide transition-all duration-300 rounded-lg hover:bg-white/5 group"
+                >
+                  {section.charAt(0).toUpperCase() + section.slice(1)}
+                  <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-px bg-gradient-to-r from-blue-400 to-purple-400 group-hover:w-4 transition-all duration-300"></div>
+                </button>
+              ))}
+              
+              <div className="ml-4 pl-4 border-l border-white/10">
+                <a
+                  href="https://github.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3 text-gray-300 hover:text-white text-sm font-light tracking-wide transition-all duration-300 rounded-lg hover:bg-white/5 flex items-center gap-2"
+                >
+                  <Circle className="w-4 h-4" />
+                  GitHub
+                </a>
+              </div>
             </div>
           </div>
 
@@ -67,7 +59,7 @@ const Header = () => {
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className="text-gray-300 hover:text-white p-2"
+              className="text-gray-300 hover:text-white p-3 rounded-lg hover:bg-white/5 transition-all duration-300"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -76,41 +68,28 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-900 border-t border-gray-800">
-              <button
-                onClick={() => scrollToSection('home')}
-                className="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium w-full text-left transition-colors"
-              >
-                Home
-              </button>
-              <button
-                onClick={() => scrollToSection('about')}
-                className="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium w-full text-left transition-colors"
-              >
-                About
-              </button>
-              <button
-                onClick={() => scrollToSection('blog')}
-                className="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium w-full text-left transition-colors"
-              >
-                Blog
-              </button>
-              <button
-                onClick={() => scrollToSection('contact')}
-                className="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium w-full text-left transition-colors"
-              >
-                Contact
-              </button>
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium transition-colors flex items-center gap-2"
-              >
-                <Github size={16} />
-                GitHub
-              </a>
+          <div className="md:hidden border-t border-white/10 bg-slate-900/95 backdrop-blur-xl">
+            <div className="px-4 py-6 space-y-2">
+              {['home', 'about', 'blog', 'contact'].map((section) => (
+                <button
+                  key={section}
+                  onClick={() => scrollToSection(section)}
+                  className="block w-full text-left px-4 py-3 text-gray-300 hover:text-white text-base font-light tracking-wide transition-all duration-300 rounded-lg hover:bg-white/5"
+                >
+                  {section.charAt(0).toUpperCase() + section.slice(1)}
+                </button>
+              ))}
+              <div className="pt-4 mt-4 border-t border-white/10">
+                <a
+                  href="https://github.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 px-4 py-3 text-gray-300 hover:text-white text-base font-light tracking-wide transition-all duration-300 rounded-lg hover:bg-white/5"
+                >
+                  <Circle className="w-4 h-4" />
+                  GitHub
+                </a>
+              </div>
             </div>
           </div>
         )}

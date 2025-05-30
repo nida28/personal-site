@@ -1,38 +1,50 @@
 
 import React from 'react';
-import { Github } from 'lucide-react';
+import { Circle } from 'lucide-react';
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-20 bg-gray-900 text-white">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-4xl font-bold mb-4">Let's Connect</h2>
-        <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
-          I'm always interested in new opportunities and collaborations. 
-          Feel free to reach out if you'd like to work together!
-        </p>
-
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-          <a
-            href="mailto:your.email@example.com"
-            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-medium transition-colors duration-200 transform hover:scale-105"
-          >
-            Get In Touch
-          </a>
+    <section id="contact" className="py-32 bg-gradient-to-br from-slate-900 via-gray-900 to-black text-white relative overflow-hidden">
+      {/* Ambient background elements */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-slate-900"></div>
+      <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl"></div>
+      
+      <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 text-center relative z-10">
+        <div className="space-y-12">
+          <div className="space-y-6">
+            <h2 className="text-5xl md:text-6xl font-light mb-6 tracking-tight">Let's Connect</h2>
+            <div className="w-24 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent mx-auto"></div>
+          </div>
           
-          <a
-            href="https://github.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-3 border border-gray-400 hover:border-white text-gray-300 hover:text-white px-8 py-4 rounded-lg font-medium transition-colors duration-200 transform hover:scale-105"
-          >
-            <Github size={20} />
-            View My GitHub
-          </a>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto font-light leading-relaxed tracking-wide">
+            I'm always interested in new opportunities and collaborations. 
+            Feel free to reach out if you'd like to work together!
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-6 justify-center pt-8">
+            <a
+              href="mailto:your.email@example.com"
+              className="group relative px-8 py-4 bg-white/10 hover:bg-white/15 backdrop-blur-sm border border-white/20 hover:border-white/30 text-white rounded-2xl font-medium transition-all duration-300 transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/20 tracking-wide"
+            >
+              <span className="relative z-10">Get In Touch</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </a>
+            
+            <a
+              href="https://github.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative flex items-center justify-center gap-3 border border-white/20 hover:border-white/40 text-white hover:text-white px-8 py-4 rounded-2xl font-medium transition-all duration-300 transform hover:scale-[1.02] backdrop-blur-sm hover:bg-white/5 tracking-wide"
+            >
+              <Circle className="w-5 h-5" />
+              <span className="relative z-10">View My GitHub</span>
+            </a>
+          </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-gray-800">
-          <p className="text-gray-400">
+        <div className="mt-24 pt-12 border-t border-white/10">
+          <p className="text-gray-400 font-light tracking-wide">
             © 2024 DevName. Built with React and lots of ☕
           </p>
         </div>
