@@ -2,6 +2,7 @@
 import React from 'react';
 import { Circle, Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import ThemeToggle from './ThemeToggle';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,7 +18,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-slate-900/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
       <nav className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0 group">
@@ -30,7 +31,7 @@ const Header = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="flex items-center space-x-1">
-              {['home', 'about', 'blog', 'contact'].map((section) => (
+              {['home', 'about', 'projects', 'blog', 'contact'].map((section) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
@@ -41,7 +42,8 @@ const Header = () => {
                 </button>
               ))}
               
-              <div className="ml-4 pl-4 border-l border-white/10">
+              <div className="ml-4 pl-4 border-l border-white/10 flex items-center gap-4">
+                <ThemeToggle />
                 <a
                   href="https://github.com"
                   target="_blank"
@@ -56,7 +58,8 @@ const Header = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center gap-4">
+            <ThemeToggle />
             <button
               onClick={toggleMenu}
               className="text-gray-300 hover:text-white p-3 rounded-lg hover:bg-white/5 transition-all duration-300"
@@ -70,7 +73,7 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden border-t border-white/10 bg-slate-900/95 backdrop-blur-xl">
             <div className="px-4 py-6 space-y-2">
-              {['home', 'about', 'blog', 'contact'].map((section) => (
+              {['home', 'about', 'projects', 'blog', 'contact'].map((section) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}

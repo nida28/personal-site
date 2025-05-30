@@ -4,7 +4,7 @@ import { Circle } from 'lucide-react';
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-32 bg-gradient-to-br from-slate-900 via-gray-900 to-black text-white relative overflow-hidden">
+    <section id="contact" className="py-32 bg-gradient-to-br from-slate-900 via-gray-900 to-black dark:from-slate-900 dark:via-gray-900 dark:to-black text-white relative overflow-hidden">
       {/* Ambient background elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-slate-900"></div>
       <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-3xl"></div>
