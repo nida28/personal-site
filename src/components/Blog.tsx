@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 interface BlogPost {
   id: number;
@@ -50,29 +51,32 @@ const Blog = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogPosts.map((post) => (
-            <article
+            <Link
               key={post.id}
-              className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300 cursor-pointer group"
+              to={`/blog/${post.id}`}
+              className="block"
             >
-              <div className="mb-4">
-                <span className="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">
-                  {post.category}
-                </span>
-              </div>
-              
-              <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                {post.title}
-              </h3>
-              
-              <p className="text-gray-600 mb-4 leading-relaxed">
-                {post.excerpt}
-              </p>
-              
-              <div className="flex justify-between items-center text-sm text-gray-500">
-                <span>{post.date}</span>
-                <span>{post.readTime}</span>
-              </div>
-            </article>
+              <article className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300 cursor-pointer group h-full">
+                <div className="mb-4">
+                  <span className="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">
+                    {post.category}
+                  </span>
+                </div>
+                
+                <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  {post.title}
+                </h3>
+                
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  {post.excerpt}
+                </p>
+                
+                <div className="flex justify-between items-center text-sm text-gray-500">
+                  <span>{post.date}</span>
+                  <span>{post.readTime}</span>
+                </div>
+              </article>
+            </Link>
           ))}
         </div>
 
