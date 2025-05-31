@@ -5,11 +5,13 @@ header:
   overlay_filter: "0.3"
   overlay_image: /assets/header.jpg
   actions:
-    - label: "View Resume"
-      url: "/assets/NidaaResume.pdf"
-excerpt: "Passionate about building scalable, backend-first systems with .NET, AWS, and clean architecture."
+    - label: "Explore Projects"
+      url: /projects/
+    - label: "Read the Blog"
+      url: /blog/
+excerpt: "lorem ipsum"
 ---
 
-<p style="text-align:center">
-  Welcome to my digital corner. This is where I share side projects, thoughts, and career updates.
+<p style="text-align:center; color:#ff00aa; font-weight:300; font-size:1.1rem;">
+ hello lorem impsum etc
 </p>
