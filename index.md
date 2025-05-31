@@ -15,3 +15,13 @@ header:
 ---
 
 
+<style>
+.page__hero--overlay .wrapper {
+  text-align: center;
+  padding-inline: 10em;
+
+  h1 {
+  font-weight: 300 !important;
+  }
+}
+</style>
