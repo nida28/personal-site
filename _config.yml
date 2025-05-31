@@ -12,6 +12,16 @@ author:
   avatar : "/assets/nidaa.jpeg"
   bio    : "Senior Software Engineer based in Berlin"
 
+navigation:
+  - name: "main"
+    items:
+      - title: "Blog"
+        url: /blog/
+      - title: "Projects"
+        url: /projects/  
+      - title: "About"
+        url: /about/
+
 defaults:
   - scope:
       path: ""
