@@ -27,6 +27,27 @@ a.btn:hover {
   z-index: 1;
 }
 
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.greedy-nav {
+  background-color: #0b0e1b !important;
+  padding: 1rem 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.greedy-nav a {
+  color: #e5e7eb;
+  font-weight: 500;
+  margin: 0 1rem;
+  transition: color 0.3s ease;
+}
+
+.greedy-nav a:hover {
+  color: #ff00aa;
+}
+
 /* Make sure text stays above overlay */
 .page__hero__content {
   position: relative;
