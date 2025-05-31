@@ -21,6 +21,17 @@ header:
   padding-inline: 10em;
 }
 
+.site-logo img {
+    max-height: 8rem !important;
+}
+  
+.html{
+  background-color: #011937;
+}
+
+.greedy-nav{
+  background: #011937;
+}  
 .page__hero--overlay .wrapper h1,
 .page__hero--overlay .wrapper p {
   font-weight: 300 !important;
