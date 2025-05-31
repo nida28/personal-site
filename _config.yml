@@ -12,6 +12,8 @@ author:
   avatar : "/assets/nidaa.jpeg"
   bio    : "Senior Software Engineer based in Berlin"
 
+logo: "/assets/logo.png"
+  
 navigation:
   - name: "main"
     items:
