@@ -19,9 +19,12 @@ header:
 .page__hero--overlay .wrapper {
   text-align: center;
   padding-inline: 10em;
+}
 
-  h1 {
+.page__hero--overlay .wrapper h1,
+.page__hero--overlay .wrapper p {
   font-weight: 300 !important;
-  }
 }
 </style>
+
+<!-- Forces rendering of splash actions -->
