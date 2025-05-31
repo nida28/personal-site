@@ -30,6 +30,11 @@ defaults:
       type: "posts"
     values:
       layout: single
+   - scope:
+      path: ""
+      type: "pages"
+    values:
+      css: /assets/css/custom.css
 
 url: "https://www.nidaamungloo.com"
 repository: nida28/personal-site
