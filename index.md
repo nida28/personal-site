@@ -4,11 +4,7 @@ header:
   overlay_color: "#000000"
   overlay_filter: "0.4"
   overlay_image: /assets/hero-bg.svg
-  [actions:
-    - label: "Explore Projects"
-      url: /projects/
-    - label: "Read the Blog"
-      url: /blog/](url)
+
 ---
 
 <style>
