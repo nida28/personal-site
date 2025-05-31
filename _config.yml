@@ -13,6 +13,7 @@ author:
   bio    : "Senior Software Engineer based in Berlin"
 
 logo: "/assets/logo.png"
+title: ""
 
 navigation:
   - name: "main"
