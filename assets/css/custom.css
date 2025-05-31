@@ -17,3 +17,25 @@ a.btn:hover {
   background-color: #e60091;
   transform: scale(1.05);
 }
+
+/* Dark gradient behind splash hero text */
+.page__hero--overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.2));
+  z-index: 1;
+}
+
+/* Make sure text stays above overlay */
+.page__hero__content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Optional: add fuchsia glow */
+.page__hero__title,
+.page__hero__subtitle {
+  color: #ff00aa !important;
+  text-shadow: 0 0 12px #ff00aa66;
+}
