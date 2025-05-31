@@ -2,15 +2,15 @@
 layout: splash
 title: "Hi, I’m Nidaa"
 subtitle: "I build calm, scalable systems — and I write about what I learn along the way."
-actions:
+excerpt: "Backend developer in Berlin, curious by nature, fuschia by choice."
+header:
+  overlay_filter: "0.5"
+  overlay_image: /assets/hero-bg.svg
+  actions:
     - label: "Explore Projects"
       url: /projects/
     - label: "Read the Blog"
       url: /blog/
-excerpt: "Backend developer in Berlin, curious by nature, fuschia by choice."
-header:
-  overlay_filter: "0.2"
-  overlay_image: /assets/hero-bg.svg
 
 ---
 
@@ -27,4 +27,3 @@ header:
 }
 </style>
 
-<!-- Forces rendering of splash actions -->
