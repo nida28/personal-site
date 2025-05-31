@@ -13,14 +13,14 @@ author:
   bio    : "Senior Software Engineer based in Berlin"
 
 logo: "/assets/logo.png"
-  
+
 navigation:
   - name: "main"
     items:
       - title: "Blog"
         url: /blog/
       - title: "Projects"
-        url: /projects/  
+        url: /projects/
       - title: "About"
         url: /about/
 
@@ -30,7 +30,7 @@ defaults:
       type: "posts"
     values:
       layout: single
-   - scope:
+  - scope:
       path: ""
       type: "pages"
     values:
