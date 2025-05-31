@@ -1,7 +1,5 @@
 ---
 layout: splash
-title: "Hi, I'm Nidaa"
-subtitle: "Senior Software Engineer in Berlin"
 header:
   overlay_color: "#000"
   overlay_filter: "0.3"
