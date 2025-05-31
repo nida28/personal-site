@@ -1,3 +1,23 @@
-remote_theme: jekyll/minima
+remote_theme: mmistakes/minimal-mistakes@4.27.1
+
 title: Nidaa Mungloo
-description: My Portfolio
+description: Senior Software Engineer Blog
+minimal_mistakes_skin: dark
+
+plugins:
+  - jekyll-include-cache
+
+author:
+  name   : "Nidaa Mungloo"
+  avatar : "/assets/nidaa.jpeg"
+  bio    : "Senior Software Engineer based in Berlin"
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: single
+
+url: "https://www.nidaamungloo.com"
+repository: nida28/personal-site
