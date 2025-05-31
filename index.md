@@ -1,7 +1,14 @@
 ---
 layout: splash
+title: "Hi, I’m Nidaa"
+subtitle: "I build calm, scalable systems — and I write about what I learn along the way."
+actions:
+    - label: "Explore Projects"
+      url: /projects/
+    - label: "Read the Blog"
+      url: /blog/
+excerpt: "Backend developer in Berlin, curious by nature, fuschia by choice."
 header:
-  overlay_color: "#000000"
   overlay_filter: "0.4"
   overlay_image: /assets/hero-bg.svg
 
@@ -61,12 +68,4 @@ header:
   }
 </style>
 
-# Hi, I'm Nidaa
 
-<div class="page__subtitle">
-  I craft thoughtful systems with .NET, AWS, and clean architecture.<br>
-  This is my digital corner for side projects, dev thoughts, and play.
-</div>
-
-[Explore Projects](/projects/){: .btn .btn--primary }&nbsp;
-[Read My Blog](/blog/){: .btn .btn--inverse }
