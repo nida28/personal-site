@@ -4,7 +4,7 @@ title: "Hi, I’m Nidaa"
 subtitle: "I build calm, scalable systems — and I write about what I learn along the way."
 excerpt: "Backend developer in Berlin, curious by nature, fuschia by choice."
 header:
-  overlay_filter: "0.5"
+  overlay_filter: "0.3"
   overlay_image: /assets/hero-bg.svg
   actions:
     - label: "Explore Projects"
