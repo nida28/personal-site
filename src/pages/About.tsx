@@ -28,7 +28,7 @@ const About = () => {
             <div className="flex-shrink-0 relative z-20">
               <div className="w-64 h-64 rounded-3xl overflow-hidden border-4 border-white/20 dark:border-white/10 shadow-2xl bg-white dark:bg-slate-800">
                 <img
-                  src="/lovable-uploads/a3a6eabd-1e64-410d-b301-5b26869cd2bb.png"
+                  src="/a3a6eabd-1e64-410d-b301-5b26869cd2bb.png"
                   alt="Nidaa"
                   className="w-full h-full object-cover"
                 />
