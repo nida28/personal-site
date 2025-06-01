@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Github, Linkedin, Mail } from 'lucide-react';
 import { useLocation } from 'react-router-dom';
@@ -46,8 +45,8 @@ const Footer = () => {
             </a>
           </div>
 
-          {/* Copyright with small bottom padding */}
-          <div className={`pt-12 pb-2 w-full text-center ${
+          {/* Copyright with slightly more bottom padding */}
+          <div className={`pt-12 pb-4 w-full text-center ${
             isAboutPage 
               ? '' 
               : 'border-t border-gray-200/50 dark:border-slate-600/50'
