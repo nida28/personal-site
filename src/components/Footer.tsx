@@ -1,10 +1,17 @@
-
 import React from 'react';
 import { Github, Linkedin, Mail } from 'lucide-react';
+import { useLocation } from 'react-router-dom';
 
 const Footer = () => {
+  const location = useLocation();
+  const isMainPage = location.pathname === '/';
+
   return (
-    <footer className="py-6 bg-gray-50 dark:bg-slate-800 border-t border-gray-200/50 dark:border-slate-700/50">
+    <footer className={`py-6 border-t border-gray-200/50 dark:border-slate-700/50 ${
+      isMainPage 
+        ? 'bg-gray-50 dark:bg-slate-800' 
+        : 'bg-white dark:bg-slate-900'
+    }`}>
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="flex flex-col items-center space-y-4">
           {/* All actions on same line */}

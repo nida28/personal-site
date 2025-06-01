@@ -1,8 +1,8 @@
-
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 interface BlogPost {
   id: number;
@@ -104,6 +104,7 @@ const BlogPost = () => {
             Back to Home
           </Link>
         </div>
+        <Footer />
       </div>
     );
   }
@@ -159,6 +160,7 @@ const BlogPost = () => {
           </Link>
         </div>
       </article>
+      <Footer />
     </div>
   );
 };
