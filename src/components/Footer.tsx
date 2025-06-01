@@ -1,6 +1,8 @@
+
 import React from 'react';
 import { Github, Linkedin, Mail } from 'lucide-react';
 import { useLocation } from 'react-router-dom';
+import { Separator } from './ui/separator';
 
 const Footer = () => {
   const location = useLocation();
@@ -10,7 +12,7 @@ const Footer = () => {
   return (
     <footer className={`${
       isAboutPage 
-        ? 'bg-transparent' 
+        ? 'bg-gray-50/50 dark:bg-slate-800/50' 
         : isMainPage 
         ? 'bg-gray-50 dark:bg-slate-800 border-t border-gray-200/50 dark:border-slate-700/50' 
         : 'bg-white dark:bg-slate-900 border-t border-gray-200/50 dark:border-slate-700/50'
@@ -44,6 +46,13 @@ const Footer = () => {
               <Mail className="w-6 h-6" />
             </a>
           </div>
+
+          {/* Separator for About page */}
+          {isAboutPage && (
+            <div className="w-full">
+              <Separator className="bg-gray-200/50 dark:bg-slate-600/50" />
+            </div>
+          )}
 
           {/* Copyright with slightly more bottom padding */}
           <div className={`pt-12 pb-4 w-full text-center ${
