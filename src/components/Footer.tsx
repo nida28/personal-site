@@ -15,7 +15,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 dark:from-pink-600 dark:to-blue-600 dark:hover:from-pink-700 dark:hover:to-blue-700 text-white rounded-lg font-medium transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl"
             >
-              <Linkedin className="w-4 h-4" />
+              <Linkedin className="w-6 h-6" />
             </a>
             
             <a
@@ -24,14 +24,14 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 dark:from-pink-600 dark:to-blue-600 dark:hover:from-pink-700 dark:hover:to-blue-700 text-white rounded-lg font-medium transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl"
             >
-              <Github className="w-4 h-4" />
+              <Github className="w-6 h-6" />
             </a>
 
             <a
               href="mailto:your.email@example.com"
               className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 dark:from-pink-600 dark:to-blue-600 dark:hover:from-pink-700 dark:hover:to-blue-700 text-white rounded-lg font-medium transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl"
             >
-              <Mail className="w-4 h-4" />
+              <Mail className="w-6 h-6" />
             </a>
           </div>
 

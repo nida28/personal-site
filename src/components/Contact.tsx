@@ -37,7 +37,7 @@ const Contact = () => {
               className="group relative flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 dark:from-pink-600 dark:to-blue-600 dark:hover:from-pink-700 dark:hover:to-blue-700 text-white rounded-2xl font-medium transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl"
             >
               <span className="relative z-10 flex items-center gap-2">
-                <Linkedin className="w-5 h-5" />
+                <Linkedin className="w-7 h-7" />
               </span>
             </a>
 
@@ -48,7 +48,7 @@ const Contact = () => {
               className="group relative flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 dark:from-pink-600 dark:to-blue-600 dark:hover:from-pink-700 dark:hover:to-blue-700 text-white rounded-2xl font-medium transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl"
             >
               <span className="relative z-10 flex items-center gap-2">
-                <Github className="w-5 h-5" />
+                <Github className="w-7 h-7" />
               </span>
             </a>
 
@@ -57,13 +57,13 @@ const Contact = () => {
               className="group relative flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 dark:from-pink-600 dark:to-blue-600 dark:hover:from-pink-700 dark:hover:to-blue-700 text-white rounded-2xl font-medium transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl"
             >
               <span className="relative z-10 flex items-center gap-2">
-                <Mail className="w-5 h-5" />
+                <Mail className="w-7 h-7" />
               </span>
             </a>
           </div>
         </div>
 
-        <div className="mt-16 pt-8 pb-0 border-t border-gray-300 dark:border-white/10">
+        <div className="mt-16 pt-8 border-t border-gray-300 dark:border-white/10">
           <p className="text-gray-600 dark:text-white font-light tracking-wide text-sm">
             © 2025 Nidaa Fatimah Mungloo
           </p>
