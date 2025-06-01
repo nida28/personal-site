@@ -46,9 +46,10 @@ const Header = () => {
                 alt="Nidaa Logo - Click to go home"
                 className="h-20 w-auto transition-all duration-300 group-hover:scale-105 group-hover:brightness-110 relative z-10"
               />
-              {/* Glowy border effect */}
-              <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-cyan-500/30 to-blue-500/30 dark:from-pink-500/40 dark:to-blue-500/40 blur-md opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-cyan-400/20 to-blue-400/20 dark:from-pink-400/30 dark:to-blue-400/30 blur-sm opacity-40 group-hover:opacity-80 transition-opacity duration-300"></div>
+              {/* Enhanced glowy border effect */}
+              <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-cyan-500/50 to-blue-500/50 dark:from-pink-500/60 dark:to-blue-500/60 blur-lg opacity-80 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-cyan-400/40 to-blue-400/40 dark:from-pink-400/50 dark:to-blue-400/50 blur-md opacity-60 group-hover:opacity-90 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-cyan-300/30 to-blue-300/30 dark:from-pink-300/40 dark:to-blue-300/40 blur-sm opacity-40 group-hover:opacity-70 transition-opacity duration-300"></div>
             </div>
             {/* Home indicator tooltip */}
             <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -63,7 +64,7 @@ const Header = () => {
             <div className="flex items-center space-x-1">
               <Link
                 to="/blog"
-                className="relative px-6 py-3 text-gray-900 hover:text-gray-700 dark:text-gray-100 dark:hover:text-white text-lg font-normal tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/10 group hover:shadow-md dark:hover:shadow-white/5"
+                className="relative px-6 py-3 text-gray-500 dark:text-white hover:text-gray-700 dark:hover:text-white text-lg font-light tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/10 group hover:shadow-md dark:hover:shadow-white/5"
               >
                 Blog
                 <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-px bg-gradient-to-r from-cyan-500 to-blue-600 dark:from-fuchsia-400 dark:to-purple-400 group-hover:w-4 transition-all duration-300"></div>
@@ -71,7 +72,7 @@ const Header = () => {
               
               <Link
                 to="/projects"
-                className="relative px-6 py-3 text-gray-900 hover:text-gray-700 dark:text-gray-100 dark:hover:text-white text-lg font-normal tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/10 group hover:shadow-md dark:hover:shadow-white/5"
+                className="relative px-6 py-3 text-gray-500 dark:text-white hover:text-gray-700 dark:hover:text-white text-lg font-light tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/10 group hover:shadow-md dark:hover:shadow-white/5"
               >
                 Projects
                 <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-px bg-gradient-to-r from-cyan-500 to-blue-600 dark:from-fuchsia-400 dark:to-purple-400 group-hover:w-4 transition-all duration-300"></div>
@@ -79,7 +80,7 @@ const Header = () => {
               
               <Link
                 to="/about"
-                className="relative px-6 py-3 text-gray-900 hover:text-gray-700 dark:text-gray-100 dark:hover:text-white text-lg font-normal tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/10 group hover:shadow-md dark:hover:shadow-white/5"
+                className="relative px-6 py-3 text-gray-500 dark:text-white hover:text-gray-700 dark:hover:text-white text-lg font-light tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/10 group hover:shadow-md dark:hover:shadow-white/5"
               >
                 About
                 <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-px bg-gradient-to-r from-cyan-500 to-blue-600 dark:from-fuchsia-400 dark:to-purple-400 group-hover:w-4 transition-all duration-300"></div>
@@ -96,7 +97,7 @@ const Header = () => {
             <ThemeToggle />
             <button
               onClick={toggleMenu}
-              className="text-gray-900 hover:text-gray-700 dark:text-gray-100 dark:hover:text-white p-3 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/10 transition-all duration-300 hover:shadow-md dark:hover:shadow-white/5"
+              className="text-gray-500 dark:text-white hover:text-gray-700 dark:hover:text-white p-3 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/10 transition-all duration-300 hover:shadow-md dark:hover:shadow-white/5"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -110,7 +111,7 @@ const Header = () => {
               <Link
                 to="/blog"
                 onClick={() => setIsMenuOpen(false)}
-                className="block w-full text-left px-4 py-3 text-gray-900 hover:text-gray-700 dark:text-gray-100 dark:hover:text-white text-lg font-normal tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/10 hover:shadow-md dark:hover:shadow-white/5"
+                className="block w-full text-left px-4 py-3 text-gray-500 dark:text-white hover:text-gray-700 dark:hover:text-white text-lg font-light tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/10 hover:shadow-md dark:hover:shadow-white/5"
               >
                 Blog
               </Link>
@@ -118,7 +119,7 @@ const Header = () => {
               <Link
                 to="/projects"
                 onClick={() => setIsMenuOpen(false)}
-                className="block w-full text-left px-4 py-3 text-gray-900 hover:text-gray-700 dark:text-gray-100 dark:hover:text-white text-lg font-normal tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/10 hover:shadow-md dark:hover:shadow-white/5"
+                className="block w-full text-left px-4 py-3 text-gray-500 dark:text-white hover:text-gray-700 dark:hover:text-white text-lg font-light tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/10 hover:shadow-md dark:hover:shadow-white/5"
               >
                 Projects
               </Link>
@@ -126,7 +127,7 @@ const Header = () => {
               <Link
                 to="/about"
                 onClick={() => setIsMenuOpen(false)}
-                className="block w-full text-left px-4 py-3 text-gray-900 hover:text-gray-700 dark:text-gray-100 dark:hover:text-white text-lg font-normal tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/10 hover:shadow-md dark:hover:shadow-white/5"
+                className="block w-full text-left px-4 py-3 text-gray-500 dark:text-white hover:text-gray-700 dark:hover:text-white text-lg font-light tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/10 hover:shadow-md dark:hover:shadow-white/5"
               >
                 About
               </Link>
