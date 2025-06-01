@@ -1,6 +1,7 @@
 
 import React from 'react';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Projects = () => {
   const projects = [
@@ -60,6 +61,13 @@ const Projects = () => {
                       <ExternalLink className="w-4 h-4" />
                       Live Demo
                     </a>
+                    <Link
+                      to="/projects"
+                      className="flex items-center gap-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-gray-800 dark:text-white rounded-xl font-medium transition-colors duration-300"
+                    >
+                      <ArrowRight className="w-4 h-4" />
+                      View All
+                    </Link>
                   </div>
                 </div>
               </div>

@@ -50,28 +50,28 @@ const Header = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="flex items-center space-x-1">
-              <button
-                onClick={() => scrollToSection('projects')}
-                className="relative px-6 py-3 text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white text-sm font-normal tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/5 group"
+              <Link
+                to="/projects"
+                className="relative px-6 py-3 text-gray-800 hover:text-gray-900 dark:text-gray-200 dark:hover:text-white text-sm font-medium tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/5 group"
               >
                 Projects
-                <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-px bg-gradient-to-r from-cyan-500 to-blue-600 dark:from-pink-400 dark:to-blue-400 group-hover:w-4 transition-all duration-300"></div>
-              </button>
+                <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-px bg-gradient-to-r from-cyan-500 to-blue-600 dark:from-pink-400 dark:to-fuchsia-400 group-hover:w-4 transition-all duration-300"></div>
+              </Link>
               
-              <button
-                onClick={() => scrollToSection('blog')}
-                className="relative px-6 py-3 text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white text-sm font-normal tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/5 group"
+              <Link
+                to="/blog"
+                className="relative px-6 py-3 text-gray-800 hover:text-gray-900 dark:text-gray-200 dark:hover:text-white text-sm font-medium tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/5 group"
               >
                 Blog
-                <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-px bg-gradient-to-r from-cyan-500 to-blue-600 dark:from-pink-400 dark:to-blue-400 group-hover:w-4 transition-all duration-300"></div>
-              </button>
+                <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-px bg-gradient-to-r from-cyan-500 to-blue-600 dark:from-pink-400 dark:to-fuchsia-400 group-hover:w-4 transition-all duration-300"></div>
+              </Link>
               
               <Link
                 to="/about"
-                className="relative px-6 py-3 text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white text-sm font-normal tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/5 group"
+                className="relative px-6 py-3 text-gray-800 hover:text-gray-900 dark:text-gray-200 dark:hover:text-white text-sm font-medium tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/5 group"
               >
                 About
-                <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-px bg-gradient-to-r from-cyan-500 to-blue-600 dark:from-pink-400 dark:to-blue-400 group-hover:w-4 transition-all duration-300"></div>
+                <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-px bg-gradient-to-r from-cyan-500 to-blue-600 dark:from-pink-400 dark:to-fuchsia-400 group-hover:w-4 transition-all duration-300"></div>
               </Link>
               
               <div className="ml-4 pl-4 border-l border-gray-300/60 dark:border-white/10 flex items-center">
@@ -85,7 +85,7 @@ const Header = () => {
             <ThemeToggle />
             <button
               onClick={toggleMenu}
-              className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white p-3 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/5 transition-all duration-300"
+              className="text-gray-800 hover:text-gray-900 dark:text-gray-200 dark:hover:text-white p-3 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/5 transition-all duration-300"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -96,24 +96,26 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden border-t border-gray-300/60 dark:border-white/10 bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl">
             <div className="px-4 py-6 space-y-2">
-              <button
-                onClick={() => scrollToSection('projects')}
-                className="block w-full text-left px-4 py-3 text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white text-base font-normal tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/5"
+              <Link
+                to="/projects"
+                onClick={() => setIsMenuOpen(false)}
+                className="block w-full text-left px-4 py-3 text-gray-800 hover:text-gray-900 dark:text-gray-200 dark:hover:text-white text-base font-medium tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/5"
               >
                 Projects
-              </button>
+              </Link>
               
-              <button
-                onClick={() => scrollToSection('blog')}
-                className="block w-full text-left px-4 py-3 text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white text-base font-normal tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/5"
+              <Link
+                to="/blog"
+                onClick={() => setIsMenuOpen(false)}
+                className="block w-full text-left px-4 py-3 text-gray-800 hover:text-gray-900 dark:text-gray-200 dark:hover:text-white text-base font-medium tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/5"
               >
                 Blog
-              </button>
+              </Link>
               
               <Link
                 to="/about"
                 onClick={() => setIsMenuOpen(false)}
-                className="block w-full text-left px-4 py-3 text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white text-base font-normal tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/5"
+                className="block w-full text-left px-4 py-3 text-gray-800 hover:text-gray-900 dark:text-gray-200 dark:hover:text-white text-base font-medium tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/5"
               >
                 About
               </Link>
