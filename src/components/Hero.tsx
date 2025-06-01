@@ -48,14 +48,14 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-6 justify-center pt-12">
             <Link
               to="/about"
-              className="group relative px-10 py-5 bg-gradient-to-r from-gray-100 to-gray-200 hover:from-cyan-100 hover:via-blue-100 hover:to-purple-100 dark:bg-white/10 dark:hover:bg-gradient-to-r dark:hover:from-blue-500/20 dark:hover:via-purple-500/20 dark:hover:to-fuchsia-500/20 backdrop-blur-sm border border-gray-300 hover:border-gray-400 dark:border-white/20 dark:hover:border-white/30 text-gray-700 dark:text-white rounded-2xl font-medium transition-all duration-300 transform hover:scale-[1.02] hover:shadow-xl tracking-wide text-lg"
+              className="group relative px-10 py-5 bg-white/20 hover:bg-gradient-to-r hover:from-cyan-200/30 hover:via-blue-200/30 hover:to-fuchsia-300/40 dark:bg-white/5 dark:hover:bg-gradient-to-r dark:hover:from-blue-500/20 dark:hover:via-purple-500/25 dark:hover:to-fuchsia-500/35 backdrop-blur-sm border border-gray-300/50 hover:border-fuchsia-300/50 dark:border-white/10 dark:hover:border-fuchsia-400/40 text-gray-700 dark:text-white rounded-2xl font-medium transition-all duration-300 transform hover:scale-[1.02] hover:shadow-xl tracking-wide text-lg"
             >
               <span className="relative z-10">Learn More</span>
             </Link>
             
             <Link 
               to="/blog"
-              className="group relative px-10 py-5 bg-gradient-to-r from-gray-100 to-gray-200 hover:from-cyan-100 hover:via-blue-100 hover:to-purple-100 dark:bg-white/10 dark:hover:bg-gradient-to-r dark:hover:from-blue-500/20 dark:hover:via-purple-500/20 dark:hover:to-fuchsia-500/20 backdrop-blur-sm border border-gray-300 hover:border-gray-400 dark:border-white/20 dark:hover:border-white/30 text-gray-700 dark:text-white rounded-2xl font-medium transition-all duration-300 transform hover:scale-[1.02] hover:shadow-xl tracking-wide text-lg"
+              className="group relative px-10 py-5 bg-white/20 hover:bg-gradient-to-r hover:from-cyan-200/30 hover:via-blue-200/30 hover:to-fuchsia-300/40 dark:bg-white/5 dark:hover:bg-gradient-to-r dark:hover:from-blue-500/20 dark:hover:via-purple-500/25 dark:hover:to-fuchsia-500/35 backdrop-blur-sm border border-gray-300/50 hover:border-fuchsia-300/50 dark:border-white/10 dark:hover:border-fuchsia-400/40 text-gray-700 dark:text-white rounded-2xl font-medium transition-all duration-300 transform hover:scale-[1.02] hover:shadow-xl tracking-wide text-lg"
             >
               <span className="relative z-10">Read My Blog</span>
             </Link>
