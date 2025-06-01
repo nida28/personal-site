@@ -25,7 +25,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-slate-900/80 dark:bg-slate-900/80 light:bg-white/90 backdrop-blur-xl border-b border-white/10 dark:border-white/10 light:border-gray-200/50">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-slate-900/80 backdrop-blur-xl border-b border-gray-200/60 dark:border-white/10">
       <nav className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0 group cursor-pointer" onClick={scrollToHome}>
@@ -43,20 +43,20 @@ const Header = () => {
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
-                  className="relative px-6 py-3 text-gray-300 hover:text-white dark:text-gray-300 dark:hover:text-white light:text-gray-600 light:hover:text-gray-900 text-sm font-light tracking-wide transition-all duration-300 rounded-lg hover:bg-white/5 dark:hover:bg-white/5 light:hover:bg-gray-100/70 group"
+                  className="relative px-6 py-3 text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white text-sm font-medium tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/5 group"
                 >
                   {section.charAt(0).toUpperCase() + section.slice(1)}
-                  <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-px bg-gradient-to-r from-pink-400 to-blue-400 dark:from-pink-400 dark:to-blue-400 light:from-blue-500 light:to-blue-600 group-hover:w-4 transition-all duration-300"></div>
+                  <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-px bg-gradient-to-r from-blue-500 to-blue-600 dark:from-pink-400 dark:to-blue-400 group-hover:w-4 transition-all duration-300"></div>
                 </button>
               ))}
               
-              <div className="ml-4 pl-4 border-l border-white/10 dark:border-white/10 light:border-gray-300/50 flex items-center gap-4">
+              <div className="ml-4 pl-4 border-l border-gray-300/60 dark:border-white/10 flex items-center gap-4">
                 <ThemeToggle />
                 <a
                   href="https://github.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-6 py-3 text-gray-300 hover:text-white dark:text-gray-300 dark:hover:text-white light:text-gray-600 light:hover:text-gray-900 text-sm font-light tracking-wide transition-all duration-300 rounded-lg hover:bg-white/5 dark:hover:bg-white/5 light:hover:bg-gray-100/70 flex items-center gap-2"
+                  className="px-6 py-3 text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white text-sm font-medium tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/5 flex items-center gap-2"
                 >
                   GitHub
                 </a>
@@ -69,7 +69,7 @@ const Header = () => {
             <ThemeToggle />
             <button
               onClick={toggleMenu}
-              className="text-gray-300 hover:text-white dark:text-gray-300 dark:hover:text-white light:text-gray-600 light:hover:text-gray-900 p-3 rounded-lg hover:bg-white/5 dark:hover:bg-white/5 light:hover:bg-gray-100/70 transition-all duration-300"
+              className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white p-3 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/5 transition-all duration-300"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -78,23 +78,23 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden border-t border-white/10 dark:border-white/10 light:border-gray-300/50 bg-slate-900/95 dark:bg-slate-900/95 light:bg-white/95 backdrop-blur-xl">
+          <div className="md:hidden border-t border-gray-300/60 dark:border-white/10 bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl">
             <div className="px-4 py-6 space-y-2">
               {['projects', 'blog', 'about'].map((section) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
-                  className="block w-full text-left px-4 py-3 text-gray-300 hover:text-white dark:text-gray-300 dark:hover:text-white light:text-gray-600 light:hover:text-gray-900 text-base font-light tracking-wide transition-all duration-300 rounded-lg hover:bg-white/5 dark:hover:bg-white/5 light:hover:bg-gray-100/70"
+                  className="block w-full text-left px-4 py-3 text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white text-base font-medium tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/5"
                 >
                   {section.charAt(0).toUpperCase() + section.slice(1)}
                 </button>
               ))}
-              <div className="pt-4 mt-4 border-t border-white/10 dark:border-white/10 light:border-gray-300/50">
+              <div className="pt-4 mt-4 border-t border-gray-300/60 dark:border-white/10">
                 <a
                   href="https://github.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 px-4 py-3 text-gray-300 hover:text-white dark:text-gray-300 dark:hover:text-white light:text-gray-600 light:hover:text-gray-900 text-base font-light tracking-wide transition-all duration-300 rounded-lg hover:bg-white/5 dark:hover:bg-white/5 light:hover:bg-gray-100/70"
+                  className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white text-base font-medium tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/5"
                 >
                   GitHub
                 </a>
