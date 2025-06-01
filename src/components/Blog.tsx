@@ -1,6 +1,6 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
+
 interface BlogPost {
   id: number;
   title: string;
@@ -9,6 +9,7 @@ interface BlogPost {
   readTime: string;
   category: string;
 }
+
 const Blog = () => {
   const blogPosts: BlogPost[] = [{
     id: 1,
@@ -18,12 +19,14 @@ const Blog = () => {
     readTime: "5 min read",
     category: "React"
   }];
-  return <section id="blog" className="py-32 bg-white dark:bg-slate-800 relative transition-colors duration-300">
+
+  return (
+    <section id="blog" className="py-32 bg-white dark:bg-slate-800 relative transition-colors duration-300">
       <div className="absolute inset-0 bg-gradient-to-br from-cyan-50/50 to-blue-50/30 dark:from-pink-900/10 dark:to-blue-900/10"></div>
       
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative">
         <div className="text-center mb-20">
-          <h2 className="text-5xl font-light mb-6 tracking-tight text-zinc-600 dark:text-white md:text-6xl">
+          <h2 className="text-5xl font-light mb-6 tracking-tight text-gray-900 dark:text-white md:text-6xl">
             Latest Insights
           </h2>
           <div className="w-24 h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-white/30 to-transparent mx-auto mb-8"></div>
@@ -68,6 +71,8 @@ const Blog = () => {
           </button>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Blog;
