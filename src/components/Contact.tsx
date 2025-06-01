@@ -63,7 +63,7 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="mt-16 pt-6 border-t border-gray-300 dark:border-white/10">
+        <div className="mt-12 pt-3 border-t border-gray-300 dark:border-white/10">
           <p className="text-gray-600 dark:text-white font-light tracking-wide text-sm">
             © 2025 Nidaa Fatimah Mungloo
           </p>
