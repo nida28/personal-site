@@ -18,7 +18,7 @@ const Footer = () => {
         : 'bg-white dark:bg-slate-900 border-t border-gray-200/50 dark:border-slate-700/50'
     }`}>
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-        <div className="flex flex-col items-center space-y-8 pt-12">
+        <div className="flex flex-col items-center space-y-8 pt-4">
           {/* Social media icons */}
           <div className="flex flex-col sm:flex-row items-center gap-8">
             <a
