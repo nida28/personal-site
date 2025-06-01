@@ -1,6 +1,6 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -34,17 +34,6 @@ const Blog = () => {
 
       <main className="relative z-10 pt-32 pb-20">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-          {/* Back to Home */}
-          <div className="mb-12">
-            <Link
-              to="/"
-              className="inline-flex items-center gap-3 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white font-medium transition-all duration-300 hover:scale-[1.02] tracking-wide"
-            >
-              <ArrowLeft size={20} />
-              Back to Home
-            </Link>
-          </div>
-
           {/* Page Header */}
           <div className="text-center mb-20">
             <h1 className="text-5xl md:text-6xl font-light text-gray-500 dark:text-white mb-6 tracking-tight">

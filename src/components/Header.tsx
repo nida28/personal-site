@@ -39,12 +39,18 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-gray-200/40 dark:border-slate-700/30 shadow-sm dark:shadow-slate-900/20">
       <nav className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="flex justify-between items-center h-24">
-          <div className="flex-shrink-0 group cursor-pointer" onClick={scrollToHome}>
+          <div className="flex-shrink-0 group cursor-pointer relative" onClick={scrollToHome}>
             <img 
               src={theme === 'dark' ? '/lovable-uploads/8e5d5b3b-7430-4ac6-8fa6-2c0c657a8cea.png' : '/lovable-uploads/52ee9a92-ee9b-4ee5-96a0-1f65c76586c6.png'}
-              alt="Nidaa Logo"
-              className="h-20 w-auto transition-transform duration-300 group-hover:scale-105"
+              alt="Nidaa Logo - Click to go home"
+              className="h-20 w-auto transition-all duration-300 group-hover:scale-105 group-hover:brightness-110"
             />
+            {/* Home indicator tooltip */}
+            <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="bg-gray-900 dark:bg-white text-white dark:text-gray-900 text-xs px-2 py-1 rounded-md whitespace-nowrap">
+                Go to Home
+              </div>
+            </div>
           </div>
 
           {/* Desktop Navigation */}
