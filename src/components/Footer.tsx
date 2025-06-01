@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <footer className={`${
       isAboutPage 
-        ? 'bg-blue-100/80 dark:bg-blue-900/50' 
+        ? 'bg-blue-50/60 dark:bg-blue-900/40' 
         : isMainPage 
         ? 'bg-gray-50 dark:bg-slate-800 border-t border-gray-200/50 dark:border-slate-700/50' 
         : 'bg-white dark:bg-slate-900 border-t border-gray-200/50 dark:border-slate-700/50'
