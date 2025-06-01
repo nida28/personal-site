@@ -64,26 +64,59 @@ const Header = () => {
             <div className="flex items-center space-x-1">
               <Link
                 to="/blog"
-                className="relative px-6 py-3 text-gray-500 dark:text-white hover:text-gray-700 dark:hover:text-white text-lg font-light tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/10 group hover:shadow-md dark:hover:shadow-white/5"
+                className="relative px-8 py-4 text-gray-500 dark:text-white hover:text-gray-700 dark:hover:text-white text-xl font-light tracking-wide transition-all duration-300 rounded-xl hover:bg-gray-100/70 dark:hover:bg-white/10 group hover:shadow-lg dark:hover:shadow-white/5 border border-transparent hover:border-cyan-200/30 dark:hover:border-pink-400/30 hover:shadow-cyan-500/10 dark:hover:shadow-pink-500/20"
+                style={{
+                  boxShadow: 'none',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = theme === 'dark' 
+                    ? '0 0 20px rgba(236, 72, 153, 0.3), 0 0 40px rgba(236, 72, 153, 0.2), 0 0 60px rgba(236, 72, 153, 0.1)'
+                    : '0 0 20px rgba(6, 182, 212, 0.3), 0 0 40px rgba(6, 182, 212, 0.2), 0 0 60px rgba(6, 182, 212, 0.1)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = 'none';
+                }}
               >
                 Blog
-                <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-px bg-gradient-to-r from-cyan-500 to-blue-600 dark:from-fuchsia-400 dark:to-purple-400 group-hover:w-4 transition-all duration-300"></div>
+                <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-0 h-px bg-gradient-to-r from-cyan-500 to-blue-600 dark:from-fuchsia-400 dark:to-purple-400 group-hover:w-4 transition-all duration-300"></div>
               </Link>
               
               <Link
                 to="/projects"
-                className="relative px-6 py-3 text-gray-500 dark:text-white hover:text-gray-700 dark:hover:text-white text-lg font-light tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/10 group hover:shadow-md dark:hover:shadow-white/5"
+                className="relative px-8 py-4 text-gray-500 dark:text-white hover:text-gray-700 dark:hover:text-white text-xl font-light tracking-wide transition-all duration-300 rounded-xl hover:bg-gray-100/70 dark:hover:bg-white/10 group hover:shadow-lg dark:hover:shadow-white/5 border border-transparent hover:border-cyan-200/30 dark:hover:border-pink-400/30 hover:shadow-cyan-500/10 dark:hover:shadow-pink-500/20"
+                style={{
+                  boxShadow: 'none',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = theme === 'dark' 
+                    ? '0 0 20px rgba(236, 72, 153, 0.3), 0 0 40px rgba(236, 72, 153, 0.2), 0 0 60px rgba(236, 72, 153, 0.1)'
+                    : '0 0 20px rgba(6, 182, 212, 0.3), 0 0 40px rgba(6, 182, 212, 0.2), 0 0 60px rgba(6, 182, 212, 0.1)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = 'none';
+                }}
               >
                 Projects
-                <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-px bg-gradient-to-r from-cyan-500 to-blue-600 dark:from-fuchsia-400 dark:to-purple-400 group-hover:w-4 transition-all duration-300"></div>
+                <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-0 h-px bg-gradient-to-r from-cyan-500 to-blue-600 dark:from-fuchsia-400 dark:to-purple-400 group-hover:w-4 transition-all duration-300"></div>
               </Link>
               
               <Link
                 to="/about"
-                className="relative px-6 py-3 text-gray-500 dark:text-white hover:text-gray-700 dark:hover:text-white text-lg font-light tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/10 group hover:shadow-md dark:hover:shadow-white/5"
+                className="relative px-8 py-4 text-gray-500 dark:text-white hover:text-gray-700 dark:hover:text-white text-xl font-light tracking-wide transition-all duration-300 rounded-xl hover:bg-gray-100/70 dark:hover:bg-white/10 group hover:shadow-lg dark:hover:shadow-white/5 border border-transparent hover:border-cyan-200/30 dark:hover:border-pink-400/30 hover:shadow-cyan-500/10 dark:hover:shadow-pink-500/20"
+                style={{
+                  boxShadow: 'none',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = theme === 'dark' 
+                    ? '0 0 20px rgba(236, 72, 153, 0.3), 0 0 40px rgba(236, 72, 153, 0.2), 0 0 60px rgba(236, 72, 153, 0.1)'
+                    : '0 0 20px rgba(6, 182, 212, 0.3), 0 0 40px rgba(6, 182, 212, 0.2), 0 0 60px rgba(6, 182, 212, 0.1)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = 'none';
+                }}
               >
                 About
-                <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-px bg-gradient-to-r from-cyan-500 to-blue-600 dark:from-fuchsia-400 dark:to-purple-400 group-hover:w-4 transition-all duration-300"></div>
+                <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-0 h-px bg-gradient-to-r from-cyan-500 to-blue-600 dark:from-fuchsia-400 dark:to-purple-400 group-hover:w-4 transition-all duration-300"></div>
               </Link>
               
               <div className="ml-4 pl-4 border-l border-gray-300/50 dark:border-slate-600/40 flex items-center">
@@ -111,7 +144,7 @@ const Header = () => {
               <Link
                 to="/blog"
                 onClick={() => setIsMenuOpen(false)}
-                className="block w-full text-left px-4 py-3 text-gray-500 dark:text-white hover:text-gray-700 dark:hover:text-white text-lg font-light tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/10 hover:shadow-md dark:hover:shadow-white/5"
+                className="block w-full text-left px-6 py-4 text-gray-500 dark:text-white hover:text-gray-700 dark:hover:text-white text-xl font-light tracking-wide transition-all duration-300 rounded-xl hover:bg-gray-100/70 dark:hover:bg-white/10 hover:shadow-md dark:hover:shadow-white/5"
               >
                 Blog
               </Link>
@@ -119,7 +152,7 @@ const Header = () => {
               <Link
                 to="/projects"
                 onClick={() => setIsMenuOpen(false)}
-                className="block w-full text-left px-4 py-3 text-gray-500 dark:text-white hover:text-gray-700 dark:hover:text-white text-lg font-light tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/10 hover:shadow-md dark:hover:shadow-white/5"
+                className="block w-full text-left px-6 py-4 text-gray-500 dark:text-white hover:text-gray-700 dark:hover:text-white text-xl font-light tracking-wide transition-all duration-300 rounded-xl hover:bg-gray-100/70 dark:hover:bg-white/10 hover:shadow-md dark:hover:shadow-white/5"
               >
                 Projects
               </Link>
@@ -127,7 +160,7 @@ const Header = () => {
               <Link
                 to="/about"
                 onClick={() => setIsMenuOpen(false)}
-                className="block w-full text-left px-4 py-3 text-gray-500 dark:text-white hover:text-gray-700 dark:hover:text-white text-lg font-light tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/10 hover:shadow-md dark:hover:shadow-white/5"
+                className="block w-full text-left px-6 py-4 text-gray-500 dark:text-white hover:text-gray-700 dark:hover:text-white text-xl font-light tracking-wide transition-all duration-300 rounded-xl hover:bg-gray-100/70 dark:hover:bg-white/10 hover:shadow-md dark:hover:shadow-white/5"
               >
                 About
               </Link>
