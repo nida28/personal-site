@@ -34,7 +34,7 @@ const Hero = () => {
               <span className="text-gray-800 dark:text-white block mb-4">
                 Hi, I'm
               </span>
-              <span className="bg-gradient-to-r from-blue-400 via-blue-600 to-blue-800 dark:from-blue-400 dark:via-purple-400 dark:to-teal-400 bg-clip-text text-transparent font-normal block">
+              <span className="bg-gradient-to-r from-blue-400 via-blue-600 to-blue-800 dark:from-fuchsia-500 dark:via-pink-400 dark:to-purple-500 bg-clip-text text-transparent font-normal block">
                 Nidaa
               </span>
             </h1>
