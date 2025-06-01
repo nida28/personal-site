@@ -13,19 +13,15 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 via-blue-50/40 to-blue-50/30 dark:from-blue-950 dark:via-purple-950 dark:to-indigo-950 text-gray-700 dark:text-white relative overflow-hidden">
-      {/* Strong dark blue/purple overlay for dark mode */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-950/90 via-purple-950/95 to-indigo-950/90 dark:block hidden"></div>
+    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 via-blue-50/40 to-blue-50/30 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 text-gray-700 dark:text-white relative overflow-hidden">
+      {/* Dark mode background - deep navy/purple like the reference */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 dark:block hidden"></div>
       
-      {/* Bright fuchsia accent blobs with high opacity */}
-      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-gradient-to-r from-fuchsia-500/60 to-purple-500/50 rounded-full blur-3xl dark:block hidden"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-gradient-to-r from-purple-500/55 to-fuchsia-500/65 rounded-full blur-3xl dark:block hidden"></div>
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-r from-fuchsia-400/45 to-purple-400/50 rounded-full blur-3xl dark:block hidden"></div>
+      {/* Subtle purple/blue ambient lighting for dark mode */}
+      <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] bg-gradient-to-r from-purple-600/20 to-blue-600/15 rounded-full blur-3xl dark:block hidden"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-gradient-to-r from-blue-600/15 to-purple-600/20 rounded-full blur-3xl dark:block hidden"></div>
       
-      {/* Additional strong purple overlay for extra depth */}
-      <div className="absolute inset-0 bg-gradient-to-t from-purple-950/80 via-transparent to-blue-950/60 dark:block hidden"></div>
-      
-      {/* Enhanced Light mode gradient background with layered effects */}
+      {/* Light mode gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-blue-50/40 to-blue-50/40 dark:hidden block"></div>
       <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-gradient-to-r from-blue-200/20 to-cyan-200/25 rounded-full blur-3xl dark:hidden block"></div>
       <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-gradient-to-r from-blue-200/25 to-cyan-200/30 rounded-full blur-3xl dark:hidden block"></div>
@@ -38,7 +34,7 @@ const Hero = () => {
               <span className="text-gray-800 dark:text-white block mb-4">
                 Hi, I'm
               </span>
-              <span className="bg-gradient-to-r from-blue-400 via-blue-600 to-blue-800 dark:from-fuchsia-400 dark:via-pink-300 dark:to-purple-300 bg-clip-text text-transparent font-normal block">
+              <span className="bg-gradient-to-r from-blue-400 via-blue-600 to-blue-800 dark:from-blue-400 dark:via-purple-400 dark:to-teal-400 bg-clip-text text-transparent font-normal block">
                 Nidaa
               </span>
             </h1>
