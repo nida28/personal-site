@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
@@ -50,12 +49,6 @@ const Header = () => {
               <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-cyan-500/50 to-blue-500/50 dark:from-pink-500/60 dark:to-blue-500/60 blur-lg opacity-80 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-cyan-400/40 to-blue-400/40 dark:from-pink-400/50 dark:to-blue-400/50 blur-md opacity-60 group-hover:opacity-90 transition-opacity duration-300"></div>
               <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-cyan-300/30 to-blue-300/30 dark:from-pink-300/40 dark:to-blue-300/40 blur-sm opacity-40 group-hover:opacity-70 transition-opacity duration-300"></div>
-            </div>
-            {/* Home indicator tooltip */}
-            <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <div className="bg-gray-900 dark:bg-white text-white dark:text-gray-900 text-xs px-2 py-1 rounded-md whitespace-nowrap">
-                Go to Home
-              </div>
             </div>
           </div>
 

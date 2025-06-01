@@ -32,8 +32,8 @@ const Hero = () => {
         <div className="animate-fade-in space-y-12">
           <div className="space-y-8">
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light tracking-tight leading-[1.1]">
-              <span className="text-gray-500 dark:text-gray-400">Hi, I'm </span>
-              <span className={`bg-clip-text text-transparent ${theme === 'dark' ? 'bg-gradient-to-r from-pink-300 via-pink-500 to-fuchsia-700' : 'bg-gradient-to-r from-blue-400 via-blue-600 to-blue-800'}`} style={{
+              <span className="text-gray-400 dark:text-gray-500">Hi, I'm </span>
+              <span className={`bg-clip-text text-transparent font-bold ${theme === 'dark' ? 'bg-gradient-to-r from-pink-300 via-pink-500 to-fuchsia-700' : 'bg-gradient-to-r from-blue-400 via-blue-600 to-blue-800'}`} style={{
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text'
@@ -44,7 +44,7 @@ const Hero = () => {
             <div className="w-32 h-px bg-gradient-to-r from-transparent via-gray-400 dark:via-white/30 to-transparent mx-auto"></div>
           </div>
           
-          <p className="text-xl sm:text-2xl md:text-3xl text-gray-500 dark:text-white max-w-4xl mx-auto leading-relaxed font-light tracking-wide px-4">
+          <p className="text-xl sm:text-2xl md:text-3xl text-gray-400 dark:text-gray-500 max-w-4xl mx-auto leading-relaxed font-light tracking-wide px-4">
             Welcome to my corner of the internet where I share my thoughts, 
             projects, and journey as a developer.
           </p>
