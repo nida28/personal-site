@@ -46,8 +46,8 @@ const Footer = () => {
             </a>
           </div>
 
-          {/* Copyright with no bottom padding */}
-          <div className={`pt-12 w-full text-center ${
+          {/* Copyright with small bottom padding */}
+          <div className={`pt-12 pb-2 w-full text-center ${
             isAboutPage 
               ? '' 
               : 'border-t border-gray-200/50 dark:border-slate-600/50'
