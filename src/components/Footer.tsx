@@ -62,10 +62,10 @@ const Footer = () => {
           )}
 
           {/* Copyright with reduced bottom padding */}
-          <div className={`pt-8 pb-4 w-full text-center ${
+          <div className={`w-full text-center ${
             isAboutPage 
-              ? '' 
-              : 'border-t border-gray-200/50 dark:border-slate-600/50'
+              ? 'pt-8 pb-4' 
+              : 'pt-8 pb-4 border-t border-gray-200/50 dark:border-slate-600/50'
           }`}>
             <p className="text-gray-600 dark:text-gray-400 font-light text-sm">
               © 2025 Nidaa Fatimah Mungloo
