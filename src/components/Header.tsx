@@ -40,11 +40,16 @@ const Header = () => {
       <nav className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="flex justify-between items-center h-24">
           <div className="flex-shrink-0 group cursor-pointer relative" onClick={scrollToHome}>
-            <img 
-              src={theme === 'dark' ? '/lovable-uploads/8e5d5b3b-7430-4ac6-8fa6-2c0c657a8cea.png' : '/lovable-uploads/52ee9a92-ee9b-4ee5-96a0-1f65c76586c6.png'}
-              alt="Nidaa Logo - Click to go home"
-              className="h-20 w-auto transition-all duration-300 group-hover:scale-105 group-hover:brightness-110"
-            />
+            <div className="relative">
+              <img 
+                src={theme === 'dark' ? '/lovable-uploads/8e5d5b3b-7430-4ac6-8fa6-2c0c657a8cea.png' : '/lovable-uploads/52ee9a92-ee9b-4ee5-96a0-1f65c76586c6.png'}
+                alt="Nidaa Logo - Click to go home"
+                className="h-20 w-auto transition-all duration-300 group-hover:scale-105 group-hover:brightness-110 relative z-10"
+              />
+              {/* Glowy border effect */}
+              <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-cyan-500/30 to-blue-500/30 dark:from-pink-500/40 dark:to-blue-500/40 blur-md opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-cyan-400/20 to-blue-400/20 dark:from-pink-400/30 dark:to-blue-400/30 blur-sm opacity-40 group-hover:opacity-80 transition-opacity duration-300"></div>
+            </div>
             {/* Home indicator tooltip */}
             <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <div className="bg-gray-900 dark:bg-white text-white dark:text-gray-900 text-xs px-2 py-1 rounded-md whitespace-nowrap">
@@ -57,24 +62,24 @@ const Header = () => {
           <div className="hidden md:block">
             <div className="flex items-center space-x-1">
               <Link
-                to="/projects"
-                className="relative px-6 py-3 text-gray-900 hover:text-gray-700 dark:text-gray-100 dark:hover:text-white text-base font-medium tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/10 group hover:shadow-md dark:hover:shadow-white/5"
-              >
-                Projects
-                <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-px bg-gradient-to-r from-cyan-500 to-blue-600 dark:from-fuchsia-400 dark:to-purple-400 group-hover:w-4 transition-all duration-300"></div>
-              </Link>
-              
-              <Link
                 to="/blog"
-                className="relative px-6 py-3 text-gray-900 hover:text-gray-700 dark:text-gray-100 dark:hover:text-white text-base font-medium tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/10 group hover:shadow-md dark:hover:shadow-white/5"
+                className="relative px-6 py-3 text-gray-900 hover:text-gray-700 dark:text-gray-100 dark:hover:text-white text-lg font-normal tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/10 group hover:shadow-md dark:hover:shadow-white/5"
               >
                 Blog
                 <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-px bg-gradient-to-r from-cyan-500 to-blue-600 dark:from-fuchsia-400 dark:to-purple-400 group-hover:w-4 transition-all duration-300"></div>
               </Link>
               
               <Link
+                to="/projects"
+                className="relative px-6 py-3 text-gray-900 hover:text-gray-700 dark:text-gray-100 dark:hover:text-white text-lg font-normal tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/10 group hover:shadow-md dark:hover:shadow-white/5"
+              >
+                Projects
+                <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-px bg-gradient-to-r from-cyan-500 to-blue-600 dark:from-fuchsia-400 dark:to-purple-400 group-hover:w-4 transition-all duration-300"></div>
+              </Link>
+              
+              <Link
                 to="/about"
-                className="relative px-6 py-3 text-gray-900 hover:text-gray-700 dark:text-gray-100 dark:hover:text-white text-base font-medium tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/10 group hover:shadow-md dark:hover:shadow-white/5"
+                className="relative px-6 py-3 text-gray-900 hover:text-gray-700 dark:text-gray-100 dark:hover:text-white text-lg font-normal tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/10 group hover:shadow-md dark:hover:shadow-white/5"
               >
                 About
                 <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-px bg-gradient-to-r from-cyan-500 to-blue-600 dark:from-fuchsia-400 dark:to-purple-400 group-hover:w-4 transition-all duration-300"></div>
@@ -103,25 +108,25 @@ const Header = () => {
           <div className="md:hidden border-t border-gray-300/50 dark:border-slate-600/40 bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl">
             <div className="px-4 py-6 space-y-2">
               <Link
-                to="/projects"
-                onClick={() => setIsMenuOpen(false)}
-                className="block w-full text-left px-4 py-3 text-gray-900 hover:text-gray-700 dark:text-gray-100 dark:hover:text-white text-base font-medium tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/10 hover:shadow-md dark:hover:shadow-white/5"
-              >
-                Projects
-              </Link>
-              
-              <Link
                 to="/blog"
                 onClick={() => setIsMenuOpen(false)}
-                className="block w-full text-left px-4 py-3 text-gray-900 hover:text-gray-700 dark:text-gray-100 dark:hover:text-white text-base font-medium tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/10 hover:shadow-md dark:hover:shadow-white/5"
+                className="block w-full text-left px-4 py-3 text-gray-900 hover:text-gray-700 dark:text-gray-100 dark:hover:text-white text-lg font-normal tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/10 hover:shadow-md dark:hover:shadow-white/5"
               >
                 Blog
               </Link>
               
               <Link
+                to="/projects"
+                onClick={() => setIsMenuOpen(false)}
+                className="block w-full text-left px-4 py-3 text-gray-900 hover:text-gray-700 dark:text-gray-100 dark:hover:text-white text-lg font-normal tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/10 hover:shadow-md dark:hover:shadow-white/5"
+              >
+                Projects
+              </Link>
+              
+              <Link
                 to="/about"
                 onClick={() => setIsMenuOpen(false)}
-                className="block w-full text-left px-4 py-3 text-gray-900 hover:text-gray-700 dark:text-gray-100 dark:hover:text-white text-base font-medium tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/10 hover:shadow-md dark:hover:shadow-white/5"
+                className="block w-full text-left px-4 py-3 text-gray-900 hover:text-gray-700 dark:text-gray-100 dark:hover:text-white text-lg font-normal tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/10 hover:shadow-md dark:hover:shadow-white/5"
               >
                 About
               </Link>
