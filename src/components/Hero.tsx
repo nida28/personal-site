@@ -13,12 +13,12 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 via-blue-50/40 to-blue-50/30 dark:from-slate-900 dark:via-gray-900 dark:to-black text-gray-700 dark:text-white relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 via-blue-50/40 to-blue-50/30 dark:from-slate-900 dark:via-purple-900/80 dark:to-blue-900/60 text-gray-700 dark:text-white relative overflow-hidden">
       {/* Enhanced ambient background elements - Dark mode with more fuchsia */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-fuchsia-900/30 to-purple-900/25 dark:block hidden"></div>
-      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-gradient-to-r from-blue-500/15 to-fuchsia-500/25 rounded-full blur-3xl dark:block hidden"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-gradient-to-r from-fuchsia-500/25 to-pink-500/20 rounded-full blur-3xl dark:block hidden"></div>
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-r from-purple-500/10 to-fuchsia-500/20 rounded-full blur-3xl dark:block hidden"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-purple-900/50 to-slate-900/60 dark:block hidden"></div>
+      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-gradient-to-r from-blue-600/20 to-fuchsia-400/30 rounded-full blur-3xl dark:block hidden"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-gradient-to-r from-fuchsia-400/25 to-pink-400/20 rounded-full blur-3xl dark:block hidden"></div>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-r from-purple-600/15 to-fuchsia-400/25 rounded-full blur-3xl dark:block hidden"></div>
       
       {/* Enhanced Light mode gradient background with layered effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-blue-50/40 to-blue-50/40 dark:hidden block"></div>
@@ -33,7 +33,7 @@ const Hero = () => {
               <span className="text-gray-800 dark:text-white block mb-4">
                 Hi, I'm
               </span>
-              <span className="bg-gradient-to-r from-blue-400 via-blue-600 to-blue-800 dark:from-fuchsia-400 dark:via-fuchsia-500 dark:to-purple-500 bg-clip-text text-transparent font-normal block">
+              <span className="bg-gradient-to-r from-blue-400 via-blue-600 to-blue-800 dark:from-fuchsia-300 dark:via-fuchsia-400 dark:to-purple-400 bg-clip-text text-transparent font-normal block">
                 Nidaa
               </span>
             </h1>
