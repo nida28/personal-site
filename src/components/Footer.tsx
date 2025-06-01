@@ -13,31 +13,31 @@ const Footer = () => {
               href="https://linkedin.com/in/yourusername"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors duration-300"
+              className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 dark:from-pink-600 dark:to-blue-600 dark:hover:from-pink-700 dark:hover:to-blue-700 text-white rounded-lg font-medium transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl"
             >
-              <Linkedin className="w-5 h-5" />
+              <Linkedin className="w-4 h-4" />
             </a>
             
             <a
               href="https://github.com/yourusername"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors duration-300"
+              className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 dark:from-pink-600 dark:to-blue-600 dark:hover:from-pink-700 dark:hover:to-blue-700 text-white rounded-lg font-medium transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl"
             >
-              <Github className="w-5 h-5" />
+              <Github className="w-4 h-4" />
             </a>
 
             <a
               href="mailto:your.email@example.com"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 dark:from-pink-600 dark:to-blue-600 dark:hover:from-pink-700 dark:hover:to-blue-700 text-white rounded-lg font-medium transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl"
+              className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 dark:from-pink-600 dark:to-blue-600 dark:hover:from-pink-700 dark:hover:to-blue-700 text-white rounded-lg font-medium transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl"
             >
               <Mail className="w-4 h-4" />
             </a>
           </div>
 
           {/* Copyright */}
-          <div className="pt-4 pb-1 border-t border-gray-200/50 dark:border-slate-600/50 w-full text-center">
-            <p className="text-gray-600 dark:text-gray-400 font-light">
+          <div className="pt-8 pb-0 border-t border-gray-200/50 dark:border-slate-600/50 w-full text-center">
+            <p className="text-gray-600 dark:text-gray-400 font-light text-sm">
               © 2025 Nidaa Fatimah Mungloo
             </p>
           </div>
