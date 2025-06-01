@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Github, Linkedin, Mail } from 'lucide-react';
 import { useLocation } from 'react-router-dom';
@@ -20,7 +19,7 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="flex flex-col items-center space-y-4 pt-8">
           {/* Social media icons */}
-          <div className="flex flex-col sm:flex-row items-center gap-8">
+          <div className="flex flex-col sm:flex-row items-center gap-8 pb-4">
             <a
               href="https://linkedin.com/in/yourusername"
               target="_blank"
@@ -55,7 +54,7 @@ const Footer = () => {
           )}
 
           {/* Copyright with symmetric padding */}
-          <div className={`pt-8 pb-12 w-full text-center ${
+          <div className={`pt-8 pb-8 w-full text-center ${
             isAboutPage 
               ? '' 
               : 'border-t border-gray-200/50 dark:border-slate-600/50'
