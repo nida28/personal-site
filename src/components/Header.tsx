@@ -36,7 +36,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-gray-50/95 dark:bg-slate-900/95 backdrop-blur-xl border-b border-gray-200/40 dark:border-slate-700/30">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-gray-200/40 dark:border-slate-700/30 shadow-sm dark:shadow-slate-900/20">
       <nav className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="flex justify-between items-center h-24">
           <div className="flex-shrink-0 group cursor-pointer" onClick={scrollToHome}>
@@ -52,7 +52,7 @@ const Header = () => {
             <div className="flex items-center space-x-1">
               <Link
                 to="/projects"
-                className="relative px-6 py-3 text-gray-800 hover:text-gray-900 dark:text-gray-200 dark:hover:text-white text-base font-normal tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/50 dark:hover:bg-white/5 group"
+                className="relative px-6 py-3 text-gray-900 hover:text-gray-700 dark:text-gray-100 dark:hover:text-white text-base font-medium tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/10 group hover:shadow-md dark:hover:shadow-white/5"
               >
                 Projects
                 <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-px bg-gradient-to-r from-cyan-500 to-blue-600 dark:from-fuchsia-400 dark:to-purple-400 group-hover:w-4 transition-all duration-300"></div>
@@ -60,7 +60,7 @@ const Header = () => {
               
               <Link
                 to="/blog"
-                className="relative px-6 py-3 text-gray-800 hover:text-gray-900 dark:text-gray-200 dark:hover:text-white text-base font-normal tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/50 dark:hover:bg-white/5 group"
+                className="relative px-6 py-3 text-gray-900 hover:text-gray-700 dark:text-gray-100 dark:hover:text-white text-base font-medium tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/10 group hover:shadow-md dark:hover:shadow-white/5"
               >
                 Blog
                 <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-px bg-gradient-to-r from-cyan-500 to-blue-600 dark:from-fuchsia-400 dark:to-purple-400 group-hover:w-4 transition-all duration-300"></div>
@@ -68,7 +68,7 @@ const Header = () => {
               
               <Link
                 to="/about"
-                className="relative px-6 py-3 text-gray-800 hover:text-gray-900 dark:text-gray-200 dark:hover:text-white text-base font-normal tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/50 dark:hover:bg-white/5 group"
+                className="relative px-6 py-3 text-gray-900 hover:text-gray-700 dark:text-gray-100 dark:hover:text-white text-base font-medium tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/10 group hover:shadow-md dark:hover:shadow-white/5"
               >
                 About
                 <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-px bg-gradient-to-r from-cyan-500 to-blue-600 dark:from-fuchsia-400 dark:to-purple-400 group-hover:w-4 transition-all duration-300"></div>
@@ -85,7 +85,7 @@ const Header = () => {
             <ThemeToggle />
             <button
               onClick={toggleMenu}
-              className="text-gray-800 hover:text-gray-900 dark:text-gray-200 dark:hover:text-white p-3 rounded-lg hover:bg-gray-100/50 dark:hover:bg-white/5 transition-all duration-300"
+              className="text-gray-900 hover:text-gray-700 dark:text-gray-100 dark:hover:text-white p-3 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/10 transition-all duration-300 hover:shadow-md dark:hover:shadow-white/5"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -94,12 +94,12 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden border-t border-gray-300/50 dark:border-slate-600/40 bg-gray-50/95 dark:bg-slate-900/95 backdrop-blur-xl">
+          <div className="md:hidden border-t border-gray-300/50 dark:border-slate-600/40 bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl">
             <div className="px-4 py-6 space-y-2">
               <Link
                 to="/projects"
                 onClick={() => setIsMenuOpen(false)}
-                className="block w-full text-left px-4 py-3 text-gray-800 hover:text-gray-900 dark:text-gray-200 dark:hover:text-white text-base font-normal tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/50 dark:hover:bg-white/5"
+                className="block w-full text-left px-4 py-3 text-gray-900 hover:text-gray-700 dark:text-gray-100 dark:hover:text-white text-base font-medium tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/10 hover:shadow-md dark:hover:shadow-white/5"
               >
                 Projects
               </Link>
@@ -107,7 +107,7 @@ const Header = () => {
               <Link
                 to="/blog"
                 onClick={() => setIsMenuOpen(false)}
-                className="block w-full text-left px-4 py-3 text-gray-800 hover:text-gray-900 dark:text-gray-200 dark:hover:text-white text-base font-normal tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/50 dark:hover:bg-white/5"
+                className="block w-full text-left px-4 py-3 text-gray-900 hover:text-gray-700 dark:text-gray-100 dark:hover:text-white text-base font-medium tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/10 hover:shadow-md dark:hover:shadow-white/5"
               >
                 Blog
               </Link>
@@ -115,7 +115,7 @@ const Header = () => {
               <Link
                 to="/about"
                 onClick={() => setIsMenuOpen(false)}
-                className="block w-full text-left px-4 py-3 text-gray-800 hover:text-gray-900 dark:text-gray-200 dark:hover:text-white text-base font-normal tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/50 dark:hover:bg-white/5"
+                className="block w-full text-left px-4 py-3 text-gray-900 hover:text-gray-700 dark:text-gray-100 dark:hover:text-white text-base font-medium tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/10 hover:shadow-md dark:hover:shadow-white/5"
               >
                 About
               </Link>
