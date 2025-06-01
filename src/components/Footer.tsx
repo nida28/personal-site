@@ -12,20 +12,13 @@ const Footer = () => {
   return (
     <footer className={`${
       isAboutPage 
-        ? 'bg-gradient-to-br from-gray-50 via-gray-100/30 to-blue-50/20 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900' 
+        ? 'bg-blue-50/60 dark:bg-blue-900/40' 
         : isMainPage 
         ? 'bg-gray-50 dark:bg-slate-800 border-t border-gray-200/50 dark:border-slate-700/50' 
         : 'bg-white dark:bg-slate-900 border-t border-gray-200/50 dark:border-slate-700/50'
     }`}>
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="flex flex-col items-center space-y-4 pt-8">
-          {/* Separator at top for About page */}
-          {isAboutPage && (
-            <div className="w-full">
-              <Separator className="bg-gray-200/50 dark:bg-slate-600/50" />
-            </div>
-          )}
-
           {/* Social media icons */}
           <div className="flex flex-col sm:flex-row items-center gap-8 pb-4">
             <a
