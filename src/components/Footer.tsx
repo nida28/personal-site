@@ -17,6 +17,13 @@ const Footer = () => {
         ? 'bg-gray-50 dark:bg-slate-800 border-t border-gray-200/50 dark:border-slate-700/50' 
         : 'bg-white dark:bg-slate-900 border-t border-gray-200/50 dark:border-slate-700/50'
     }`}>
+      {/* Separator above footer for About page */}
+      {isAboutPage && (
+        <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+          <Separator className="bg-gray-200/50 dark:bg-slate-600/50" />
+        </div>
+      )}
+      
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="flex flex-col items-center space-y-4 pt-8">
           {/* Social media icons */}
@@ -47,7 +54,7 @@ const Footer = () => {
             </a>
           </div>
 
-          {/* Separator for About page */}
+          {/* Separator for About page - kept for existing styling */}
           {isAboutPage && (
             <div className="w-full">
               <Separator className="bg-gray-200/50 dark:bg-slate-600/50" />
