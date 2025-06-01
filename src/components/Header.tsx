@@ -29,10 +29,15 @@ const Header = () => {
           <div className="flex-shrink-0 group cursor-pointer relative" onClick={scrollToHome}>
             <div className="relative">
               <img
-                src={theme === 'dark' ? '/8e5d5b3b-7430-4ac6-8fa6-2c0c657a8cea.png' : '/52ee9a92-ee9b-4ee5-96a0-1f65c76586c6.png'}
+                src={
+                  theme === 'dark'
+                    ? `${import.meta.env.BASE_URL}8e5d5b3b-7430-4ac6-8fa6-2c0c657a8cea.png`
+                    : `${import.meta.env.BASE_URL}52ee9a92-ee9b-4ee5-96a0-1f65c76586c6.png`
+                }
                 alt="Nidaa Logo - Click to go home"
                 className="h-20 w-auto transition-all duration-300 group-hover:scale-105 group-hover:brightness-110 relative z-10"
               />
+
               {/* Enhanced glowy border effect */}
               <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-cyan-500/50 to-blue-500/50 dark:from-pink-500/60 dark:to-blue-500/60 blur-lg opacity-80 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-cyan-400/40 to-blue-400/40 dark:from-pink-400/50 dark:to-blue-400/50 blur-md opacity-60 group-hover:opacity-90 transition-opacity duration-300"></div>

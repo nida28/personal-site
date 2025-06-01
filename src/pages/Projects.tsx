@@ -43,7 +43,7 @@ const Projects = () => {
                 <div className="group relative">
                   <div className="w-64 h-64 overflow-hidden rounded-3xl shadow-2xl">
                     <img
-                      src="/58aa78a2-4988-4ff6-a51a-fdfeafa16e35.png"
+                      src={`${import.meta.env.BASE_URL}58aa78a2-4988-4ff6-a51a-fdfeafa16e35.png`}
                       alt="BGB Bot"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />

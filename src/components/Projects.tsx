@@ -4,13 +4,17 @@ import { ExternalLink, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Projects = () => {
-  const projects = [{
-    id: 1,
-    title: "BGB Bot",
-    description: "An intelligent bot solution built with modern technologies. Features automated responses, smart integrations, and seamless user interactions.",
-    image: "/58aa78a2-4988-4ff6-a51a-fdfeafa16e35.png",
-    liveUrl: "https://example.com"
-  }];
+  const projects = [
+    {
+      id: 1,
+      title: "BGB Bot",
+      description:
+        "An intelligent bot solution built with modern technologies. Features automated responses, smart integrations, and seamless user interactions.",
+      image: `${import.meta.env.BASE_URL}58aa78a2-4988-4ff6-a51a-fdfeafa16e35.png`,
+      liveUrl: "https://example.com",
+    },
+  ];
+
 
   return (
     <section id="projects" className="py-32 bg-gray-50 dark:bg-slate-900 transition-colors duration-300">
