@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ExternalLink, ArrowLeft } from 'lucide-react';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const Projects = () => {
   return (
@@ -123,6 +124,8 @@ const Projects = () => {
           </div>
         </div>
       </main>
+
+      <Footer />
     </div>
   );
 };

@@ -1,6 +1,7 @@
 
 import React from 'react';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const About = () => {
   return (
@@ -71,6 +72,8 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };
