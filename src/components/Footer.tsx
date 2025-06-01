@@ -13,7 +13,7 @@ const Footer = () => {
       isMainPage 
         ? 'bg-gray-50 dark:bg-slate-800' 
         : isAboutPage
-        ? 'bg-gradient-to-br from-gray-50 via-gray-100/30 to-blue-50/20 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900'
+        ? 'bg-transparent'
         : 'bg-white dark:bg-slate-900'
     }`}>
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
