@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ExternalLink, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -12,11 +13,11 @@ const Projects = () => {
   return <section id="projects" className="py-32 bg-gray-50 dark:bg-slate-900 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="text-center mb-20">
-          <h2 className="text-5xl font-light mb-6 tracking-tight text-zinc-600 md:text-6xl">
+          <h2 className="text-5xl font-light mb-6 tracking-tight text-zinc-600 dark:text-white md:text-6xl">
             Featured Project
           </h2>
           <div className="w-24 h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-white/30 to-transparent mx-auto mb-8"></div>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto font-light leading-relaxed">
+          <p className="text-xl text-gray-600 dark:text-white max-w-3xl mx-auto font-light leading-relaxed">
             My latest work and creative solution
           </p>
         </div>
@@ -34,7 +35,7 @@ const Projects = () => {
                   <h3 className="text-2xl font-light text-gray-900 dark:text-white mb-4 tracking-wide">
                     {project.title}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6 font-light">
+                  <p className="text-gray-600 dark:text-white leading-relaxed mb-6 font-light">
                     {project.description}
                   </p>
                   

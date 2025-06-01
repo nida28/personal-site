@@ -16,7 +16,7 @@ const About = () => {
             About Me
           </h2>
           <div className="w-24 h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-white/30 to-transparent mx-auto mb-8"></div>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto font-light leading-relaxed">
+          <p className="text-xl text-gray-600 dark:text-white max-w-3xl mx-auto font-light leading-relaxed">
             Passionate about creating meaningful digital experiences through clean, efficient code.
           </p>
         </div>
@@ -40,7 +40,7 @@ const About = () => {
 
             <div>
               <h3 className="text-3xl font-light text-gray-900 dark:text-white mb-6 tracking-wide">My Story</h3>
-              <div className="space-y-6 text-gray-700 dark:text-gray-300 leading-relaxed">
+              <div className="space-y-6 text-gray-700 dark:text-white leading-relaxed">
                 <p className="text-lg font-light">
                   I'm a developer with a passion for building innovative web applications 
                   and sharing my thoughts through writing. This is my personal space where 
@@ -65,7 +65,7 @@ const About = () => {
                     className="group relative bg-white/80 dark:bg-slate-700/50 backdrop-blur-sm rounded-2xl px-6 py-4 text-center shadow-sm border border-gray-100 dark:border-white/10 hover:shadow-xl hover:shadow-pink-500/10 dark:hover:shadow-pink-500/20 transition-all duration-500 hover:scale-[1.02] hover:border-pink-200/50 dark:hover:border-pink-400/30"
                     style={{ animationDelay: `${index * 50}ms` }}
                   >
-                    <span className="text-gray-800 dark:text-gray-200 font-medium tracking-wide group-hover:text-pink-600 dark:group-hover:text-pink-400 transition-colors duration-300">
+                    <span className="text-gray-800 dark:text-white font-medium tracking-wide group-hover:text-pink-600 dark:group-hover:text-pink-400 transition-colors duration-300">
                       {skill}
                     </span>
                     <div className="absolute inset-0 bg-gradient-to-br from-pink-500/5 to-blue-500/5 dark:from-pink-500/10 dark:to-blue-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

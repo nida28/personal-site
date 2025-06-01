@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 interface BlogPost {
@@ -22,11 +23,11 @@ const Blog = () => {
       
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative">
         <div className="text-center mb-20">
-          <h2 className="text-5xl font-light mb-6 tracking-tight text-zinc-600 md:text-6xl">
+          <h2 className="text-5xl font-light mb-6 tracking-tight text-zinc-600 dark:text-white md:text-6xl">
             Latest Insights
           </h2>
           <div className="w-24 h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-white/30 to-transparent mx-auto mb-8"></div>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto font-light leading-relaxed">
+          <p className="text-xl text-gray-600 dark:text-white max-w-3xl mx-auto font-light leading-relaxed">
             Thoughts, tutorials, and insights from my journey as a developer.
           </p>
         </div>
@@ -46,11 +47,11 @@ const Blog = () => {
                   {post.title}
                 </h3>
                 
-                <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed font-light">
+                <p className="text-gray-600 dark:text-white mb-6 leading-relaxed font-light">
                   {post.excerpt}
                 </p>
                 
-                <div className="flex justify-between items-center text-sm text-gray-500 dark:text-gray-400 font-light tracking-wide">
+                <div className="flex justify-between items-center text-sm text-gray-500 dark:text-gray-300 font-light tracking-wide">
                   <span>{post.date}</span>
                   <span>{post.readTime}</span>
                 </div>

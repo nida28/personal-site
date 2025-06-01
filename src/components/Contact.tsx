@@ -23,7 +23,7 @@ const Contact = () => {
             <div className="w-32 h-px bg-gradient-to-r from-transparent via-gray-400 dark:via-white/30 to-transparent mx-auto"></div>
           </div>
           
-          <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto font-light leading-relaxed tracking-wide">
+          <p className="text-xl sm:text-2xl text-gray-600 dark:text-white max-w-4xl mx-auto font-light leading-relaxed tracking-wide">
             I'm always interested in connecting with fellow developers and hearing your thoughts. 
             Feel free to reach out if you'd like to chat!
           </p>
@@ -39,7 +39,7 @@ const Contact = () => {
         </div>
 
         <div className="mt-32 pt-16 border-t border-gray-300 dark:border-white/10">
-          <p className="text-gray-600 dark:text-gray-400 font-light tracking-wide text-lg">
+          <p className="text-gray-600 dark:text-white font-light tracking-wide text-lg">
             © 2024 Nidaa. Built with React and lots of ☕
           </p>
         </div>

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTheme } from '../contexts/ThemeContext';
@@ -31,7 +32,7 @@ const Hero = () => {
         <div className="animate-fade-in space-y-12">
           <div className="space-y-8">
             <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-light tracking-tight leading-[0.85]">
-              <span className="block mb-4 text-gray-500">
+              <span className="block mb-4 text-gray-500 dark:text-white">
                 Hi, I'm
               </span>
               <span className="block font-normal">
@@ -47,7 +48,7 @@ const Hero = () => {
             <div className="w-32 h-px bg-gradient-to-r from-transparent via-gray-400 dark:via-white/30 to-transparent mx-auto"></div>
           </div>
           
-          <p className="text-xl sm:text-2xl md:text-3xl text-gray-500 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed font-light tracking-wide px-4">
+          <p className="text-xl sm:text-2xl md:text-3xl text-gray-500 dark:text-white max-w-4xl mx-auto leading-relaxed font-light tracking-wide px-4">
             Welcome to my corner of the internet where I share my thoughts, 
             projects, and journey as a developer.
           </p>
