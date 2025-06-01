@@ -18,5 +18,5 @@ export default defineConfig(({ command, mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: process.env.NODE_ENV === 'production' ? '/dev-haven-blog-link-1/' : '/',
+  base: process.env.NODE_ENV === 'production' ? '/dev-haven-blog-link/' : '/',
 }));
