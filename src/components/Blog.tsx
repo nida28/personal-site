@@ -1,7 +1,5 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 interface BlogPost {
   id: number;
   title: string;
@@ -10,26 +8,21 @@ interface BlogPost {
   readTime: string;
   category: string;
 }
-
 const Blog = () => {
-  const blogPosts: BlogPost[] = [
-    {
-      id: 1,
-      title: "Building Scalable React Applications",
-      excerpt: "Best practices and patterns for creating maintainable React apps that can grow with your team and user base.",
-      date: "Dec 15, 2024",
-      readTime: "5 min read",
-      category: "React"
-    }
-  ];
-
-  return (
-    <section id="blog" className="py-32 bg-white dark:bg-slate-800 relative transition-colors duration-300">
+  const blogPosts: BlogPost[] = [{
+    id: 1,
+    title: "Building Scalable React Applications",
+    excerpt: "Best practices and patterns for creating maintainable React apps that can grow with your team and user base.",
+    date: "Dec 15, 2024",
+    readTime: "5 min read",
+    category: "React"
+  }];
+  return <section id="blog" className="py-32 bg-white dark:bg-slate-800 relative transition-colors duration-300">
       <div className="absolute inset-0 bg-gradient-to-br from-cyan-50/50 to-blue-50/30 dark:from-pink-900/10 dark:to-blue-900/10"></div>
       
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative">
         <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-6xl font-light text-gray-900 dark:text-white mb-6 tracking-tight">
+          <h2 className="text-5xl font-light mb-6 tracking-tight text-zinc-600 md:text-6xl">
             Latest Insights
           </h2>
           <div className="w-24 h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-white/30 to-transparent mx-auto mb-8"></div>
@@ -39,13 +32,9 @@ const Blog = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogPosts.map((post, index) => (
-            <Link
-              key={post.id}
-              to={`/blog/${post.id}`}
-              className="block group"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
+          {blogPosts.map((post, index) => <Link key={post.id} to={`/blog/${post.id}`} className="block group" style={{
+          animationDelay: `${index * 100}ms`
+        }}>
               <article className="bg-white/80 dark:bg-slate-700/50 backdrop-blur-sm rounded-3xl p-8 hover:shadow-2xl hover:shadow-cyan-500/10 dark:hover:shadow-pink-500/20 transition-all duration-500 cursor-pointer h-full border border-gray-100/50 dark:border-white/10 hover:border-cyan-200/50 dark:hover:border-pink-400/30 hover:scale-[1.02] group">
                 <div className="mb-6">
                   <span className="inline-block bg-gradient-to-r from-cyan-100 to-blue-100 dark:from-pink-900/50 dark:to-blue-900/50 text-cyan-800 dark:text-pink-200 text-sm font-medium px-4 py-2 rounded-full tracking-wide">
@@ -68,8 +57,7 @@ const Blog = () => {
 
                 <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 dark:from-pink-500/10 dark:to-blue-500/10 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </article>
-            </Link>
-          ))}
+            </Link>)}
         </div>
 
         <div className="text-center mt-16">
@@ -79,8 +67,6 @@ const Blog = () => {
           </button>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Blog;
