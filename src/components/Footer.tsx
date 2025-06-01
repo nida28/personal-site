@@ -9,12 +9,12 @@ const Footer = () => {
   const isAboutPage = location.pathname === '/about';
 
   return (
-    <footer className={`py-12 border-t border-gray-200/50 dark:border-slate-700/50 ${
-      isMainPage 
-        ? 'bg-gray-50 dark:bg-slate-800' 
-        : isAboutPage
-        ? 'bg-transparent'
-        : 'bg-white dark:bg-slate-900'
+    <footer className={`py-12 ${
+      isAboutPage 
+        ? 'bg-transparent' 
+        : isMainPage 
+        ? 'bg-gray-50 dark:bg-slate-800 border-t border-gray-200/50 dark:border-slate-700/50' 
+        : 'bg-white dark:bg-slate-900 border-t border-gray-200/50 dark:border-slate-700/50'
     }`}>
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="flex flex-col items-center space-y-8">
@@ -47,7 +47,11 @@ const Footer = () => {
           </div>
 
           {/* Copyright with balanced spacing */}
-          <div className="pt-4 border-t border-gray-200/50 dark:border-slate-600/50 w-full text-center">
+          <div className={`pt-4 w-full text-center ${
+            isAboutPage 
+              ? '' 
+              : 'border-t border-gray-200/50 dark:border-slate-600/50'
+          }`}>
             <p className="text-gray-600 dark:text-gray-400 font-light text-sm">
               © 2025 Nidaa Fatimah Mungloo
             </p>
