@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 
 const Projects = () => {
   const projects = [
@@ -8,10 +8,8 @@ const Projects = () => {
       id: 1,
       title: "BGB Bot",
       description: "An intelligent bot solution built with modern technologies. Features automated responses, smart integrations, and seamless user interactions.",
-      image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=500&h=300&fit=crop",
-      tech: ["React", "Node.js", "AI/ML", "MongoDB"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com"
+      image: "/lovable-uploads/58aa78a2-4988-4ff6-a51a-fdfeafa16e35.png",
+      liveUrl: "https://example.com"
     }
   ];
 
@@ -52,35 +50,15 @@ const Projects = () => {
                     {project.description}
                   </p>
                   
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {project.tech.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-3 py-1 text-sm bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 rounded-full font-medium"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                  
                   <div className="flex gap-4">
                     <a
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-medium transition-colors duration-300"
+                      className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 dark:bg-blue-600 dark:hover:bg-blue-700 text-white rounded-xl font-medium transition-colors duration-300"
                     >
                       <ExternalLink className="w-4 h-4" />
                       Live Demo
-                    </a>
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 border border-gray-300 dark:border-white/20 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/5 rounded-xl font-medium transition-colors duration-300"
-                    >
-                      <Github className="w-4 h-4" />
-                      Code
                     </a>
                   </div>
                 </div>

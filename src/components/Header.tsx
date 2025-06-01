@@ -32,7 +32,7 @@ const Header = () => {
             <img 
               src={theme === 'dark' ? '/lovable-uploads/8e5d5b3b-7430-4ac6-8fa6-2c0c657a8cea.png' : '/lovable-uploads/52ee9a92-ee9b-4ee5-96a0-1f65c76586c6.png'}
               alt="Nidaa Logo"
-              className="h-12 w-auto transition-transform duration-300 group-hover:scale-105"
+              className="h-16 w-auto transition-transform duration-300 group-hover:scale-105"
             />
           </div>
 
@@ -43,23 +43,15 @@ const Header = () => {
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
-                  className="relative px-6 py-3 text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white text-sm font-medium tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/5 group"
+                  className="relative px-6 py-3 text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white text-sm font-normal tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/5 group"
                 >
                   {section.charAt(0).toUpperCase() + section.slice(1)}
-                  <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-px bg-gradient-to-r from-blue-500 to-blue-600 dark:from-pink-400 dark:to-blue-400 group-hover:w-4 transition-all duration-300"></div>
+                  <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-px bg-gradient-to-r from-cyan-500 to-blue-600 dark:from-pink-400 dark:to-blue-400 group-hover:w-4 transition-all duration-300"></div>
                 </button>
               ))}
               
-              <div className="ml-4 pl-4 border-l border-gray-300/60 dark:border-white/10 flex items-center gap-4">
+              <div className="ml-4 pl-4 border-l border-gray-300/60 dark:border-white/10 flex items-center">
                 <ThemeToggle />
-                <a
-                  href="https://github.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-6 py-3 text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white text-sm font-medium tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/5 flex items-center gap-2"
-                >
-                  GitHub
-                </a>
               </div>
             </div>
           </div>
@@ -84,21 +76,11 @@ const Header = () => {
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
-                  className="block w-full text-left px-4 py-3 text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white text-base font-medium tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/5"
+                  className="block w-full text-left px-4 py-3 text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white text-base font-normal tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/5"
                 >
                   {section.charAt(0).toUpperCase() + section.slice(1)}
                 </button>
               ))}
-              <div className="pt-4 mt-4 border-t border-gray-300/60 dark:border-white/10">
-                <a
-                  href="https://github.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white text-base font-medium tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/5"
-                >
-                  GitHub
-                </a>
-              </div>
             </div>
           </div>
         )}
