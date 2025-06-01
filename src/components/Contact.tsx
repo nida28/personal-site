@@ -3,14 +3,13 @@ import React from 'react';
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-40 bg-gradient-to-br from-gray-50 via-blue-50/40 to-blue-50/30 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 text-gray-700 dark:text-white relative overflow-hidden transition-colors duration-300">
-      {/* Dark mode background - matching hero */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 dark:block hidden"></div>
+    <section id="contact" className="py-40 bg-gradient-to-br from-gray-50 via-blue-50/40 to-blue-50/30 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800 text-gray-700 dark:text-white relative overflow-hidden transition-colors duration-300">
+      {/* Dark mode background - matching hero exactly */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-900 to-slate-800 dark:block hidden"></div>
       
-      {/* Enhanced ambient background elements - matching hero aesthetic */}
-      <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-gradient-to-r from-purple-600/20 to-blue-600/15 rounded-full blur-3xl dark:block hidden"></div>
-      <div className="absolute bottom-1/4 left-1/4 w-[500px] h-[500px] bg-gradient-to-r from-blue-600/15 to-purple-600/20 rounded-full blur-3xl dark:block hidden"></div>
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-r from-purple-500/12 to-fuchsia-500/18 rounded-full blur-3xl dark:block hidden"></div>
+      {/* Subtle fuchsia ambient lighting for dark mode - matching hero */}
+      <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] bg-gradient-to-r from-fuchsia-600/20 to-purple-600/25 rounded-full blur-3xl dark:block hidden"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-gradient-to-r from-purple-600/25 to-fuchsia-600/20 rounded-full blur-3xl dark:block hidden"></div>
       
       {/* Light mode gradient background - matching hero */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-blue-50/40 to-blue-50/40 dark:hidden block"></div>
