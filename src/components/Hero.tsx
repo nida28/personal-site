@@ -1,8 +1,10 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTheme } from '../contexts/ThemeContext';
 
 const Hero = () => {
+  const { theme } = useTheme();
+  
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -36,7 +38,11 @@ const Hero = () => {
               </span>
               <span className="block font-normal">
                 <span 
-                  className="bg-gradient-to-r from-pink-300 via-pink-500 to-fuchsia-700 bg-clip-text text-transparent"
+                  className={`bg-clip-text text-transparent ${
+                    theme === 'dark' 
+                      ? 'bg-gradient-to-r from-pink-300 via-pink-500 to-fuchsia-700' 
+                      : 'bg-gradient-to-r from-blue-400 via-blue-600 to-blue-800'
+                  }`}
                   style={{
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
