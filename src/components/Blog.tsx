@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -22,20 +21,18 @@ const Blog = () => {
   }];
 
   return (
-    <section id="blog" className="py-32 bg-gradient-to-br from-gray-50 via-blue-50/40 to-blue-50/30 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800 text-gray-700 dark:text-white relative overflow-hidden transition-colors duration-300">
-      {/* Dark mode background - matching hero exactly */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-900 to-slate-800 dark:block hidden"></div>
-      
-      {/* Subtle fuchsia ambient lighting for dark mode - matching hero */}
-      <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] bg-gradient-to-r from-fuchsia-600/20 to-purple-600/25 rounded-full blur-3xl dark:block hidden"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-gradient-to-r from-purple-600/25 to-fuchsia-600/20 rounded-full blur-3xl dark:block hidden"></div>
-      
-      {/* Light mode gradient background - matching hero */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-blue-50/40 to-blue-50/40 dark:hidden block"></div>
-      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-gradient-to-r from-blue-200/20 to-cyan-200/25 rounded-full blur-3xl dark:hidden block"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-gradient-to-r from-blue-200/25 to-cyan-200/30 rounded-full blur-3xl dark:hidden block"></div>
-      
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+    <section className="py-20 bg-gradient-to-br from-gray-50/95 via-blue-50/20 to-blue-50/15 dark:from-slate-900/98 dark:via-slate-900/95 dark:to-slate-800/90 text-gray-700 dark:text-white relative overflow-x-hidden">
+      {/* Dark mode ambient lighting */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-slate-900/90 to-slate-800/85 dark:block hidden"></div>
+
+      {/* Subtle ambient lighting */}
+      <div className="absolute top-1/4 left-1/4 max-w-[500px] w-full h-[500px] bg-gradient-to-r from-blue-600/5 to-cyan-600/10 rounded-full blur-[120px] dark:from-fuchsia-600/20 dark:to-purple-600/25"></div>
+      <div className="absolute bottom-1/4 right-1/4 max-w-[500px] w-full h-[500px] bg-gradient-to-r from-cyan-600/10 to-blue-600/5 rounded-full blur-[120px] dark:from-purple-600/25 dark:to-fuchsia-600/20"></div>
+
+      {/* Base gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-50/95 via-blue-50/30 to-blue-50/25 dark:hidden block"></div>
+
+      <div className="container mx-auto relative z-10">
         <div className="text-center mb-20">
           <h2 className="text-5xl font-light mb-6 tracking-tight text-gray-500 dark:text-white md:text-6xl">
             Latest Insights
@@ -47,24 +44,23 @@ const Blog = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogPosts.map((post, index) => <Link key={post.id} to={`/blog/${post.id}`} className="block group" style={{
-          animationDelay: `${index * 100}ms`
-        }}>
-              <article className="bg-white/80 dark:bg-slate-700/50 backdrop-blur-sm rounded-3xl p-8 hover:shadow-2xl hover:shadow-cyan-500/10 dark:hover:shadow-pink-500/20 transition-all duration-500 cursor-pointer h-full border border-gray-100/50 dark:border-white/10 hover:border-cyan-200/50 dark:hover:border-pink-400/30 hover:scale-[1.02] group">
+          {blogPosts.map((post, index) => (
+            <Link key={post.id} to={`/blog/${post.id}`} className="block group">
+              <article className="relative bg-white/80 dark:bg-slate-700/50 backdrop-blur-sm rounded-3xl p-8 hover:shadow-2xl hover:shadow-cyan-500/10 dark:hover:shadow-pink-500/20 transition-all duration-500 cursor-pointer h-full border border-gray-100/50 dark:border-white/10 hover:border-cyan-200/50 dark:hover:border-pink-400/30 hover:scale-[1.02] group">
                 <div className="mb-6">
                   <span className="inline-block bg-gradient-to-r from-cyan-100 to-blue-100 dark:from-pink-900/50 dark:to-blue-900/50 text-cyan-800 dark:text-pink-200 text-sm font-medium px-4 py-2 rounded-full tracking-wide">
                     {post.category}
                   </span>
                 </div>
-                
+
                 <h3 className="text-2xl font-light text-gray-900 dark:text-white mb-4 group-hover:text-cyan-600 dark:group-hover:text-pink-400 transition-colors duration-300 leading-tight tracking-wide">
                   {post.title}
                 </h3>
-                
+
                 <p className="text-gray-600 dark:text-white mb-6 leading-relaxed font-light">
                   {post.excerpt}
                 </p>
-                
+
                 <div className="flex justify-between items-center text-sm text-gray-500 dark:text-gray-300 font-light tracking-wide">
                   <span>{post.date}</span>
                   <span>{post.readTime}</span>
@@ -72,7 +68,8 @@ const Blog = () => {
 
                 <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 dark:from-pink-500/10 dark:to-blue-500/10 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </article>
-            </Link>)}
+            </Link>
+          ))}
         </div>
 
         <div className="text-center mt-16">

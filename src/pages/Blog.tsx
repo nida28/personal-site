@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
@@ -26,14 +25,14 @@ const Blog = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white dark:bg-slate-900 transition-colors duration-300">
+    <div className="min-h-screen bg-white dark:bg-slate-900 transition-colors duration-300 overflow-x-hidden">
       <Header />
-      
+
       {/* Background elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-cyan-50/50 to-blue-50/30 dark:from-pink-900/10 dark:to-blue-900/10"></div>
 
-      <main className="relative z-10 pt-32 pb-20">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+      <main className="relative z-10 pt-32 pb-11">
+        <div className="container mx-auto">
           {/* Page Header */}
           <div className="text-center mb-20">
             <h1 className="text-5xl md:text-6xl font-light text-gray-500 dark:text-white mb-6 tracking-tight">
@@ -47,29 +46,24 @@ const Blog = () => {
 
           {/* Blog Posts Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map((post, index) => (
-              <Link
-                key={post.id}
-                to={`/blog/${post.id}`}
-                className="block group"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <article className="bg-white/80 dark:bg-slate-700/50 backdrop-blur-sm rounded-3xl p-8 hover:shadow-2xl hover:shadow-cyan-500/10 dark:hover:shadow-pink-500/20 transition-all duration-500 cursor-pointer h-full border border-gray-100/50 dark:border-white/10 hover:border-cyan-200/50 dark:hover:border-pink-400/30 hover:scale-[1.02] group">
+            {blogPosts.map((post) => (
+              <Link key={post.id} to={`/blog/${post.id}`} className="block group">
+                <article className="relative bg-white/80 dark:bg-slate-700/50 backdrop-blur-sm rounded-3xl p-8 hover:shadow-2xl hover:shadow-cyan-500/10 dark:hover:shadow-pink-500/20 transition-all duration-500 cursor-pointer h-full border border-gray-100/50 dark:border-white/10 hover:border-cyan-200/50 dark:hover:border-pink-400/30 hover:scale-[1.02] group">
                   <div className="mb-6">
                     <span className="inline-block bg-gradient-to-r from-cyan-100 to-blue-100 dark:from-pink-900/50 dark:to-blue-900/50 text-cyan-800 dark:text-pink-200 text-sm font-medium px-4 py-2 rounded-full tracking-wide">
                       {post.category}
                     </span>
                   </div>
-                  
+
                   <h3 className="text-2xl font-light text-gray-900 dark:text-white mb-4 group-hover:text-cyan-600 dark:group-hover:text-pink-400 transition-colors duration-300 leading-tight tracking-wide">
                     {post.title}
                   </h3>
-                  
-                  <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed font-light">
+
+                  <p className="text-gray-600 dark:text-white mb-6 leading-relaxed font-light">
                     {post.excerpt}
                   </p>
-                  
-                  <div className="flex justify-between items-center text-sm text-gray-500 dark:text-gray-400 font-light tracking-wide">
+
+                  <div className="flex justify-between items-center text-sm text-gray-500 dark:text-gray-300 font-light tracking-wide">
                     <span>{post.date}</span>
                     <span>{post.readTime}</span>
                   </div>

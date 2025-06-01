@@ -1,75 +1,53 @@
-
 import React from 'react';
 import { Github, Linkedin, Mail } from 'lucide-react';
 import { useLocation } from 'react-router-dom';
-import { Separator } from './ui/separator';
 
 const Footer = () => {
   const location = useLocation();
   const isMainPage = location.pathname === '/';
-  const isAboutPage = location.pathname === '/about';
 
   return (
-    <footer className={`${
-      isAboutPage 
-        ? 'bg-blue-50/60 dark:bg-blue-900/40' 
-        : isMainPage 
-        ? 'bg-gray-50 dark:bg-slate-800 border-t border-gray-200/50 dark:border-slate-700/50' 
-        : 'bg-white dark:bg-slate-900 border-t border-gray-200/50 dark:border-slate-700/50'
-    }`}>
-      {/* Separator above footer for About page - removed padding */}
-      {isAboutPage && (
-        <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
-          <Separator className="bg-gray-200/50 dark:bg-slate-600/50" />
-        </div>
-      )}
-      
-      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-        <div className="flex flex-col items-center space-y-4 pt-8">
-          {/* Social media icons */}
-          <div className="flex flex-col sm:flex-row items-center gap-8 pb-4">
-            <a
-              href="https://linkedin.com/in/yourusername"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 dark:from-pink-600 dark:to-blue-600 dark:hover:from-pink-700 dark:hover:to-blue-700 text-white rounded-lg font-medium transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl"
-            >
-              <Linkedin className="w-6 h-6" />
-            </a>
-            
-            <a
-              href="https://github.com/yourusername"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 dark:from-pink-600 dark:to-blue-600 dark:hover:from-pink-700 dark:hover:to-blue-700 text-white rounded-lg font-medium transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl"
-            >
-              <Github className="w-6 h-6" />
-            </a>
+    <footer className={`${isMainPage
+      ? 'bg-gray-50 dark:bg-slate-800'
+      : 'bg-white dark:bg-slate-900'
+      }`}>
+      <div className="pt-8 border-t border-gray-200/30 dark:border-white/10 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
+        <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+          <div className="flex flex-col items-center space-y-6">
+            {/* Social media icons */}
+            <div className="flex flex-col sm:flex-row items-center gap-8">
+              <a
+                href="https://linkedin.com/in/yourusername"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 dark:from-pink-600 dark:to-blue-600 dark:hover:from-pink-700 dark:hover:to-blue-700 text-white rounded-lg font-medium transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl"
+              >
+                <Linkedin className="w-6 h-6" />
+              </a>
 
-            <a
-              href="mailto:your.email@example.com"
-              className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 dark:from-pink-600 dark:to-blue-600 dark:hover:from-pink-700 dark:hover:to-blue-700 text-white rounded-lg font-medium transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl"
-            >
-              <Mail className="w-6 h-6" />
-            </a>
-          </div>
+              <a
+                href="https://github.com/yourusername"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 dark:from-pink-600 dark:to-blue-600 dark:hover:from-pink-700 dark:hover:to-blue-700 text-white rounded-lg font-medium transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl"
+              >
+                <Github className="w-6 h-6" />
+              </a>
 
-          {/* Separator for About page - kept for existing styling */}
-          {isAboutPage && (
-            <div className="w-full">
-              <Separator className="bg-gray-200/50 dark:bg-slate-600/50" />
+              <a
+                href="mailto:your.email@example.com"
+                className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 dark:from-pink-600 dark:to-blue-600 dark:hover:from-pink-700 dark:hover:to-blue-700 text-white rounded-lg font-medium transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl"
+              >
+                <Mail className="w-6 h-6" />
+              </a>
             </div>
-          )}
 
-          {/* Copyright with reduced bottom padding */}
-          <div className={`w-full text-center ${
-            isAboutPage 
-              ? 'pt-8 pb-4' 
-              : 'pt-8 pb-4 border-t border-gray-200/50 dark:border-slate-600/50'
-          }`}>
-            <p className="text-gray-600 dark:text-gray-400 font-light text-sm">
-              © 2025 Nidaa Fatimah Mungloo
-            </p>
+            {/* Copyright text */}
+            <div className="w-full text-center pb-4">
+              <p className="text-gray-600 dark:text-gray-400 font-light text-sm">
+                © 2025 Nidaa Fatimah Mungloo
+              </p>
+            </div>
           </div>
         </div>
       </div>

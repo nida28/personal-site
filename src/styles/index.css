@@ -1,0 +1,11 @@
+/* Base styles and resets */
+@import './base.css';
+
+/* Theme variables and dark mode */
+@import './theme.css';
+
+/* Component-specific styles */
+@import './components.css';
+
+/* Utility classes and animations */
+@import './utilities.css';

@@ -1,5 +1,5 @@
-
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import * as React from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
 
 type Theme = 'light' | 'dark';
 
@@ -10,6 +10,22 @@ interface ThemeContextType {
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
+// Initialize theme before React hydration
+const initializeTheme = (): Theme => {
+  if (typeof window === 'undefined') return 'dark';
+
+  const savedTheme = localStorage.getItem('theme') as Theme;
+  if (savedTheme) {
+    document.documentElement.dataset.theme = savedTheme;
+    return savedTheme;
+  }
+
+  const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const initialTheme = isDark ? 'dark' : 'light';
+  document.documentElement.dataset.theme = initialTheme;
+  return initialTheme;
+};
+
 export const useTheme = () => {
   const context = useContext(ThemeContext);
   if (context === undefined) {
@@ -19,32 +35,23 @@ export const useTheme = () => {
 };
 
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [theme, setTheme] = useState<Theme>(() => {
-    if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('theme') as Theme;
-      if (saved) {
-        return saved;
-      }
-      // Check browser preference
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    }
-    return 'dark';
-  });
+  const [theme, setTheme] = useState<Theme>(initializeTheme);
 
   useEffect(() => {
+    const root = document.documentElement;
+    root.dataset.theme = theme;
     localStorage.setItem('theme', theme);
+
     if (theme === 'dark') {
-      document.documentElement.classList.add('dark');
+      root.classList.add('dark');
     } else {
-      document.documentElement.classList.remove('dark');
+      root.classList.remove('dark');
     }
   }, [theme]);
 
   useEffect(() => {
-    // Listen for changes in browser preference
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
     const handleChange = (e: MediaQueryListEvent) => {
-      // Only auto-switch if user hasn't manually set a preference
       const saved = localStorage.getItem('theme');
       if (!saved) {
         setTheme(e.matches ? 'dark' : 'light');

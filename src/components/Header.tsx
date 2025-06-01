@@ -1,7 +1,7 @@
-import React from 'react';
+import * as React from 'react';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import ThemeToggle from './ThemeToggle';
 import { useTheme } from '../contexts/ThemeContext';
 
@@ -9,25 +9,13 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { theme } = useTheme();
   const location = useLocation();
+  const navigate = useNavigate();
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-  const scrollToSection = (sectionId: string) => {
-    if (location.pathname !== '/') {
-      window.location.href = `/#${sectionId}`;
-      return;
-    }
-    
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-    setIsMenuOpen(false);
-  };
-
   const scrollToHome = () => {
     if (location.pathname !== '/') {
-      window.location.href = '/';
+      navigate('/');
       return;
     }
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -40,7 +28,7 @@ const Header = () => {
         <div className="flex justify-between items-center h-24">
           <div className="flex-shrink-0 group cursor-pointer relative" onClick={scrollToHome}>
             <div className="relative">
-              <img 
+              <img
                 src={theme === 'dark' ? '/lovable-uploads/8e5d5b3b-7430-4ac6-8fa6-2c0c657a8cea.png' : '/lovable-uploads/52ee9a92-ee9b-4ee5-96a0-1f65c76586c6.png'}
                 alt="Nidaa Logo - Click to go home"
                 className="h-20 w-auto transition-all duration-300 group-hover:scale-105 group-hover:brightness-110 relative z-10"
@@ -62,7 +50,7 @@ const Header = () => {
                   boxShadow: 'none',
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.boxShadow = theme === 'dark' 
+                  e.currentTarget.style.boxShadow = theme === 'dark'
                     ? '0 0 20px rgba(236, 72, 153, 0.3), 0 0 40px rgba(236, 72, 153, 0.2), 0 0 60px rgba(236, 72, 153, 0.1)'
                     : '0 0 20px rgba(6, 182, 212, 0.3), 0 0 40px rgba(6, 182, 212, 0.2), 0 0 60px rgba(6, 182, 212, 0.1)';
                 }}
@@ -72,7 +60,7 @@ const Header = () => {
               >
                 Blog
               </Link>
-              
+
               <Link
                 to="/projects"
                 className="relative px-8 py-4 text-gray-500 dark:text-white hover:text-gray-700 dark:hover:text-white text-xl font-light tracking-wide transition-all duration-300 rounded-xl hover:bg-gray-100/70 dark:hover:bg-white/10 group hover:shadow-lg dark:hover:shadow-white/5 border border-transparent hover:border-cyan-200/30 dark:hover:border-pink-400/30 hover:shadow-cyan-500/10 dark:hover:shadow-pink-500/20"
@@ -80,7 +68,7 @@ const Header = () => {
                   boxShadow: 'none',
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.boxShadow = theme === 'dark' 
+                  e.currentTarget.style.boxShadow = theme === 'dark'
                     ? '0 0 20px rgba(236, 72, 153, 0.3), 0 0 40px rgba(236, 72, 153, 0.2), 0 0 60px rgba(236, 72, 153, 0.1)'
                     : '0 0 20px rgba(6, 182, 212, 0.3), 0 0 40px rgba(6, 182, 212, 0.2), 0 0 60px rgba(6, 182, 212, 0.1)';
                 }}
@@ -90,7 +78,7 @@ const Header = () => {
               >
                 Projects
               </Link>
-              
+
               <Link
                 to="/about"
                 className="relative px-8 py-4 text-gray-500 dark:text-white hover:text-gray-700 dark:hover:text-white text-xl font-light tracking-wide transition-all duration-300 rounded-xl hover:bg-gray-100/70 dark:hover:bg-white/10 group hover:shadow-lg dark:hover:shadow-white/5 border border-transparent hover:border-cyan-200/30 dark:hover:border-pink-400/30 hover:shadow-cyan-500/10 dark:hover:shadow-pink-500/20"
@@ -98,7 +86,7 @@ const Header = () => {
                   boxShadow: 'none',
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.boxShadow = theme === 'dark' 
+                  e.currentTarget.style.boxShadow = theme === 'dark'
                     ? '0 0 20px rgba(236, 72, 153, 0.3), 0 0 40px rgba(236, 72, 153, 0.2), 0 0 60px rgba(236, 72, 153, 0.1)'
                     : '0 0 20px rgba(6, 182, 212, 0.3), 0 0 40px rgba(6, 182, 212, 0.2), 0 0 60px rgba(6, 182, 212, 0.1)';
                 }}
@@ -108,7 +96,7 @@ const Header = () => {
               >
                 About
               </Link>
-              
+
               <div className="ml-4 pl-4 border-l border-gray-300/50 dark:border-slate-600/40 flex items-center">
                 <ThemeToggle />
               </div>
@@ -138,7 +126,7 @@ const Header = () => {
               >
                 Blog
               </Link>
-              
+
               <Link
                 to="/projects"
                 onClick={() => setIsMenuOpen(false)}
@@ -146,7 +134,7 @@ const Header = () => {
               >
                 Projects
               </Link>
-              
+
               <Link
                 to="/about"
                 onClick={() => setIsMenuOpen(false)}

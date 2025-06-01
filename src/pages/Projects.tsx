@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ExternalLink } from 'lucide-react';
 import Header from '../components/Header';
@@ -6,21 +5,21 @@ import Footer from '../components/Footer';
 
 const Projects = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-cyan-50 dark:from-slate-900 dark:via-gray-900 dark:to-black">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-cyan-50 dark:from-slate-900 dark:via-gray-900 dark:to-black overflow-x-hidden">
       <Header />
-      
+
       {/* Enhanced ambient background elements - Dark mode - Positioned to avoid cutoff */}
       <div className="fixed inset-0 bg-gradient-to-br from-pink-900/20 via-blue-900/30 to-purple-900/20 dark:block hidden pointer-events-none"></div>
-      <div className="fixed top-1/2 left-1/4 w-[400px] h-[400px] bg-gradient-to-r from-pink-500/10 to-blue-500/10 rounded-full blur-3xl dark:block hidden pointer-events-none"></div>
-      <div className="fixed bottom-1/3 right-1/4 w-[400px] h-[400px] bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-full blur-3xl dark:block hidden pointer-events-none"></div>
-      
+      <div className="fixed top-1/2 left-1/4 max-w-[400px] w-full h-[400px] bg-gradient-to-r from-pink-500/10 to-blue-500/10 rounded-full blur-3xl dark:block hidden pointer-events-none"></div>
+      <div className="fixed bottom-1/3 right-1/4 max-w-[400px] w-full h-[400px] bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-full blur-3xl dark:block hidden pointer-events-none"></div>
+
       {/* Enhanced ambient background elements - Light mode - Positioned to avoid cutoff */}
       <div className="fixed inset-0 bg-gradient-to-br from-cyan-100/40 via-blue-100/30 to-blue-200/40 dark:hidden block pointer-events-none"></div>
-      <div className="fixed top-1/2 left-1/4 w-[400px] h-[400px] bg-gradient-to-r from-cyan-200/20 to-blue-300/20 rounded-full blur-3xl dark:hidden block pointer-events-none"></div>
-      <div className="fixed bottom-1/3 right-1/4 w-[400px] h-[400px] bg-gradient-to-r from-blue-300/20 to-blue-400/20 rounded-full blur-3xl dark:hidden block pointer-events-none"></div>
+      <div className="fixed top-1/2 left-1/4 max-w-[400px] w-full h-[400px] bg-gradient-to-r from-cyan-200/20 to-blue-300/20 rounded-full blur-3xl dark:hidden block pointer-events-none"></div>
+      <div className="fixed bottom-1/3 right-1/4 max-w-[400px] w-full h-[400px] bg-gradient-to-r from-blue-300/20 to-blue-400/20 rounded-full blur-3xl dark:hidden block pointer-events-none"></div>
 
       <main className="relative z-10 pt-32 pb-20">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="container mx-auto">
           {/* Page Header */}
           <div className="text-center mb-12">
             <h1 className="text-5xl md:text-6xl font-light text-gray-500 dark:text-white mb-6 tracking-tight">
@@ -63,17 +62,17 @@ const Projects = () => {
 
                 <div className="space-y-6 text-gray-600 dark:text-gray-300 leading-relaxed">
                   <p className="text-lg font-light">
-                    BGB Bot is an intelligent automation solution built with cutting-edge technologies. 
-                    This project represents a sophisticated approach to bot development, combining 
+                    BGB Bot is an intelligent automation solution built with cutting-edge technologies.
+                    This project represents a sophisticated approach to bot development, combining
                     artificial intelligence with seamless user interactions.
                   </p>
                   <p className="text-lg font-light">
-                    The bot features automated response systems, smart integrations with various 
-                    platforms, and advanced natural language processing capabilities. It's designed 
+                    The bot features automated response systems, smart integrations with various
+                    platforms, and advanced natural language processing capabilities. It's designed
                     to handle complex queries while maintaining a conversational and intuitive interface.
                   </p>
                   <p className="text-lg font-light">
-                    Built with scalability in mind, the architecture supports real-time processing, 
+                    Built with scalability in mind, the architecture supports real-time processing,
                     machine learning adaptations, and seamless deployment across multiple environments.
                   </p>
                 </div>
