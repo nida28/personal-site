@@ -18,7 +18,7 @@ const Footer = () => {
         : 'bg-white dark:bg-slate-900 border-t border-gray-200/50 dark:border-slate-700/50'
     }`}>
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-        <div className="flex flex-col items-center space-y-4 pt-4">
+        <div className="flex flex-col items-center space-y-4 pt-8">
           {/* Social media icons */}
           <div className="flex flex-col sm:flex-row items-center gap-8">
             <a
@@ -55,7 +55,7 @@ const Footer = () => {
           )}
 
           {/* Copyright with symmetric padding */}
-          <div className={`pt-6 pb-6 w-full text-center ${
+          <div className={`pt-8 pb-8 w-full text-center ${
             isAboutPage 
               ? '' 
               : 'border-t border-gray-200/50 dark:border-slate-600/50'
