@@ -34,7 +34,17 @@ const Hero = () => {
               <span className="text-gray-800 dark:text-white block mb-4">
                 Hi, I'm
               </span>
-              <span className="bg-gradient-to-r from-fuchsia-500 via-purple-500 via-blue-500 to-cyan-400 dark:from-fuchsia-400 dark:via-purple-500 dark:via-blue-500 dark:to-cyan-400 bg-clip-text text-transparent font-normal block bg-[length:200%_200%] animate-[gradient_6s_ease-in-out_infinite]">
+              <span 
+                className="font-normal block"
+                style={{
+                  background: 'linear-gradient(90deg, #d946ef 0%, #a855f7 25%, #3b82f6 50%, #06b6d4 75%, #22d3ee 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                  backgroundSize: '300% 100%',
+                  animation: 'gradient-shift 4s ease-in-out infinite'
+                }}
+              >
                 Nidaa
               </span>
             </h1>
@@ -63,6 +73,13 @@ const Hero = () => {
           </div>
         </div>
       </div>
+      
+      <style jsx>{`
+        @keyframes gradient-shift {
+          0%, 100% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+        }
+      `}</style>
     </section>
   );
 };
