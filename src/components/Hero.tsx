@@ -33,7 +33,7 @@ const Hero = () => {
               <span className="text-gray-600 dark:text-white block mb-4">
                 Hi, I'm
               </span>
-              <span className="bg-gradient-to-r from-cyan-600 via-blue-700 to-purple-700 dark:from-white dark:via-pink-100 dark:to-fuchsia-200 bg-clip-text text-transparent font-normal block">
+              <span className="bg-gradient-to-r from-cyan-600 via-blue-700 to-purple-700 dark:from-cyan-400 dark:via-blue-500 dark:to-fuchsia-500 bg-clip-text text-transparent font-normal block">
                 Nidaa
               </span>
             </h1>
