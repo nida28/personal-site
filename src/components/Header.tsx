@@ -52,7 +52,7 @@ const Header = () => {
             <div className="flex items-center space-x-1">
               <Link
                 to="/projects"
-                className="relative px-6 py-3 text-gray-800 hover:text-gray-900 dark:text-gray-200 dark:hover:text-white text-sm font-medium tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/5 group"
+                className="relative px-6 py-3 text-gray-800 hover:text-gray-900 dark:text-gray-200 dark:hover:text-white text-base font-normal tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/5 group"
               >
                 Projects
                 <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-px bg-gradient-to-r from-cyan-500 to-blue-600 dark:from-pink-400 dark:to-fuchsia-400 group-hover:w-4 transition-all duration-300"></div>
@@ -60,7 +60,7 @@ const Header = () => {
               
               <Link
                 to="/blog"
-                className="relative px-6 py-3 text-gray-800 hover:text-gray-900 dark:text-gray-200 dark:hover:text-white text-sm font-medium tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/5 group"
+                className="relative px-6 py-3 text-gray-800 hover:text-gray-900 dark:text-gray-200 dark:hover:text-white text-base font-normal tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/5 group"
               >
                 Blog
                 <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-px bg-gradient-to-r from-cyan-500 to-blue-600 dark:from-pink-400 dark:to-fuchsia-400 group-hover:w-4 transition-all duration-300"></div>
@@ -68,7 +68,7 @@ const Header = () => {
               
               <Link
                 to="/about"
-                className="relative px-6 py-3 text-gray-800 hover:text-gray-900 dark:text-gray-200 dark:hover:text-white text-sm font-medium tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/5 group"
+                className="relative px-6 py-3 text-gray-800 hover:text-gray-900 dark:text-gray-200 dark:hover:text-white text-base font-normal tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/5 group"
               >
                 About
                 <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-px bg-gradient-to-r from-cyan-500 to-blue-600 dark:from-pink-400 dark:to-fuchsia-400 group-hover:w-4 transition-all duration-300"></div>
@@ -99,7 +99,7 @@ const Header = () => {
               <Link
                 to="/projects"
                 onClick={() => setIsMenuOpen(false)}
-                className="block w-full text-left px-4 py-3 text-gray-800 hover:text-gray-900 dark:text-gray-200 dark:hover:text-white text-base font-medium tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/5"
+                className="block w-full text-left px-4 py-3 text-gray-800 hover:text-gray-900 dark:text-gray-200 dark:hover:text-white text-base font-normal tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/5"
               >
                 Projects
               </Link>
@@ -107,7 +107,7 @@ const Header = () => {
               <Link
                 to="/blog"
                 onClick={() => setIsMenuOpen(false)}
-                className="block w-full text-left px-4 py-3 text-gray-800 hover:text-gray-900 dark:text-gray-200 dark:hover:text-white text-base font-medium tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/5"
+                className="block w-full text-left px-4 py-3 text-gray-800 hover:text-gray-900 dark:text-gray-200 dark:hover:text-white text-base font-normal tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/5"
               >
                 Blog
               </Link>
@@ -115,7 +115,7 @@ const Header = () => {
               <Link
                 to="/about"
                 onClick={() => setIsMenuOpen(false)}
-                className="block w-full text-left px-4 py-3 text-gray-800 hover:text-gray-900 dark:text-gray-200 dark:hover:text-white text-base font-medium tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/5"
+                className="block w-full text-left px-4 py-3 text-gray-800 hover:text-gray-900 dark:text-gray-200 dark:hover:text-white text-base font-normal tracking-wide transition-all duration-300 rounded-lg hover:bg-gray-100/70 dark:hover:bg-white/5"
               >
                 About
               </Link>
