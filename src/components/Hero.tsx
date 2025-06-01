@@ -31,18 +31,14 @@ const Hero = () => {
       <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 text-center relative z-10">
         <div className="animate-fade-in space-y-12">
           <div className="space-y-8">
-            <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-light tracking-tight leading-[0.85]">
-              <span className="block mb-4 text-gray-500 dark:text-gray-400 text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
-                Hi, I'm
-              </span>
-              <span className="block font-normal">
-                <span className={`bg-clip-text text-transparent ${theme === 'dark' ? 'bg-gradient-to-r from-pink-300 via-pink-500 to-fuchsia-700' : 'bg-gradient-to-r from-blue-400 via-blue-600 to-blue-800'}`} style={{
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text'
-                }}>
-                  Nidaa
-                </span>
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light tracking-tight leading-[1.1]">
+              <span className="text-gray-500 dark:text-gray-400">Hi, I'm </span>
+              <span className={`bg-clip-text text-transparent ${theme === 'dark' ? 'bg-gradient-to-r from-pink-300 via-pink-500 to-fuchsia-700' : 'bg-gradient-to-r from-blue-400 via-blue-600 to-blue-800'}`} style={{
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text'
+              }}>
+                Nidaa
               </span>
             </h1>
             <div className="w-32 h-px bg-gradient-to-r from-transparent via-gray-400 dark:via-white/30 to-transparent mx-auto"></div>
