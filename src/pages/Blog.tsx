@@ -22,22 +22,6 @@ const Blog = () => {
       date: "Dec 15, 2024",
       readTime: "5 min read",
       category: "React"
-    },
-    {
-      id: 2,
-      title: "The Art of Clean Code",
-      excerpt: "Exploring principles and techniques that make code more readable, maintainable, and enjoyable to work with.",
-      date: "Dec 10, 2024",
-      readTime: "7 min read",
-      category: "Best Practices"
-    },
-    {
-      id: 3,
-      title: "Modern CSS Techniques",
-      excerpt: "Dive into the latest CSS features and how they can improve your web development workflow and user experience.",
-      date: "Dec 5, 2024",
-      readTime: "4 min read",
-      category: "CSS"
     }
   ];
 
