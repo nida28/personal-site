@@ -2,9 +2,9 @@
 import React from 'react';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
-import About from '../components/About';
 import Projects from '../components/Projects';
 import Blog from '../components/Blog';
+import About from '../components/About';
 import Contact from '../components/Contact';
 
 const Index = () => {
@@ -12,9 +12,9 @@ const Index = () => {
     <div className="min-h-screen bg-white dark:bg-slate-900 transition-colors duration-300">
       <Header />
       <Hero />
-      <About />
       <Projects />
       <Blog />
+      <About />
       <Contact />
     </div>
   );

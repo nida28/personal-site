@@ -1,11 +1,13 @@
 
 import React from 'react';
-import { Circle, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import ThemeToggle from './ThemeToggle';
+import { useTheme } from '../contexts/ThemeContext';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { theme } = useTheme();
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -17,28 +19,34 @@ const Header = () => {
     setIsMenuOpen(false);
   };
 
+  const scrollToHome = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setIsMenuOpen(false);
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-slate-900/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
       <nav className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="flex justify-between items-center h-20">
-          <div className="flex-shrink-0 group">
-            <h1 className="text-xl font-light text-white tracking-wide flex items-center gap-2">
-              <Circle className="w-2 h-2 fill-blue-400 text-blue-400" />
-              DevName
-            </h1>
+          <div className="flex-shrink-0 group cursor-pointer" onClick={scrollToHome}>
+            <img 
+              src={theme === 'dark' ? '/lovable-uploads/8e5d5b3b-7430-4ac6-8fa6-2c0c657a8cea.png' : '/lovable-uploads/52ee9a92-ee9b-4ee5-96a0-1f65c76586c6.png'}
+              alt="Nidaa Logo"
+              className="h-12 w-auto transition-transform duration-300 group-hover:scale-105"
+            />
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="flex items-center space-x-1">
-              {['home', 'about', 'projects', 'blog', 'contact'].map((section) => (
+              {['projects', 'blog', 'about'].map((section) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
                   className="relative px-6 py-3 text-gray-300 hover:text-white text-sm font-light tracking-wide transition-all duration-300 rounded-lg hover:bg-white/5 group"
                 >
                   {section.charAt(0).toUpperCase() + section.slice(1)}
-                  <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-px bg-gradient-to-r from-blue-400 to-purple-400 group-hover:w-4 transition-all duration-300"></div>
+                  <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-px bg-gradient-to-r from-pink-400 to-blue-400 group-hover:w-4 transition-all duration-300"></div>
                 </button>
               ))}
               
@@ -50,7 +58,6 @@ const Header = () => {
                   rel="noopener noreferrer"
                   className="px-6 py-3 text-gray-300 hover:text-white text-sm font-light tracking-wide transition-all duration-300 rounded-lg hover:bg-white/5 flex items-center gap-2"
                 >
-                  <Circle className="w-4 h-4" />
                   GitHub
                 </a>
               </div>
@@ -73,7 +80,7 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden border-t border-white/10 bg-slate-900/95 backdrop-blur-xl">
             <div className="px-4 py-6 space-y-2">
-              {['home', 'about', 'projects', 'blog', 'contact'].map((section) => (
+              {['projects', 'blog', 'about'].map((section) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
@@ -89,7 +96,6 @@ const Header = () => {
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 px-4 py-3 text-gray-300 hover:text-white text-base font-light tracking-wide transition-all duration-300 rounded-lg hover:bg-white/5"
                 >
-                  <Circle className="w-4 h-4" />
                   GitHub
                 </a>
               </div>

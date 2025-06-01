@@ -12,19 +12,19 @@ const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-gray-900 to-black text-white relative overflow-hidden">
       {/* Ambient background elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 via-purple-600/5 to-emerald-600/5"></div>
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-pink-600/5 via-blue-600/5 to-cyan-600/5"></div>
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-pink-500/10 to-blue-500/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-full blur-3xl"></div>
       
       <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 text-center relative z-10">
         <div className="animate-fade-in space-y-8">
           <div className="space-y-6">
             <h1 className="text-6xl md:text-8xl font-light mb-6 tracking-tight">
-              <span className="bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
-                Hi, I'm a
+              <span className="bg-gradient-to-r from-white via-pink-100 to-white bg-clip-text text-transparent">
+                Hi, I'm Nidaa
               </span>
               <br />
-              <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-emerald-400 bg-clip-text text-transparent font-normal">
+              <span className="bg-gradient-to-r from-pink-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent font-normal">
                 Developer
               </span>
             </h1>
@@ -32,17 +32,17 @@ const Hero = () => {
           </div>
           
           <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-light tracking-wide">
-            I craft digital experiences with clean code and creative solutions. 
-            Welcome to my corner of the internet.
+            Welcome to my corner of the internet where I share my thoughts, 
+            projects, and journey as a developer.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center pt-8">
             <button
               onClick={() => scrollToSection('about')}
-              className="group relative px-8 py-4 bg-white/10 hover:bg-white/15 backdrop-blur-sm border border-white/20 hover:border-white/30 text-white rounded-xl font-medium transition-all duration-300 transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/20"
+              className="group relative px-8 py-4 bg-white/10 hover:bg-white/15 backdrop-blur-sm border border-white/20 hover:border-white/30 text-white rounded-xl font-medium transition-all duration-300 transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-pink-500/20"
             >
               <span className="relative z-10">Learn More</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-pink-600/20 to-blue-600/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </button>
             
             <button
