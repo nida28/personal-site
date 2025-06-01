@@ -18,16 +18,6 @@ const Footer = () => {
             </a>
 
             <a
-              href="https://github.com/yourusername"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors duration-300"
-            >
-              <Github className="w-5 h-5" />
-              <span className="font-medium">GitHub</span>
-            </a>
-            
-            <a
               href="https://linkedin.com/in/yourusername"
               target="_blank"
               rel="noopener noreferrer"
@@ -35,6 +25,16 @@ const Footer = () => {
             >
               <Linkedin className="w-5 h-5" />
               <span className="font-medium">LinkedIn</span>
+            </a>
+            
+            <a
+              href="https://github.com/yourusername"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors duration-300"
+            >
+              <Github className="w-5 h-5" />
+              <span className="font-medium">GitHub</span>
             </a>
           </div>
 

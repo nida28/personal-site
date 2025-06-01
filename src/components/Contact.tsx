@@ -41,18 +41,6 @@ const Contact = () => {
             </a>
 
             <a
-              href="https://github.com/yourusername"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative px-10 py-5 bg-white/20 hover:bg-gradient-to-r hover:from-cyan-100/30 hover:via-blue-100/30 hover:to-purple-100/40 dark:bg-white/8 dark:hover:bg-gradient-to-r dark:hover:from-blue-500/20 dark:hover:via-purple-500/25 dark:hover:to-fuchsia-500/30 backdrop-blur-sm border border-gray-300/50 hover:border-gray-400/60 dark:border-white/15 dark:hover:border-white/25 text-gray-800 dark:text-white rounded-2xl font-medium transition-all duration-300 transform hover:scale-[1.02] hover:shadow-xl tracking-wide text-lg"
-            >
-              <span className="relative z-10 flex items-center gap-2">
-                <Github className="w-5 h-5" />
-                GitHub
-              </span>
-            </a>
-
-            <a
               href="https://linkedin.com/in/yourusername"
               target="_blank"
               rel="noopener noreferrer"
@@ -61,6 +49,18 @@ const Contact = () => {
               <span className="relative z-10 flex items-center gap-2">
                 <Linkedin className="w-5 h-5" />
                 LinkedIn
+              </span>
+            </a>
+
+            <a
+              href="https://github.com/yourusername"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative px-10 py-5 bg-white/20 hover:bg-gradient-to-r hover:from-cyan-100/30 hover:via-blue-100/30 hover:to-purple-100/40 dark:bg-white/8 dark:hover:bg-gradient-to-r dark:hover:from-blue-500/20 dark:hover:via-purple-500/25 dark:hover:to-fuchsia-500/30 backdrop-blur-sm border border-gray-300/50 hover:border-gray-400/60 dark:border-white/15 dark:hover:border-white/25 text-gray-800 dark:text-white rounded-2xl font-medium transition-all duration-300 transform hover:scale-[1.02] hover:shadow-xl tracking-wide text-lg"
+            >
+              <span className="relative z-10 flex items-center gap-2">
+                <Github className="w-5 h-5" />
+                GitHub
               </span>
             </a>
           </div>

@@ -22,15 +22,25 @@ const Blog = () => {
   }];
 
   return (
-    <section id="blog" className="py-32 bg-white dark:bg-slate-800 relative transition-colors duration-300">
-      <div className="absolute inset-0 bg-gradient-to-br from-cyan-50/50 to-blue-50/30 dark:from-pink-900/10 dark:to-blue-900/10"></div>
+    <section id="blog" className="py-32 bg-gradient-to-br from-gray-50 via-blue-50/40 to-blue-50/30 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800 text-gray-700 dark:text-white relative overflow-hidden transition-colors duration-300">
+      {/* Dark mode background - matching hero exactly */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-900 to-slate-800 dark:block hidden"></div>
       
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative">
+      {/* Subtle fuchsia ambient lighting for dark mode - matching hero */}
+      <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] bg-gradient-to-r from-fuchsia-600/20 to-purple-600/25 rounded-full blur-3xl dark:block hidden"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-gradient-to-r from-purple-600/25 to-fuchsia-600/20 rounded-full blur-3xl dark:block hidden"></div>
+      
+      {/* Light mode gradient background - matching hero */}
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-blue-50/40 to-blue-50/40 dark:hidden block"></div>
+      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-gradient-to-r from-blue-200/20 to-cyan-200/25 rounded-full blur-3xl dark:hidden block"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-gradient-to-r from-blue-200/25 to-cyan-200/30 rounded-full blur-3xl dark:hidden block"></div>
+      
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="text-center mb-20">
           <h2 className="text-5xl font-light mb-6 tracking-tight text-gray-500 dark:text-white md:text-6xl">
             Latest Insights
           </h2>
-          <div className="w-24 h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-white/30 to-transparent mx-auto mb-8"></div>
+          <div className="w-24 h-px bg-gradient-to-r from-transparent via-gray-400 dark:via-white/30 to-transparent mx-auto mb-8"></div>
           <p className="text-xl text-gray-600 dark:text-white max-w-3xl mx-auto font-light leading-relaxed">
             Thoughts, tutorials, and insights from my journey as a developer.
           </p>
