@@ -34,7 +34,7 @@ const Hero = () => {
               <span className="text-gray-800 dark:text-white block mb-4">
                 Hi, I'm
               </span>
-              <span className="bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-400 dark:from-cyan-400 dark:via-blue-500 dark:via-purple-500 dark:to-pink-500 bg-clip-text text-transparent font-normal block bg-[length:200%_200%] animate-[gradient_6s_ease-in-out_infinite]">
+              <span className="bg-gradient-to-r from-fuchsia-500 via-purple-500 via-blue-500 to-cyan-400 dark:from-fuchsia-400 dark:via-purple-500 dark:via-blue-500 dark:to-cyan-400 bg-clip-text text-transparent font-normal block bg-[length:200%_200%] animate-[gradient_6s_ease-in-out_infinite]">
                 Nidaa
               </span>
             </h1>
