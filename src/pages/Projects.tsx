@@ -9,15 +9,15 @@ const Projects = () => {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-cyan-50 dark:from-slate-900 dark:via-gray-900 dark:to-black">
       <Header />
       
-      {/* Enhanced ambient background elements - Dark mode */}
-      <div className="absolute inset-0 bg-gradient-to-br from-pink-900/20 via-blue-900/30 to-purple-900/20 dark:block hidden"></div>
-      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-gradient-to-r from-pink-500/15 to-blue-500/15 rounded-full blur-3xl dark:block hidden"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-gradient-to-r from-blue-500/15 to-cyan-500/15 rounded-full blur-3xl dark:block hidden"></div>
+      {/* Enhanced ambient background elements - Dark mode - Positioned to avoid cutoff */}
+      <div className="fixed inset-0 bg-gradient-to-br from-pink-900/20 via-blue-900/30 to-purple-900/20 dark:block hidden pointer-events-none"></div>
+      <div className="fixed top-1/2 left-1/4 w-[400px] h-[400px] bg-gradient-to-r from-pink-500/10 to-blue-500/10 rounded-full blur-3xl dark:block hidden pointer-events-none"></div>
+      <div className="fixed bottom-1/3 right-1/4 w-[400px] h-[400px] bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-full blur-3xl dark:block hidden pointer-events-none"></div>
       
-      {/* Enhanced ambient background elements - Light mode */}
-      <div className="absolute inset-0 bg-gradient-to-br from-cyan-100/40 via-blue-100/30 to-blue-200/40 dark:hidden block"></div>
-      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-gradient-to-r from-cyan-200/30 to-blue-300/30 rounded-full blur-3xl dark:hidden block"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-gradient-to-r from-blue-300/30 to-blue-400/30 rounded-full blur-3xl dark:hidden block"></div>
+      {/* Enhanced ambient background elements - Light mode - Positioned to avoid cutoff */}
+      <div className="fixed inset-0 bg-gradient-to-br from-cyan-100/40 via-blue-100/30 to-blue-200/40 dark:hidden block pointer-events-none"></div>
+      <div className="fixed top-1/2 left-1/4 w-[400px] h-[400px] bg-gradient-to-r from-cyan-200/20 to-blue-300/20 rounded-full blur-3xl dark:hidden block pointer-events-none"></div>
+      <div className="fixed bottom-1/3 right-1/4 w-[400px] h-[400px] bg-gradient-to-r from-blue-300/20 to-blue-400/20 rounded-full blur-3xl dark:hidden block pointer-events-none"></div>
 
       <main className="relative z-10 pt-32 pb-20">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">

@@ -19,32 +19,29 @@ const About = () => {
 
           <div className="flex justify-center">
             <div className="max-w-2xl space-y-8">
-              {/* Profile Photo Section */}
-              <div className="flex justify-center mb-8">
-                <div className="relative">
-                  <div className="w-64 h-64 rounded-3xl overflow-hidden border-4 border-white/20 dark:border-white/10 shadow-2xl">
-                    <img
-                      src="/lovable-uploads/a3a6eabd-1e64-410d-b301-5b26869cd2bb.png"
-                      alt="Nidaa"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="absolute -inset-2 bg-gradient-to-r from-cyan-500/30 via-blue-500/30 to-purple-500/30 dark:from-pink-500/40 dark:via-blue-500/40 dark:to-purple-500/40 rounded-3xl blur-xl opacity-70"></div>
+              {/* Profile Photo Section - Clean image without background interference */}
+              <div className="flex justify-center mb-8 relative z-20">
+                <div className="w-64 h-64 rounded-3xl overflow-hidden border-4 border-white/20 dark:border-white/10 shadow-2xl bg-white dark:bg-slate-800">
+                  <img
+                    src="/lovable-uploads/a3a6eabd-1e64-410d-b301-5b26869cd2bb.png"
+                    alt="Nidaa"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
 
               <div className="text-center relative">
-                {/* Enhanced ambient background elements - Dark mode - Moved down */}
-                <div className="absolute inset-0 top-20 bg-gradient-to-br from-pink-900/30 via-blue-900/40 to-purple-900/30 dark:block hidden"></div>
-                <div className="absolute top-32 right-1/4 w-96 h-96 bg-gradient-to-r from-pink-500/20 to-blue-500/20 rounded-full blur-3xl dark:block hidden"></div>
-                <div className="absolute top-40 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl dark:block hidden"></div>
-                <div className="absolute top-48 left-1/2 transform -translate-x-1/2 w-[600px] h-[600px] bg-gradient-to-r from-purple-500/15 to-pink-500/15 rounded-full blur-3xl dark:block hidden"></div>
+                {/* Enhanced ambient background elements - Dark mode - Positioned below the image */}
+                <div className="absolute inset-0 top-32 bg-gradient-to-br from-pink-900/30 via-blue-900/40 to-purple-900/30 dark:block hidden"></div>
+                <div className="absolute top-40 right-1/4 w-96 h-96 bg-gradient-to-r from-pink-500/20 to-blue-500/20 rounded-full blur-3xl dark:block hidden"></div>
+                <div className="absolute top-48 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl dark:block hidden"></div>
+                <div className="absolute top-56 left-1/2 transform -translate-x-1/2 w-[600px] h-[600px] bg-gradient-to-r from-purple-500/15 to-pink-500/15 rounded-full blur-3xl dark:block hidden"></div>
                 
-                {/* Enhanced ambient background elements - Light mode - Moved down */}
-                <div className="absolute inset-0 top-20 bg-gradient-to-br from-gray-50/80 via-gray-100/50 to-blue-50/30 dark:hidden block"></div>
-                <div className="absolute top-32 right-1/4 w-96 h-96 bg-gradient-to-r from-blue-200/20 to-cyan-200/20 rounded-full blur-3xl dark:hidden block"></div>
-                <div className="absolute top-40 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-200/20 to-blue-300/20 rounded-full blur-3xl dark:hidden block"></div>
-                <div className="absolute top-48 left-1/2 transform -translate-x-1/2 w-[600px] h-[600px] bg-gradient-to-r from-blue-100/20 to-cyan-100/20 rounded-full blur-3xl dark:hidden block"></div>
+                {/* Enhanced ambient background elements - Light mode - Positioned below the image */}
+                <div className="absolute inset-0 top-32 bg-gradient-to-br from-gray-50/80 via-gray-100/50 to-blue-50/30 dark:hidden block"></div>
+                <div className="absolute top-40 right-1/4 w-96 h-96 bg-gradient-to-r from-blue-200/20 to-cyan-200/20 rounded-full blur-3xl dark:hidden block"></div>
+                <div className="absolute top-48 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-200/20 to-blue-300/20 rounded-full blur-3xl dark:hidden block"></div>
+                <div className="absolute top-56 left-1/2 transform -translate-x-1/2 w-[600px] h-[600px] bg-gradient-to-r from-blue-100/20 to-cyan-100/20 rounded-full blur-3xl dark:hidden block"></div>
                 
                 <h2 className="text-3xl font-light text-gray-900 dark:text-white mb-6 tracking-wide relative z-10">My Story</h2>
                 <div className="space-y-6 text-gray-700 dark:text-gray-300 leading-relaxed relative z-10">
