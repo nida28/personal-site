@@ -26,7 +26,7 @@ const Blog = () => {
       
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative">
         <div className="text-center mb-20">
-          <h2 className="text-5xl font-light mb-6 tracking-tight text-gray-900 dark:text-white md:text-6xl">
+          <h2 className="text-5xl font-light mb-6 tracking-tight text-gray-500 dark:text-white md:text-6xl">
             Latest Insights
           </h2>
           <div className="w-24 h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-white/30 to-transparent mx-auto mb-8"></div>

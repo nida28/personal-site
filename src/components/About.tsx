@@ -12,7 +12,7 @@ const About = () => {
     <section id="about" className="py-32 bg-gray-50 dark:bg-slate-800 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-6xl font-light text-gray-900 dark:text-white mb-6 tracking-tight">
+          <h2 className="text-5xl md:text-6xl font-light text-gray-500 dark:text-white mb-6 tracking-tight">
             About Me
           </h2>
           <div className="w-24 h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-white/30 to-transparent mx-auto mb-8"></div>

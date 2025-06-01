@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const Contact = () => {
@@ -19,7 +18,7 @@ const Contact = () => {
       <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 text-center relative z-10">
         <div className="space-y-16">
           <div className="space-y-8">
-            <h2 className="text-6xl md:text-7xl font-light mb-8 tracking-tight text-gray-700 dark:text-white">Let's Connect</h2>
+            <h2 className="text-6xl md:text-7xl font-light mb-8 tracking-tight text-gray-500 dark:text-white">Let's Connect</h2>
             <div className="w-32 h-px bg-gradient-to-r from-transparent via-gray-400 dark:via-white/30 to-transparent mx-auto"></div>
           </div>
           
