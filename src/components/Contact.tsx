@@ -31,16 +31,6 @@ const Contact = () => {
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center pt-8">
             <a
-              href="mailto:your.email@example.com"
-              className="group relative px-10 py-5 bg-white/20 hover:bg-gradient-to-r hover:from-cyan-100/30 hover:via-blue-100/30 hover:to-purple-100/40 dark:bg-white/8 dark:hover:bg-gradient-to-r dark:hover:from-blue-500/20 dark:hover:via-purple-500/25 dark:hover:to-fuchsia-500/30 backdrop-blur-sm border border-gray-300/50 hover:border-gray-400/60 dark:border-white/15 dark:hover:border-white/25 text-gray-800 dark:text-white rounded-2xl font-medium transition-all duration-300 transform hover:scale-[1.02] hover:shadow-xl tracking-wide text-lg"
-            >
-              <span className="relative z-10 flex items-center gap-2">
-                <Mail className="w-5 h-5" />
-                Get In Touch
-              </span>
-            </a>
-
-            <a
               href="https://linkedin.com/in/yourusername"
               target="_blank"
               rel="noopener noreferrer"
@@ -48,7 +38,6 @@ const Contact = () => {
             >
               <span className="relative z-10 flex items-center gap-2">
                 <Linkedin className="w-5 h-5" />
-                LinkedIn
               </span>
             </a>
 
@@ -60,13 +49,21 @@ const Contact = () => {
             >
               <span className="relative z-10 flex items-center gap-2">
                 <Github className="w-5 h-5" />
-                GitHub
+              </span>
+            </a>
+
+            <a
+              href="mailto:your.email@example.com"
+              className="group relative px-10 py-5 bg-white/20 hover:bg-gradient-to-r hover:from-cyan-100/30 hover:via-blue-100/30 hover:to-purple-100/40 dark:bg-white/8 dark:hover:bg-gradient-to-r dark:hover:from-blue-500/20 dark:hover:via-purple-500/25 dark:hover:to-fuchsia-500/30 backdrop-blur-sm border border-gray-300/50 hover:border-gray-400/60 dark:border-white/15 dark:hover:border-white/25 text-gray-800 dark:text-white rounded-2xl font-medium transition-all duration-300 transform hover:scale-[1.02] hover:shadow-xl tracking-wide text-lg"
+            >
+              <span className="relative z-10 flex items-center gap-2">
+                <Mail className="w-5 h-5" />
               </span>
             </a>
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-gray-300 dark:border-white/10">
+        <div className="mt-16 pt-6 pb-2 border-t border-gray-300 dark:border-white/10">
           <p className="text-gray-600 dark:text-white font-light tracking-wide text-lg">
             © 2025 Nidaa Fatimah Mungloo
           </p>
