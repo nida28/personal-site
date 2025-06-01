@@ -45,9 +45,15 @@ const Projects = () => {
 
           {/* BGB Bot Project Details */}
           <div className="max-w-4xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
-              {/* Project Image */}
-              <div className="group relative">
+            {/* Top section with Badge and Image */}
+            <div className="flex items-start gap-8 mb-12">
+              <div className="flex-shrink-0">
+                <span className="inline-block bg-gradient-to-r from-cyan-100 to-blue-100 dark:from-pink-900/50 dark:to-blue-900/50 text-cyan-800 dark:text-pink-200 text-sm font-medium px-4 py-2 rounded-full tracking-wide">
+                  Bot Development
+                </span>
+              </div>
+              
+              <div className="group relative flex-1">
                 <div className="aspect-video overflow-hidden rounded-3xl shadow-2xl">
                   <img
                     src="/lovable-uploads/58aa78a2-4988-4ff6-a51a-fdfeafa16e35.png"
@@ -57,64 +63,61 @@ const Projects = () => {
                 </div>
                 <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 dark:from-pink-500/40 dark:to-blue-500/40 rounded-3xl blur opacity-30"></div>
               </div>
+            </div>
 
-              {/* Project Information */}
-              <div className="space-y-8">
-                <div>
-                  <span className="inline-block bg-gradient-to-r from-cyan-100 to-blue-100 dark:from-pink-900/50 dark:to-blue-900/50 text-cyan-800 dark:text-pink-200 text-sm font-medium px-4 py-2 rounded-full tracking-wide mb-6">
-                    Bot Development
-                  </span>
-                  <h2 className="text-4xl font-light text-gray-500 dark:text-white mb-6 tracking-wide">
-                    BGB Bot
-                  </h2>
-                </div>
+            {/* Project Information */}
+            <div className="space-y-8">
+              <div>
+                <h2 className="text-4xl font-light text-gray-500 dark:text-white mb-6 tracking-wide">
+                  BGB Bot
+                </h2>
+              </div>
 
-                <div className="space-y-6 text-gray-600 dark:text-gray-300 leading-relaxed">
-                  <p className="text-lg font-light">
-                    BGB Bot is an intelligent automation solution built with cutting-edge technologies. 
-                    This project represents a sophisticated approach to bot development, combining 
-                    artificial intelligence with seamless user interactions.
-                  </p>
-                  <p className="text-lg font-light">
-                    The bot features automated response systems, smart integrations with various 
-                    platforms, and advanced natural language processing capabilities. It's designed 
-                    to handle complex queries while maintaining a conversational and intuitive interface.
-                  </p>
-                  <p className="text-lg font-light">
-                    Built with scalability in mind, the architecture supports real-time processing, 
-                    machine learning adaptations, and seamless deployment across multiple environments.
-                  </p>
-                </div>
+              <div className="space-y-6 text-gray-600 dark:text-gray-300 leading-relaxed">
+                <p className="text-lg font-light">
+                  BGB Bot is an intelligent automation solution built with cutting-edge technologies. 
+                  This project represents a sophisticated approach to bot development, combining 
+                  artificial intelligence with seamless user interactions.
+                </p>
+                <p className="text-lg font-light">
+                  The bot features automated response systems, smart integrations with various 
+                  platforms, and advanced natural language processing capabilities. It's designed 
+                  to handle complex queries while maintaining a conversational and intuitive interface.
+                </p>
+                <p className="text-lg font-light">
+                  Built with scalability in mind, the architecture supports real-time processing, 
+                  machine learning adaptations, and seamless deployment across multiple environments.
+                </p>
+              </div>
 
-                {/* Technologies Used */}
-                <div>
-                  <h3 className="text-xl font-light text-gray-500 dark:text-white mb-4 tracking-wide">
-                    Technologies Used
-                  </h3>
-                  <div className="flex flex-wrap gap-3">
-                    {['React', 'TypeScript', 'Node.js', 'AI/ML', 'WebSocket', 'API Integration'].map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-4 py-2 bg-gray-100/80 dark:bg-slate-700/50 text-gray-700 dark:text-gray-300 text-sm rounded-xl font-light border border-gray-200/50 dark:border-white/10"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
+              {/* Technologies Used */}
+              <div>
+                <h3 className="text-xl font-light text-gray-500 dark:text-white mb-4 tracking-wide">
+                  Technologies Used
+                </h3>
+                <div className="flex flex-wrap gap-3">
+                  {['React', 'TypeScript', 'Node.js', 'AI/ML', 'WebSocket', 'API Integration'].map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-4 py-2 bg-gray-100/80 dark:bg-slate-700/50 text-gray-700 dark:text-gray-300 text-sm rounded-xl font-light border border-gray-200/50 dark:border-white/10"
+                    >
+                      {tech}
+                    </span>
+                  ))}
                 </div>
+              </div>
 
-                {/* Action Button */}
-                <div className="pt-6">
-                  <a
-                    href="https://example.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 dark:from-pink-600 dark:to-blue-600 dark:hover:from-pink-700 dark:hover:to-blue-700 text-white rounded-xl font-medium transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl"
-                  >
-                    <ExternalLink className="w-5 h-5" />
-                    View Live Demo
-                  </a>
-                </div>
+              {/* Action Button */}
+              <div className="pt-6">
+                <a
+                  href="https://example.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 dark:from-pink-600 dark:to-blue-600 dark:hover:from-pink-700 dark:hover:to-blue-700 text-white rounded-xl font-medium transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl"
+                >
+                  <ExternalLink className="w-5 h-5" />
+                  View Live Demo
+                </a>
               </div>
             </div>
           </div>
