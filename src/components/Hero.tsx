@@ -13,13 +13,13 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 via-blue-50/40 to-blue-50/30 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 text-gray-700 dark:text-white relative overflow-hidden">
-      {/* Dark mode background - deep navy/purple like the reference */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 dark:block hidden"></div>
+    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 via-blue-50/40 to-blue-50/30 dark:from-black dark:via-slate-950 dark:to-black text-gray-700 dark:text-white relative overflow-hidden">
+      {/* Dark mode background - much darker */}
+      <div className="absolute inset-0 bg-gradient-to-br from-black via-slate-950 to-gray-900 dark:block hidden"></div>
       
-      {/* Subtle purple/blue ambient lighting for dark mode */}
-      <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] bg-gradient-to-r from-purple-600/20 to-blue-600/15 rounded-full blur-3xl dark:block hidden"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-gradient-to-r from-blue-600/15 to-purple-600/20 rounded-full blur-3xl dark:block hidden"></div>
+      {/* Subtle purple/blue ambient lighting for dark mode - more subtle */}
+      <div className="absolute top-1/4 left-1/4 w-[300px] h-[300px] bg-gradient-to-r from-purple-600/15 to-blue-600/10 rounded-full blur-3xl dark:block hidden"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-[300px] h-[300px] bg-gradient-to-r from-blue-600/10 to-purple-600/15 rounded-full blur-3xl dark:block hidden"></div>
       
       {/* Light mode gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-blue-50/40 to-blue-50/40 dark:hidden block"></div>
@@ -34,7 +34,7 @@ const Hero = () => {
               <span className="text-gray-800 dark:text-white block mb-4">
                 Hi, I'm
               </span>
-              <span className="bg-gradient-to-r from-blue-400 via-blue-600 to-blue-800 dark:from-fuchsia-500 dark:via-pink-400 dark:to-purple-500 bg-clip-text text-transparent font-normal block">
+              <span className="bg-gradient-to-r from-blue-400 via-blue-600 to-blue-800 dark:from-cyan-400 dark:via-fuchsia-500 dark:to-purple-600 bg-clip-text text-transparent font-normal block">
                 Nidaa
               </span>
             </h1>
