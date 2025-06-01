@@ -78,7 +78,6 @@ const Header = () => {
                 }}
               >
                 Blog
-                <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-0 h-px bg-gradient-to-r from-cyan-500 to-blue-600 dark:from-fuchsia-400 dark:to-purple-400 group-hover:w-4 transition-all duration-300"></div>
               </Link>
               
               <Link
@@ -97,7 +96,6 @@ const Header = () => {
                 }}
               >
                 Projects
-                <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-0 h-px bg-gradient-to-r from-cyan-500 to-blue-600 dark:from-fuchsia-400 dark:to-purple-400 group-hover:w-4 transition-all duration-300"></div>
               </Link>
               
               <Link
@@ -116,7 +114,6 @@ const Header = () => {
                 }}
               >
                 About
-                <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-0 h-px bg-gradient-to-r from-cyan-500 to-blue-600 dark:from-fuchsia-400 dark:to-purple-400 group-hover:w-4 transition-all duration-300"></div>
               </Link>
               
               <div className="ml-4 pl-4 border-l border-gray-300/50 dark:border-slate-600/40 flex items-center">
