@@ -36,7 +36,7 @@ const Hero = () => {
               </span>
               <span className="block font-normal">
                 <span 
-                  className="bg-gradient-to-r from-fuchsia-400 via-fuchsia-500 to-purple-500 bg-clip-text text-transparent"
+                  className="bg-gradient-to-r from-pink-300 via-pink-500 to-fuchsia-700 bg-clip-text text-transparent"
                   style={{
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
