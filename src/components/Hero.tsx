@@ -34,17 +34,7 @@ const Hero = () => {
               <span className="text-gray-800 dark:text-white block mb-4">
                 Hi, I'm
               </span>
-              <span 
-                className="font-normal block"
-                style={{
-                  background: 'linear-gradient(90deg, #d946ef 0%, #a855f7 25%, #3b82f6 50%, #06b6d4 75%, #22d3ee 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
-                  backgroundSize: '300% 100%',
-                  animation: 'gradient-shift 4s ease-in-out infinite'
-                }}
-              >
+              <span className="bg-gradient-to-r from-fuchsia-500 to-pink-500 bg-clip-text text-transparent font-normal block">
                 Nidaa
               </span>
             </h1>
@@ -73,13 +63,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      
-      <style jsx>{`
-        @keyframes gradient-shift {
-          0%, 100% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-        }
-      `}</style>
     </section>
   );
 };
