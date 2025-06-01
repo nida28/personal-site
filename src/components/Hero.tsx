@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -33,8 +34,17 @@ const Hero = () => {
               <span className="text-gray-800 dark:text-white block mb-4">
                 Hi, I'm
               </span>
-              <span className="bg-gradient-to-r from-fuchsia-400 via-fuchsia-500 to-purple-500 bg-clip-text text-transparent font-normal block">
-                Nidaa
+              <span className="block font-normal">
+                <span 
+                  className="bg-gradient-to-r from-fuchsia-400 via-fuchsia-500 to-purple-500 bg-clip-text text-transparent"
+                  style={{
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text'
+                  }}
+                >
+                  Nidaa
+                </span>
               </span>
             </h1>
             <div className="w-32 h-px bg-gradient-to-r from-transparent via-gray-400 dark:via-white/30 to-transparent mx-auto"></div>
