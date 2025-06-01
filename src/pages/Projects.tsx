@@ -5,27 +5,6 @@ import { ExternalLink, ArrowLeft } from 'lucide-react';
 import Header from '../components/Header';
 
 const Projects = () => {
-  const projects = [
-    {
-      id: 1,
-      title: "BGB Bot",
-      description: "An intelligent bot solution built with modern technologies. Features automated responses, smart integrations, and seamless user interactions.",
-      image: "/lovable-uploads/58aa78a2-4988-4ff6-a51a-fdfeafa16e35.png",
-      liveUrl: "https://example.com",
-      technologies: ["React", "TypeScript", "Node.js", "AI/ML"],
-      category: "Bot Development"
-    },
-    {
-      id: 2,
-      title: "Portfolio Website",
-      description: "A modern, responsive portfolio website built with React and Tailwind CSS. Features dark mode, smooth animations, and optimized performance.",
-      image: "/lovable-uploads/a3a6eabd-1e64-410d-b301-5b26869cd2bb.png",
-      liveUrl: "https://example.com",
-      technologies: ["React", "Tailwind CSS", "TypeScript", "Vite"],
-      category: "Web Development"
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-cyan-50 dark:from-slate-900 dark:via-gray-900 dark:to-black">
       <Header />
@@ -55,73 +34,89 @@ const Projects = () => {
 
           {/* Page Header */}
           <div className="text-center mb-20">
-            <h1 className="text-5xl md:text-6xl font-light text-gray-900 dark:text-white mb-6 tracking-tight">
-              My Projects
+            <h1 className="text-5xl md:text-6xl font-light text-gray-500 dark:text-white mb-6 tracking-tight">
+              Featured Project
             </h1>
             <div className="w-24 h-px bg-gradient-to-r from-transparent via-gray-400 dark:via-white/30 to-transparent mx-auto mb-8"></div>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto font-light leading-relaxed">
-              A collection of my latest work and creative solutions.
+              Showcasing my latest work and creative solution.
             </p>
           </div>
 
-          {/* Projects Grid */}
-          <div className="grid md:grid-cols-2 gap-12">
-            {projects.map((project, index) => (
-              <div
-                key={project.id}
-                className="group relative bg-white/80 dark:bg-slate-800/50 backdrop-blur-sm rounded-3xl overflow-hidden shadow-sm dark:shadow-2xl border border-gray-200/50 dark:border-white/10 hover:shadow-2xl dark:hover:shadow-blue-500/20 transition-all duration-500 hover:scale-[1.02]"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="aspect-video overflow-hidden">
+          {/* BGB Bot Project Details */}
+          <div className="max-w-4xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              {/* Project Image */}
+              <div className="group relative">
+                <div className="aspect-video overflow-hidden rounded-3xl shadow-2xl">
                   <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    src="/lovable-uploads/58aa78a2-4988-4ff6-a51a-fdfeafa16e35.png"
+                    alt="BGB Bot"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                
-                <div className="p-8">
-                  <div className="mb-4">
-                    <span className="inline-block bg-gradient-to-r from-cyan-100 to-blue-100 dark:from-pink-900/50 dark:to-blue-900/50 text-cyan-800 dark:text-pink-200 text-sm font-medium px-4 py-2 rounded-full tracking-wide">
-                      {project.category}
-                    </span>
-                  </div>
+                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 dark:from-pink-500/40 dark:to-blue-500/40 rounded-3xl blur opacity-30"></div>
+              </div>
 
-                  <h3 className="text-2xl font-light text-gray-900 dark:text-white mb-4 tracking-wide">
-                    {project.title}
-                  </h3>
-                  
-                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6 font-light">
-                    {project.description}
+              {/* Project Information */}
+              <div className="space-y-8">
+                <div>
+                  <span className="inline-block bg-gradient-to-r from-cyan-100 to-blue-100 dark:from-pink-900/50 dark:to-blue-900/50 text-cyan-800 dark:text-pink-200 text-sm font-medium px-4 py-2 rounded-full tracking-wide mb-6">
+                    Bot Development
+                  </span>
+                  <h2 className="text-4xl font-light text-gray-500 dark:text-white mb-6 tracking-wide">
+                    BGB Bot
+                  </h2>
+                </div>
+
+                <div className="space-y-6 text-gray-600 dark:text-gray-300 leading-relaxed">
+                  <p className="text-lg font-light">
+                    BGB Bot is an intelligent automation solution built with cutting-edge technologies. 
+                    This project represents a sophisticated approach to bot development, combining 
+                    artificial intelligence with seamless user interactions.
                   </p>
+                  <p className="text-lg font-light">
+                    The bot features automated response systems, smart integrations with various 
+                    platforms, and advanced natural language processing capabilities. It's designed 
+                    to handle complex queries while maintaining a conversational and intuitive interface.
+                  </p>
+                  <p className="text-lg font-light">
+                    Built with scalability in mind, the architecture supports real-time processing, 
+                    machine learning adaptations, and seamless deployment across multiple environments.
+                  </p>
+                </div>
 
-                  <div className="mb-6">
-                    <div className="flex flex-wrap gap-2">
-                      {project.technologies.map((tech) => (
-                        <span
-                          key={tech}
-                          className="px-3 py-1 bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 text-sm rounded-lg font-light"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  
-                  <div className="flex gap-4">
-                    <a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 dark:from-pink-600 dark:to-blue-600 dark:hover:from-pink-700 dark:hover:to-blue-700 text-white rounded-xl font-medium transition-all duration-300 transform hover:scale-[1.02]"
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                      Live Demo
-                    </a>
+                {/* Technologies Used */}
+                <div>
+                  <h3 className="text-xl font-light text-gray-500 dark:text-white mb-4 tracking-wide">
+                    Technologies Used
+                  </h3>
+                  <div className="flex flex-wrap gap-3">
+                    {['React', 'TypeScript', 'Node.js', 'AI/ML', 'WebSocket', 'API Integration'].map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-4 py-2 bg-gray-100/80 dark:bg-slate-700/50 text-gray-700 dark:text-gray-300 text-sm rounded-xl font-light border border-gray-200/50 dark:border-white/10"
+                      >
+                        {tech}
+                      </span>
+                    ))}
                   </div>
                 </div>
+
+                {/* Action Button */}
+                <div className="pt-6">
+                  <a
+                    href="https://example.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 dark:from-pink-600 dark:to-blue-600 dark:hover:from-pink-700 dark:hover:to-blue-700 text-white rounded-xl font-medium transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl"
+                  >
+                    <ExternalLink className="w-5 h-5" />
+                    View Live Demo
+                  </a>
+                </div>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </main>

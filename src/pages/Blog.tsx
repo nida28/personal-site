@@ -47,7 +47,7 @@ const Blog = () => {
 
           {/* Page Header */}
           <div className="text-center mb-20">
-            <h1 className="text-5xl md:text-6xl font-light text-gray-900 dark:text-white mb-6 tracking-tight">
+            <h1 className="text-5xl md:text-6xl font-light text-gray-500 dark:text-white mb-6 tracking-tight">
               Latest Insights
             </h1>
             <div className="w-24 h-px bg-gradient-to-r from-transparent via-gray-400 dark:via-white/30 to-transparent mx-auto mb-8"></div>
