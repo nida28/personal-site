@@ -8,7 +8,6 @@ const Footer = () => {
   const location = useLocation();
   const isMainPage = location.pathname === '/';
   const isAboutPage = location.pathname === '/about';
-  const isBlogPage = location.pathname === '/blog';
 
   return (
     <footer className={`${
@@ -26,7 +25,7 @@ const Footer = () => {
       )}
       
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-        <div className={`flex flex-col items-center space-y-4 ${isBlogPage ? 'pt-4' : 'pt-8'}`}>
+        <div className="flex flex-col items-center space-y-4 pt-8">
           {/* Social media icons */}
           <div className="flex flex-col sm:flex-row items-center gap-8 pb-4">
             <a
