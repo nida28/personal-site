@@ -1,4 +1,4 @@
-# Nidaa Mungloo's Personal Website
+# Nidaa's Personal Website
 
 A modern, responsive personal website and portfolio built with React, TypeScript, and TailwindCSS. Visit the live site at [www.nidaamungloo.com](https://www.nidaamungloo.com).
 
@@ -106,9 +106,3 @@ The site is automatically deployed to GitHub Pages when changes are pushed to th
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Contact
-
-Nidaa Mungloo - [nidaa.mungloo@gmail.com](mailto:nidaa.mungloo@gmail.com)
-
-Project Link: [https://github.com/nida28/personal-site](https://github.com/nida28/personal-site)
