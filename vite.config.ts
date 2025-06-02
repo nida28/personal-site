@@ -2,6 +2,9 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
+import mdx from '@mdx-js/rollup';
+import remarkFrontmatter from 'remark-frontmatter';
+import remarkMdxFrontmatter from 'remark-mdx-frontmatter';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ command, mode }) => ({
@@ -10,6 +13,13 @@ export default defineConfig(({ command, mode }) => ({
     port: 8080,
   },
   plugins: [
+    mdx({
+      providerImportSource: "@mdx-js/react",
+      remarkPlugins: [
+        remarkFrontmatter,
+        [remarkMdxFrontmatter, { name: 'frontmatter' }]
+      ]
+    }),
     react(),
     mode === 'development' && componentTagger(),
   ].filter(Boolean),
@@ -18,5 +28,9 @@ export default defineConfig(({ command, mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  assetsInclude: ['**/*.md'],
   base: '/dev-haven-blog-link/',
+  optimizeDeps: {
+    include: ['@mdx-js/react'],
+  },
 }));

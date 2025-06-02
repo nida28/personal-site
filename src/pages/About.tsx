@@ -23,51 +23,53 @@ const About = () => {
           </div>
 
           {/* Newspaper-style layout */}
-          <div className="flex flex-col lg:flex-row gap-12 items-start pb-10">
-            {/* Profile Photo Section - Left aligned with higher z-index */}
-            <div className="flex-shrink-0 relative z-20">
-              <div className="w-64 h-64 rounded-3xl overflow-hidden border-4 border-white/20 dark:border-white/10 shadow-2xl bg-white dark:bg-slate-800">
-                <img
-                  src={`${import.meta.env.BASE_URL}a3a6eabd-1e64-410d-b301-5b26869cd2bb.png`}
-                  alt="Nidaa"
-                  className="w-full h-full object-cover"
-                />
-
-              </div>
-            </div>
-
-            {/* Text content flowing around image */}
-            <div className="flex-1 space-y-8">
-              <div>
-                <h2 className="text-3xl font-light text-gray-900 dark:text-white mb-6 tracking-wide">My Story</h2>
-                <div className="space-y-6 text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
-                  <p className="text-lg font-light">
-                    I'm a developer with a passion for building innovative web applications
-                    and sharing my thoughts through writing. This is my personal space where
-                    I document my journey, share insights, and showcase my side projects.
-                  </p>
-                  <p className="text-lg font-light">
-                    When I'm not coding, you can find me exploring new technologies,
-                    writing about my experiences, or working on creative projects that
-                    push the boundaries of what's possible on the web.
-                  </p>
-                  <p className="text-lg font-light">
-                    I believe in writing clean, efficient code and creating digital experiences
-                    that are not only functional but also beautiful and user-friendly.
-                    Welcome to my corner of the internet!
-                  </p>
-                  <p className="text-lg font-light">
-                    My approach to development focuses on understanding user needs and translating
-                    them into elegant solutions. I enjoy the challenge of solving complex problems
-                    while maintaining simplicity in design and functionality.
-                  </p>
-                  <p className="text-lg font-light">
-                    Through my work, I aim to bridge the gap between technical possibility and
-                    user experience, creating applications that not only work well but feel
-                    intuitive and enjoyable to use.
-                  </p>
+          <div className="max-w-4xl mx-auto">
+            <div className="relative">
+              {/* Profile Photo Section - Floating left */}
+              <div className="float-left mr-12 mb-8 relative z-20">
+                <div className="w-64 h-64 rounded-3xl overflow-hidden border-4 border-white/20 dark:border-white/10 shadow-2xl bg-white dark:bg-slate-800">
+                  <img
+                    src={`${import.meta.env.BASE_URL}a3a6eabd-1e64-410d-b301-5b26869cd2bb.png`}
+                    alt="Nidaa"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
+
+              {/* Text content flowing around image */}
+              <div className="space-y-8">
+                <div>
+                  <h2 className="text-3xl font-light text-gray-900 dark:text-white mb-6 tracking-wide">My Story</h2>
+                  <div className="space-y-6 text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+                    <p className="text-lg font-light">
+                      I'm a developer with a passion for building innovative web applications
+                      and sharing my thoughts through writing. This is my personal space where
+                      I document my journey, share insights, and showcase my side projects.
+                    </p>
+                    <p className="text-lg font-light">
+                      When I'm not coding, you can find me exploring new technologies,
+                      writing about my experiences, or working on creative projects that
+                      push the boundaries of what's possible on the web.
+                    </p>
+                    <p className="text-lg font-light">
+                      I believe in writing clean, efficient code and creating digital experiences
+                      that are not only functional but also beautiful and user-friendly.
+                      Welcome to my corner of the internet!
+                    </p>
+                    <p className="text-lg font-light">
+                      My approach to development focuses on understanding user needs and translating
+                      them into elegant solutions. I enjoy the challenge of solving complex problems
+                      while maintaining simplicity in design and functionality.
+                    </p>
+                    <p className="text-lg font-light pb-16">
+                      Through my work, I aim to bridge the gap between technical possibility and
+                      user experience, creating applications that not only work well but feel
+                      intuitive and enjoyable to use.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="clear-both"></div>
             </div>
           </div>
         </div>

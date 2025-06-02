@@ -1,7 +1,8 @@
 import React from 'react';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, Github } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { socialConfig } from '../config/social';
 
 const Projects = () => {
   return (
@@ -37,9 +38,6 @@ const Projects = () => {
             <div className="flex flex-col lg:flex-row gap-12 items-start">
               {/* Project Image Section - Left side */}
               <div className="flex-shrink-0 relative z-20">
-                <span className="inline-block bg-gradient-to-r from-cyan-100 to-blue-100 dark:from-pink-900/50 dark:to-blue-900/50 text-cyan-800 dark:text-pink-200 text-sm font-medium px-4 py-2 rounded-full tracking-wide mb-6">
-                  Bot Development
-                </span>
                 <div className="group relative">
                   <div className="w-64 h-64 overflow-hidden rounded-3xl shadow-2xl">
                     <img
@@ -77,33 +75,27 @@ const Projects = () => {
                   </p>
                 </div>
 
-                {/* Technologies Used */}
-                <div>
-                  <h3 className="text-xl font-light text-gray-500 dark:text-white mb-4 tracking-wide">
-                    Technologies Used
-                  </h3>
-                  <div className="flex flex-wrap gap-3">
-                    {['React', 'TypeScript', 'Node.js', 'AI/ML', 'WebSocket', 'API Integration'].map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-4 py-2 bg-gray-100/80 dark:bg-slate-700/50 text-gray-700 dark:text-gray-300 text-sm rounded-xl font-light border border-gray-200/50 dark:border-white/10"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Action Button */}
-                <div className="pt-6">
+                {/* Project Links */}
+                <div className="flex gap-6 pt-8">
                   <a
-                    href="https://example.com"
+                    href={socialConfig.bgbBot.demo.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 dark:from-pink-600 dark:to-blue-600 dark:hover:from-pink-700 dark:hover:to-blue-700 text-white rounded-xl font-medium transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl"
+                    aria-label={socialConfig.bgbBot.demo.label}
+                    className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 dark:from-pink-600 dark:to-blue-600 dark:hover:from-pink-700 dark:hover:to-blue-700 text-white rounded-xl font-medium transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl"
                   >
                     <ExternalLink className="w-5 h-5" />
-                    View Live Demo
+                    <span>Live Demo</span>
+                  </a>
+                  <a
+                    href={socialConfig.bgbBot.sourceCode.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={socialConfig.bgbBot.sourceCode.label}
+                    className="flex items-center gap-2 px-6 py-3 bg-white dark:bg-slate-800 hover:bg-gray-50 dark:hover:bg-slate-700 text-gray-800 dark:text-white rounded-xl font-medium transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl border border-gray-200 dark:border-white/10"
+                  >
+                    <Github className="w-5 h-5" />
+                    <span>Source Code</span>
                   </a>
                 </div>
               </div>

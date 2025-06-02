@@ -1,7 +1,7 @@
-
 import React from 'react';
-import { ExternalLink, ArrowRight } from 'lucide-react';
+import { ExternalLink, ArrowRight, Github } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { socialConfig } from '../config/social';
 
 const Projects = () => {
   const projects = [
@@ -11,10 +11,10 @@ const Projects = () => {
       description:
         "An intelligent bot solution built with modern technologies. Features automated responses, smart integrations, and seamless user interactions.",
       image: `${import.meta.env.BASE_URL}58aa78a2-4988-4ff6-a51a-fdfeafa16e35.png`,
-      liveUrl: "https://example.com",
+      demoUrl: socialConfig.bgbBot.demo.url,
+      sourceUrl: socialConfig.bgbBot.sourceCode.url,
     },
   ];
-
 
   return (
     <section id="projects" className="py-32 bg-gray-50 dark:bg-slate-900 transition-colors duration-300">
@@ -47,14 +47,26 @@ const Projects = () => {
                 </p>
 
                 <div className="flex gap-4">
-                  <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 dark:bg-blue-600 dark:hover:bg-blue-700 text-white rounded-xl font-medium transition-colors duration-300">
+                  <a
+                    href={project.demoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={socialConfig.bgbBot.demo.label}
+                    className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 dark:bg-blue-600 dark:hover:bg-blue-700 text-white rounded-xl font-medium transition-colors duration-300"
+                  >
                     <ExternalLink className="w-4 h-4" />
                     Live Demo
                   </a>
-                  <Link to="/projects" className="flex items-center gap-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-gray-800 dark:text-white rounded-xl font-medium transition-colors duration-300">
-                    <ArrowRight className="w-4 h-4" />
-                    View All
-                  </Link>
+                  <a
+                    href={project.sourceUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={socialConfig.bgbBot.sourceCode.label}
+                    className="flex items-center gap-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-gray-800 dark:text-white rounded-xl font-medium transition-colors duration-300"
+                  >
+                    <Github className="w-4 h-4" />
+                    Source Code
+                  </a>
                 </div>
               </div>
             </div>)}
