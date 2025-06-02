@@ -1,73 +1,114 @@
-# Welcome to your Lovable project
+# Nidaa Mungloo's Personal Website
 
-## Project info
+A modern, responsive personal website and portfolio built with React, TypeScript, and TailwindCSS. Visit the live site at [www.nidaamungloo.com](https://www.nidaamungloo.com).
 
-**URL**: https://lovable.dev/projects/16faf257-28c3-4459-b0bc-daae5762ddad
+## Features
 
-## How can I edit this code?
+- 🌓 Dark/Light mode support
+- 📱 Fully responsive design
+- 🎨 Modern UI with gradient effects
+- 🚀 Fast performance
+- 📊 Google Analytics integration
+- 🔍 SEO optimized
+- 🎯 TypeScript for type safety
+- 🎨 TailwindCSS for styling
+- 📝 Blog support with MDX
 
-There are several ways of editing your application.
+## Tech Stack
 
-**Use Lovable**
+- React
+- TypeScript
+- TailwindCSS
+- Vite
+- MDX for blog posts
+- GitHub Pages for hosting
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/16faf257-28c3-4459-b0bc-daae5762ddad) and start prompting.
+## Project Structure
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+personal-site/
+├── public/             # Static assets
+├── src/
+│   ├── components/     # React components
+│   │   └── common/    # Reusable components
+│   ├── config/        # Configuration files
+│   ├── contexts/      # React contexts
+│   ├── pages/         # Page components
+│   ├── styles/        # Global styles
+│   └── types/         # TypeScript types
+└── package.json
 ```
 
-**Edit a file directly in GitHub**
+## Getting Started
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Prerequisites
 
-**Use GitHub Codespaces**
+- Node.js (v16 or higher)
+- npm or yarn
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Installation
 
-## What technologies are used for this project?
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/nida28/personal-site.git
+   cd personal-site
+   ```
 
-This project is built with:
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn
+   ```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+3. Start the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
 
-## How can I deploy this project?
+4. Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-Simply open [Lovable](https://lovable.dev/projects/16faf257-28c3-4459-b0bc-daae5762ddad) and click on Share -> Publish.
+### Building for Production
 
-## Can I connect a custom domain to my Lovable project?
+```bash
+npm run build
+# or
+yarn build
+```
 
-Yes, you can!
+## Deployment
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+The site is automatically deployed to GitHub Pages when changes are pushed to the main branch.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## Customization
+
+### Adding Blog Posts
+
+1. Create a new MDX file in `src/content/blog/`
+2. Add frontmatter with title, date, and excerpt
+3. Write your content using MDX
+
+### Modifying Theme
+
+- Colors can be customized in `tailwind.config.ts`
+- Dark mode styles use the `dark:` prefix in TailwindCSS classes
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+Nidaa Mungloo - [nidaa.mungloo@gmail.com](mailto:nidaa.mungloo@gmail.com)
+
+Project Link: [https://github.com/nida28/personal-site](https://github.com/nida28/personal-site)
