@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { getAllPosts, BlogPost } from '../utils/blog';
+import { textConfig } from '../config/text';
 
 const Blog = () => {
   const [posts, setPosts] = useState<BlogPost[]>([]);
@@ -34,11 +35,11 @@ const Blog = () => {
         <div className="container mx-auto">
           {/* Page Header */}
           <div className="text-center mb-20">
-            <h1 className="text-5xl md:text-6xl font-light text-gray-500 dark:text-white mb-6 tracking-tight">
+            <h1 className={`${textConfig.title.base} ${textConfig.title.size} ${textConfig.title.color} mb-6`}>
               Latest Insights
             </h1>
             <div className="w-24 h-px bg-gradient-to-r from-transparent via-gray-400 dark:via-white/30 to-transparent mx-auto mb-8"></div>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto font-light leading-relaxed">
+            <p className={`${textConfig.subtitle.base} ${textConfig.subtitle.size} ${textConfig.subtitle.color} max-w-3xl mx-auto`}>
               Thoughts, tutorials, and insights from my journey as a developer.
             </p>
           </div>
@@ -86,11 +87,11 @@ const Blog = () => {
                       </div>
                     )}
 
-                    <h3 className="text-2xl font-light text-gray-900 dark:text-white mb-4 group-hover:text-cyan-600 dark:group-hover:text-pink-400 transition-colors duration-300 leading-tight tracking-wide">
+                    <h3 className={`${textConfig.sectionTitle.base} ${textConfig.sectionTitle.size} ${textConfig.sectionTitle.color} mb-4 group-hover:text-cyan-600 dark:group-hover:text-pink-400 transition-colors duration-300 leading-tight`}>
                       {post.frontmatter.title}
                     </h3>
 
-                    <p className="text-gray-600 dark:text-white mb-6 leading-relaxed font-light">
+                    <p className={`${textConfig.text.base} ${textConfig.text.size} ${textConfig.text.color} mb-6`}>
                       {post.frontmatter.excerpt}
                     </p>
 

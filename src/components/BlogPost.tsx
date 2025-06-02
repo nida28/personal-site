@@ -38,13 +38,13 @@ const MDXWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 const mdxComponents = {
     wrapper: MDXWrapper,
     h1: (props: any) => (
-        <h1 {...props} className="text-4xl font-extralight text-gray-900 dark:text-white tracking-tight leading-[1.1] mt-16 mb-8" />
+        <h1 {...props} className="text-5xl font-extralight text-blue-900 dark:text-white tracking-tight leading-[1.1] mt-16 mb-8" />
     ),
     h2: (props: any) => (
-        <h2 {...props} className="text-3xl font-light text-gray-900 dark:text-white tracking-tight leading-[1.1] mt-16 mb-8 pb-4 border-b border-gray-200 dark:border-gray-800" />
+        <h2 {...props} className="text-4xl font-light text-blue-900 dark:text-white tracking-tight leading-[1.1] mt-16 mb-8 pb-4 border-b border-gray-200 dark:border-gray-800" />
     ),
     h3: (props: any) => (
-        <h3 {...props} className="text-2xl font-light text-gray-900 dark:text-white tracking-tight leading-[1.1] mt-16 mb-8" />
+        <h3 {...props} className="text-3xl font-light text-blue-900 dark:text-white tracking-tight leading-[1.1] mt-16 mb-8" />
     ),
     p: (props: any) => {
         // Skip rendering if the content looks like frontmatter
@@ -52,32 +52,32 @@ const mdxComponents = {
             return null;
         }
         return (
-            <p {...props} className="text-lg text-gray-600 dark:text-gray-300 font-light leading-relaxed mb-8" />
+            <p {...props} className="text-2xl text-black dark:text-gray-300 font-light leading-relaxed mb-8" />
         );
     },
     a: (props: any) => (
-        <a {...props} className="text-cyan-600 dark:text-cyan-400 font-normal hover:underline" />
+        <a {...props} className="text-xl text-cyan-600 dark:text-cyan-400 font-normal hover:underline" />
     ),
     ul: (props: any) => (
-        <ul {...props} className="list-disc pl-8 my-8 space-y-3" />
+        <ul {...props} className="list-disc pl-8 my-8 space-y-4" />
     ),
     ol: (props: any) => (
-        <ol {...props} className="list-decimal pl-8 my-8 space-y-3" />
+        <ol {...props} className="list-decimal pl-8 my-8 space-y-4" />
     ),
     li: (props: any) => (
-        <li {...props} className="text-lg text-gray-600 dark:text-gray-300 font-light leading-relaxed" />
+        <li {...props} className="text-2xl text-black dark:text-gray-300 font-light leading-relaxed" />
     ),
     blockquote: (props: any) => (
-        <blockquote {...props} className="border-l-4 border-cyan-500 dark:border-pink-500 pl-8 py-4 my-12 italic text-lg font-light bg-gradient-to-r from-cyan-50 to-transparent dark:from-pink-900/10 dark:to-transparent" />
+        <blockquote {...props} className="border-l-4 border-cyan-500 dark:border-pink-500 pl-8 py-4 my-12 italic text-xl font-light bg-gradient-to-r from-cyan-50 to-transparent dark:from-pink-900/10 dark:to-transparent" />
     ),
     pre: (props: any) => (
-        <pre {...props} className="bg-gray-900 dark:bg-gray-800 p-8 rounded-lg text-gray-100 my-12 text-[15px] shadow-xl leading-relaxed font-normal" />
+        <pre {...props} className="bg-gray-900 dark:bg-gray-800 p-8 rounded-lg text-gray-100 my-12 text-lg shadow-xl leading-relaxed font-normal" />
     ),
     code: ({ children, className }: { children: React.ReactNode; className?: string }) => {
         return className ? (
-            <code className={className}>{children}</code>
+            <code className={`${className} text-lg`}>{children}</code>
         ) : (
-            <code className="text-cyan-600 dark:text-cyan-400 bg-cyan-50 dark:bg-cyan-900/20 px-2 py-1 rounded-md font-normal">{children}</code>
+            <code className="text-lg text-cyan-600 dark:text-cyan-400 bg-cyan-50 dark:bg-cyan-900/20 px-2 py-1 rounded-md font-normal">{children}</code>
         );
     },
 };
@@ -118,7 +118,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ post }) => {
                 )}
 
                 <div className="space-y-8">
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-gray-900 dark:text-white tracking-tight leading-[1.1]">
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-blue-900 dark:text-white tracking-tight leading-[1.1]">
                         {frontmatter.title}
                     </h1>
 
@@ -137,7 +137,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ post }) => {
                         </div>
                     </div>
 
-                    <p className="text-xl text-gray-600 dark:text-gray-300 font-light leading-relaxed border-l-4 border-cyan-500 dark:border-pink-500 pl-8 py-4 bg-gradient-to-r from-cyan-50 to-transparent dark:from-pink-900/10 dark:to-transparent">
+                    <p className="text-2xl text-black dark:text-gray-300 font-light leading-relaxed border-l-4 border-cyan-500 dark:border-pink-500 pl-8 py-4 bg-gradient-to-r from-cyan-50 to-transparent dark:from-pink-900/10 dark:to-transparent">
                         {frontmatter.excerpt}
                     </p>
                 </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { textConfig } from '../config/text';
 
 const About = () => {
   return (
@@ -15,9 +16,11 @@ const About = () => {
 
         <div className="container mx-auto relative z-10">
           <div className="text-center mb-20">
-            <h1 className="text-5xl md:text-6xl font-light mb-6 tracking-tight text-gray-500 dark:text-white">About Me</h1>
+            <h1 className={`${textConfig.title.base} ${textConfig.title.size} ${textConfig.title.color} mb-6`}>
+              About Me
+            </h1>
             <div className="w-24 h-px bg-gradient-to-r from-transparent via-cyan-400/60 dark:via-white/30 to-transparent mx-auto mb-8"></div>
-            <p className="text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto font-light leading-relaxed">
+            <p className={`${textConfig.subtitle.base} ${textConfig.subtitle.size} ${textConfig.subtitle.color} max-w-3xl mx-auto`}>
               Passionate about creating meaningful digital experiences through clean, efficient code.
             </p>
           </div>
@@ -39,29 +42,31 @@ const About = () => {
               {/* Text content flowing around image */}
               <div className="space-y-8">
                 <div>
-                  <h2 className="text-3xl font-light text-gray-900 dark:text-white mb-6 tracking-wide">My Story</h2>
-                  <div className="space-y-6 text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
-                    <p className="text-lg font-light">
+                  <h2 className={`${textConfig.sectionTitle.base} ${textConfig.sectionTitle.size} ${textConfig.sectionTitle.color} mb-6`}>
+                    My Story
+                  </h2>
+                  <div className="space-y-6 leading-relaxed text-justify">
+                    <p className={`${textConfig.subtitle.base} ${textConfig.subtitle.size} ${textConfig.subtitle.color}`}>
                       I'm a developer with a passion for building innovative web applications
                       and sharing my thoughts through writing. This is my personal space where
                       I document my journey, share insights, and showcase my side projects.
                     </p>
-                    <p className="text-lg font-light">
+                    <p className={`${textConfig.subtitle.base} ${textConfig.subtitle.size} ${textConfig.subtitle.color}`}>
                       When I'm not coding, you can find me exploring new technologies,
                       writing about my experiences, or working on creative projects that
                       push the boundaries of what's possible on the web.
                     </p>
-                    <p className="text-lg font-light">
+                    <p className={`${textConfig.subtitle.base} ${textConfig.subtitle.size} ${textConfig.subtitle.color}`}>
                       I believe in writing clean, efficient code and creating digital experiences
                       that are not only functional but also beautiful and user-friendly.
                       Welcome to my corner of the internet!
                     </p>
-                    <p className="text-lg font-light">
+                    <p className={`${textConfig.subtitle.base} ${textConfig.subtitle.size} ${textConfig.subtitle.color}`}>
                       My approach to development focuses on understanding user needs and translating
                       them into elegant solutions. I enjoy the challenge of solving complex problems
                       while maintaining simplicity in design and functionality.
                     </p>
-                    <p className="text-lg font-light pb-16">
+                    <p className={`${textConfig.subtitle.base} ${textConfig.subtitle.size} ${textConfig.subtitle.color} pb-16`}>
                       Through my work, I aim to bridge the gap between technical possibility and
                       user experience, creating applications that not only work well but feel
                       intuitive and enjoyable to use.

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTheme } from '../contexts/ThemeContext';
 
@@ -21,9 +20,9 @@ const Hero = () => {
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-[800px] w-full h-[800px] bg-gradient-to-r from-cyan-100/10 to-blue-100/15 rounded-full blur-[150px] dark:hidden block"></div>
 
       <div className="container mx-auto text-center relative z-10">
-        <div className="animate-fade-in space-y-12">
-          <div className="space-y-8">
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light tracking-tight leading-[1.1]">
+        <div className="animate-fade-in space-y-12 duration-1000">
+          <div className="space-y-8 pt-32">
+            <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-light tracking-tight leading-[1.1]">
               <span className="text-gray-400 dark:text-gray-230">Hi, I'm </span>
               <span className={`bg-clip-text text-transparent font-medium ${theme === 'dark' ? 'bg-gradient-to-r from-pink-300 via-pink-500 to-fuchsia-700' : 'bg-gradient-to-r from-blue-400 via-blue-600 to-blue-800'}`} style={{
                 WebkitBackgroundClip: 'text',

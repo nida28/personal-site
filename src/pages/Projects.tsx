@@ -3,6 +3,7 @@ import { ExternalLink, Github } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { socialConfig } from '../config/social';
+import { textConfig } from '../config/text';
 
 const Projects = () => {
   return (
@@ -23,11 +24,11 @@ const Projects = () => {
         <div className="container mx-auto">
           {/* Page Header */}
           <div className="text-center mb-12">
-            <h1 className="text-5xl md:text-6xl font-light text-gray-500 dark:text-white mb-6 tracking-tight">
+            <h1 className={`${textConfig.title.base} ${textConfig.title.size} ${textConfig.title.color} mb-6`}>
               Featured Project
             </h1>
             <div className="w-24 h-px bg-gradient-to-r from-transparent via-gray-400 dark:via-white/30 to-transparent mx-auto mb-8"></div>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto font-light leading-relaxed">
+            <p className={`${textConfig.subtitle.base} ${textConfig.subtitle.size} ${textConfig.subtitle.color} max-w-3xl mx-auto`}>
               Showcasing my latest work and creative solution.
             </p>
           </div>
@@ -51,38 +52,38 @@ const Projects = () => {
               </div>
 
               {/* Project Information - Right side */}
-              <div className="flex-1 space-y-8">
+              <div className="flex-grow space-y-8">
                 <div>
-                  <h2 className="text-4xl font-light text-gray-500 dark:text-white mb-6 tracking-wide">
+                  <h2 className={`${textConfig.sectionTitle.base} ${textConfig.sectionTitle.size} ${textConfig.sectionTitle.color} mb-6`}>
                     BGB Bot
                   </h2>
                 </div>
 
-                <div className="space-y-6 text-gray-600 dark:text-gray-300 leading-relaxed">
-                  <p className="text-lg font-light">
+                <div className="space-y-6">
+                  <p className={`${textConfig.subtitle.base} ${textConfig.subtitle.size} ${textConfig.subtitle.color}`}>
                     BGB Bot is an intelligent automation solution built with cutting-edge technologies.
                     This project represents a sophisticated approach to bot development, combining
                     artificial intelligence with seamless user interactions.
                   </p>
-                  <p className="text-lg font-light">
+                  <p className={`${textConfig.subtitle.base} ${textConfig.subtitle.size} ${textConfig.subtitle.color}`}>
                     The bot features automated response systems, smart integrations with various
                     platforms, and advanced natural language processing capabilities. It's designed
                     to handle complex queries while maintaining a conversational and intuitive interface.
                   </p>
-                  <p className="text-lg font-light">
+                  <p className={`${textConfig.subtitle.base} ${textConfig.subtitle.size} ${textConfig.subtitle.color}`}>
                     Built with scalability in mind, the architecture supports real-time processing,
                     machine learning adaptations, and seamless deployment across multiple environments.
                   </p>
                 </div>
 
                 {/* Project Links */}
-                <div className="flex gap-6 pt-8">
+                <div className="flex gap-4 pt-4">
                   <a
                     href={socialConfig.bgbBot.demo.url}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={socialConfig.bgbBot.demo.label}
-                    className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 dark:from-pink-600 dark:to-blue-600 dark:hover:from-pink-700 dark:hover:to-blue-700 text-white rounded-xl font-medium transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl"
+                    className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 dark:from-pink-600 dark:to-blue-600 dark:hover:from-pink-700 dark:hover:to-blue-700 text-white rounded-xl font-medium transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl text-xl"
                   >
                     <ExternalLink className="w-5 h-5" />
                     <span>Live Demo</span>
@@ -92,7 +93,7 @@ const Projects = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={socialConfig.bgbBot.sourceCode.label}
-                    className="flex items-center gap-2 px-6 py-3 bg-white dark:bg-slate-800 hover:bg-gray-50 dark:hover:bg-slate-700 text-gray-800 dark:text-white rounded-xl font-medium transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl border border-gray-200 dark:border-white/10"
+                    className="flex items-center gap-2 px-6 py-3 bg-white dark:bg-slate-800 hover:bg-gray-50 dark:hover:bg-slate-700 text-gray-800 dark:text-white rounded-xl font-medium transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl border border-gray-200 dark:border-white/10 text-xl"
                   >
                     <Github className="w-5 h-5" />
                     <span>Source Code</span>
