@@ -1,6 +1,7 @@
 import React from 'react';
 import { Github, Linkedin, Mail } from 'lucide-react';
 import { socialConfig } from '../config/social';
+import SocialButton from './common/SocialButton';
 
 const Contact = () => {
   return (
@@ -26,39 +27,24 @@ const Contact = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center pt-8">
-            <a
+            <SocialButton
               href={socialConfig.linkedin.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={socialConfig.linkedin.label}
-              className="group relative flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 dark:from-pink-600 dark:to-blue-600 dark:hover:from-pink-700 dark:hover:to-blue-700 text-white rounded-2xl font-medium transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl"
-            >
-              <span className="relative z-10 flex items-center gap-2">
-                <Linkedin className="w-7 h-7" />
-              </span>
-            </a>
-
-            <a
+              label={socialConfig.linkedin.label}
+              icon={Linkedin}
+              size="lg"
+            />
+            <SocialButton
               href={socialConfig.github.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={socialConfig.github.label}
-              className="group relative flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 dark:from-pink-600 dark:to-blue-600 dark:hover:from-pink-700 dark:hover:to-blue-700 text-white rounded-2xl font-medium transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl"
-            >
-              <span className="relative z-10 flex items-center gap-2">
-                <Github className="w-7 h-7" />
-              </span>
-            </a>
-
-            <a
+              label={socialConfig.github.label}
+              icon={Github}
+              size="lg"
+            />
+            <SocialButton
               href={`mailto:${socialConfig.email.address}`}
-              aria-label={socialConfig.email.label}
-              className="group relative flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 dark:from-pink-600 dark:to-blue-600 dark:hover:from-pink-700 dark:hover:to-blue-700 text-white rounded-2xl font-medium transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl"
-            >
-              <span className="relative z-10 flex items-center gap-2">
-                <Mail className="w-7 h-7" />
-              </span>
-            </a>
+              label={socialConfig.email.label}
+              icon={Mail}
+              size="lg"
+            />
           </div>
         </div>
 
