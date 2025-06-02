@@ -4,6 +4,9 @@ on:
   push:
     branches: [main]  # Or your default branch
 
+permissions:
+  contents: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -23,8 +26,13 @@ jobs:
       - name: Build the site
         run: npm run build
 
+      - name: Create .nojekyll file
+        run: touch dist/.nojekyll
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
+          cname: www.nidaamungloo.com
+          enable_jekyll: false
