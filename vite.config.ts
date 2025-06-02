@@ -29,7 +29,7 @@ export default defineConfig(({ command, mode }) => ({
     },
   },
   assetsInclude: ['**/*.md'],
-  base: '/dev-haven-blog-link/',
+  base: '/',
   optimizeDeps: {
     include: ['@mdx-js/react'],
   },
