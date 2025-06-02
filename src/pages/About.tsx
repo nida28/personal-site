@@ -46,27 +46,27 @@ const About = () => {
                     My Story
                   </h2>
                   <div className="space-y-6 leading-relaxed text-justify">
-                    <p className={`${textConfig.subtitle.base} ${textConfig.subtitle.size} ${textConfig.subtitle.color}`}>
+                    <p className={`${textConfig.text.base} ${textConfig.text.size} ${textConfig.text.color}`}>
                       I'm a developer with a passion for building innovative web applications
                       and sharing my thoughts through writing. This is my personal space where
                       I document my journey, share insights, and showcase my side projects.
                     </p>
-                    <p className={`${textConfig.subtitle.base} ${textConfig.subtitle.size} ${textConfig.subtitle.color}`}>
+                    <p className={`${textConfig.text.base} ${textConfig.text.size} ${textConfig.text.color}`}>
                       When I'm not coding, you can find me exploring new technologies,
                       writing about my experiences, or working on creative projects that
                       push the boundaries of what's possible on the web.
                     </p>
-                    <p className={`${textConfig.subtitle.base} ${textConfig.subtitle.size} ${textConfig.subtitle.color}`}>
+                    <p className={`${textConfig.text.base} ${textConfig.text.size} ${textConfig.text.color}`}>
                       I believe in writing clean, efficient code and creating digital experiences
                       that are not only functional but also beautiful and user-friendly.
                       Welcome to my corner of the internet!
                     </p>
-                    <p className={`${textConfig.subtitle.base} ${textConfig.subtitle.size} ${textConfig.subtitle.color}`}>
+                    <p className={`${textConfig.text.base} ${textConfig.text.size} ${textConfig.text.color}`}>
                       My approach to development focuses on understanding user needs and translating
                       them into elegant solutions. I enjoy the challenge of solving complex problems
                       while maintaining simplicity in design and functionality.
                     </p>
-                    <p className={`${textConfig.subtitle.base} ${textConfig.subtitle.size} ${textConfig.subtitle.color} pb-16`}>
+                    <p className={`${textConfig.text.base} ${textConfig.text.size} ${textConfig.text.color} pb-16`}>
                       Through my work, I aim to bridge the gap between technical possibility and
                       user experience, creating applications that not only work well but feel
                       intuitive and enjoyable to use.

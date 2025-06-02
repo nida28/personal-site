@@ -60,17 +60,17 @@ const Projects = () => {
                 </div>
 
                 <div className="space-y-6">
-                  <p className={`${textConfig.subtitle.base} ${textConfig.subtitle.size} ${textConfig.subtitle.color}`}>
+                  <p className={`${textConfig.text.base} ${textConfig.text.size} ${textConfig.text.color}`}>
                     BGB Bot is an intelligent automation solution built with cutting-edge technologies.
                     This project represents a sophisticated approach to bot development, combining
                     artificial intelligence with seamless user interactions.
                   </p>
-                  <p className={`${textConfig.subtitle.base} ${textConfig.subtitle.size} ${textConfig.subtitle.color}`}>
+                  <p className={`${textConfig.text.base} ${textConfig.text.size} ${textConfig.text.color}`}>
                     The bot features automated response systems, smart integrations with various
                     platforms, and advanced natural language processing capabilities. It's designed
                     to handle complex queries while maintaining a conversational and intuitive interface.
                   </p>
-                  <p className={`${textConfig.subtitle.base} ${textConfig.subtitle.size} ${textConfig.subtitle.color}`}>
+                  <p className={`${textConfig.text.base} ${textConfig.text.size} ${textConfig.text.color}`}>
                     Built with scalability in mind, the architecture supports real-time processing,
                     machine learning adaptations, and seamless deployment across multiple environments.
                   </p>

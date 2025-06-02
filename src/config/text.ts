@@ -13,6 +13,27 @@ export const textConfig = {
         color: "text-gray-700 dark:text-white",
     },
 
+    // Hero title prefix ("Hi, I'm")
+    heroTitlePrefix: {
+        base: "font-light tracking-tight leading-[1.1]",
+        size: "text-6xl sm:text-7xl md:text-8xl lg:text-9xl",
+        color: "text-gray-400 dark:text-gray-300",
+    },
+
+    // Hero title name ("Nidaa")
+    heroTitleName: {
+        base: "font-medium tracking-tight leading-[1.1] bg-clip-text text-transparent",
+        size: "text-6xl sm:text-7xl md:text-8xl lg:text-9xl",
+        color: "bg-gradient-to-r from-blue-400 via-blue-600 to-blue-800 dark:from-pink-300 dark:via-pink-500 dark:to-fuchsia-700",
+    },
+
+    // Hero subtitle
+    heroSubtitle: {
+        base: "font-light leading-relaxed tracking-wide",
+        size: "text-xl sm:text-2xl md:text-3xl",
+        color: "text-gray-400 dark:text-gray-200",
+    },
+
     // Subtitle styling
     subtitle: {
         base: "font-light leading-relaxed",
@@ -32,6 +53,13 @@ export const textConfig = {
         base: "font-light tracking-wide",
         size: "text-4xl",
         color: "text-blue-900 dark:text-white",
+    },
+
+    // Toolbar text styling
+    toolbar: {
+        base: "font-light tracking-wide",
+        size: "text-[1.3rem]",
+        color: "text-gray-700 dark:text-gray-200",
     },
 
     // Helper function to combine classes

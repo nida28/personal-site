@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useTheme } from '../contexts/ThemeContext';
+import { textConfig } from '../config/text';
 
 const Hero = () => {
   const { theme } = useTheme();
@@ -22,11 +23,10 @@ const Hero = () => {
       <div className="container mx-auto text-center relative z-10">
         <div className="animate-fade-in space-y-12 duration-1000">
           <div className="space-y-8 pt-32">
-            <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-light tracking-tight leading-[1.1]">
-              <span className="text-gray-400 dark:text-gray-230">Hi, I'm </span>
-              <span className={`bg-clip-text text-transparent font-medium ${theme === 'dark' ? 'bg-gradient-to-r from-pink-300 via-pink-500 to-fuchsia-700' : 'bg-gradient-to-r from-blue-400 via-blue-600 to-blue-800'}`} style={{
+            <h1 className="leading-[1.1]">
+              <span className={`${textConfig.heroTitlePrefix.base} ${textConfig.heroTitlePrefix.size} ${textConfig.heroTitlePrefix.color}`}>Hi, I'm </span>
+              <span className={`${textConfig.heroTitleName.base} ${textConfig.heroTitleName.size} ${textConfig.heroTitleName.color}`} style={{
                 WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text'
               }}>
                 Nidaa
@@ -35,7 +35,7 @@ const Hero = () => {
             <div className="w-32 h-px bg-gradient-to-r from-transparent via-gray-400 dark:via-white/30 to-transparent mx-auto"></div>
           </div>
 
-          <p className="text-xl sm:text-2xl md:text-3xl text-gray-400 dark:text-gray-200 max-w-4xl mx-auto leading-relaxed font-light tracking-wide">
+          <p className={`${textConfig.heroSubtitle.base} ${textConfig.heroSubtitle.size} ${textConfig.heroSubtitle.color} max-w-4xl mx-auto`}>
             Welcome to my corner of the internet where I share my thoughts,
             projects, and journey as a developer.
           </p>

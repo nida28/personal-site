@@ -1,4 +1,4 @@
-import React from 'react';
+import type { FC } from 'react';
 import { LucideIcon } from 'lucide-react';
 
 interface SocialButtonProps {
@@ -8,7 +8,7 @@ interface SocialButtonProps {
     size?: 'sm' | 'lg';
 }
 
-const SocialButton: React.FC<SocialButtonProps> = ({ href, label, icon: Icon, size = 'sm' }) => {
+const SocialButton: FC<SocialButtonProps> = ({ href, label, icon: Icon, size = 'sm' }) => {
     const sizeClasses = {
         sm: {
             button: 'w-12 h-12',

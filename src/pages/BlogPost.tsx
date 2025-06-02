@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import BlogPostComponent from '../components/BlogPost';
 import { getPostBySlug, BlogPost } from '../utils/blog';
+import { textConfig } from '../config/text';
 
 const BlogPostPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -61,10 +62,10 @@ const BlogPostPage: React.FC = () => {
       <div className="min-h-screen bg-white dark:bg-slate-900 transition-colors duration-300">
         <Header />
         <div className="max-w-4xl mx-auto px-6 py-32 text-center">
-          <h1 className="text-4xl font-light text-gray-900 dark:text-white mb-4">
+          <h1 className={`${textConfig.sectionTitle.base} ${textConfig.sectionTitle.size} ${textConfig.sectionTitle.color} mb-4`}>
             Post Not Found
           </h1>
-          <p className="text-gray-600 dark:text-gray-400">
+          <p className={`${textConfig.text.base} ${textConfig.text.size} ${textConfig.text.color}`}>
             The blog post you're looking for doesn't exist.
           </p>
         </div>

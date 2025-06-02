@@ -1,9 +1,9 @@
-import * as React from 'react';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import ThemeToggle from './ThemeToggle';
 import { useTheme } from '../contexts/ThemeContext';
+import { textConfig } from '../config/text';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -50,7 +50,7 @@ const Header = () => {
             <div className="flex items-center space-x-1">
               <Link
                 to="/blog"
-                className="relative px-8 py-4 text-gray-500 dark:text-white hover:text-gray-700 dark:hover:text-white text-xl font-light tracking-wide transition-all duration-300 rounded-xl hover:bg-gray-100/70 dark:hover:bg-white/10 group hover:shadow-lg dark:hover:shadow-white/5 border border-transparent hover:border-cyan-200/30 dark:hover:border-pink-400/30 hover:shadow-cyan-500/10 dark:hover:shadow-pink-500/20"
+                className={`${textConfig.toolbar.base} ${textConfig.toolbar.size} ${textConfig.toolbar.color} relative px-8 py-4 hover:text-gray-700 dark:hover:text-white transition-all duration-300 rounded-xl hover:bg-gray-100/70 dark:hover:bg-white/10 group hover:shadow-lg dark:hover:shadow-white/5 border border-transparent hover:border-cyan-200/30 dark:hover:border-pink-400/30 hover:shadow-cyan-500/10 dark:hover:shadow-pink-500/20`}
                 style={{
                   boxShadow: 'none',
                 }}
@@ -68,7 +68,7 @@ const Header = () => {
 
               <Link
                 to="/projects"
-                className="relative px-8 py-4 text-gray-500 dark:text-white hover:text-gray-700 dark:hover:text-white text-xl font-light tracking-wide transition-all duration-300 rounded-xl hover:bg-gray-100/70 dark:hover:bg-white/10 group hover:shadow-lg dark:hover:shadow-white/5 border border-transparent hover:border-cyan-200/30 dark:hover:border-pink-400/30 hover:shadow-cyan-500/10 dark:hover:shadow-pink-500/20"
+                className={`${textConfig.toolbar.base} ${textConfig.toolbar.size} ${textConfig.toolbar.color} relative px-8 py-4 hover:text-gray-700 dark:hover:text-white transition-all duration-300 rounded-xl hover:bg-gray-100/70 dark:hover:bg-white/10 group hover:shadow-lg dark:hover:shadow-white/5 border border-transparent hover:border-cyan-200/30 dark:hover:border-pink-400/30 hover:shadow-cyan-500/10 dark:hover:shadow-pink-500/20`}
                 style={{
                   boxShadow: 'none',
                 }}
@@ -86,7 +86,7 @@ const Header = () => {
 
               <Link
                 to="/about"
-                className="relative px-8 py-4 text-gray-500 dark:text-white hover:text-gray-700 dark:hover:text-white text-xl font-light tracking-wide transition-all duration-300 rounded-xl hover:bg-gray-100/70 dark:hover:bg-white/10 group hover:shadow-lg dark:hover:shadow-white/5 border border-transparent hover:border-cyan-200/30 dark:hover:border-pink-400/30 hover:shadow-cyan-500/10 dark:hover:shadow-pink-500/20"
+                className={`${textConfig.toolbar.base} ${textConfig.toolbar.size} ${textConfig.toolbar.color} relative px-8 py-4 hover:text-gray-700 dark:hover:text-white transition-all duration-300 rounded-xl hover:bg-gray-100/70 dark:hover:bg-white/10 group hover:shadow-lg dark:hover:shadow-white/5 border border-transparent hover:border-cyan-200/30 dark:hover:border-pink-400/30 hover:shadow-cyan-500/10 dark:hover:shadow-pink-500/20`}
                 style={{
                   boxShadow: 'none',
                 }}

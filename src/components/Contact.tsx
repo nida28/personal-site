@@ -1,7 +1,7 @@
-import React from 'react';
 import { Github, Linkedin, Mail } from 'lucide-react';
 import { socialConfig } from '../config/social';
 import SocialButton from './common/SocialButton';
+import { textConfig } from '../config/text';
 
 const Contact = () => {
   return (
@@ -14,14 +14,16 @@ const Contact = () => {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-50/30 via-transparent to-transparent dark:from-purple-900/15 dark:via-transparent dark:to-transparent"></div>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-cyan-50/30 via-transparent to-transparent dark:from-pink-900/15 dark:via-transparent dark:to-transparent"></div>
 
-      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="space-y-12">
           <div className="space-y-8 text-center">
-            <h2 className="text-6xl md:text-7xl font-light mb-8 tracking-tight text-gray-500 dark:text-white">Let's Connect</h2>
+            <h2 className={`${textConfig.title.base} ${textConfig.title.size} ${textConfig.title.color} mb-8`}>
+              Let's Connect
+            </h2>
             <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-400/30 dark:via-white/20 to-transparent mx-auto"></div>
           </div>
 
-          <p className="text-xl sm:text-2xl text-gray-600 dark:text-white max-w-4xl mx-auto font-light leading-relaxed tracking-wide text-center">
+          <p className={`${textConfig.subtitle.base} ${textConfig.subtitle.size} ${textConfig.subtitle.color} max-w-4xl mx-auto text-center`}>
             I'm always interested in connecting with fellow developers and hearing your thoughts.
             Feel free to reach out if you'd like to chat!
           </p>
@@ -50,7 +52,7 @@ const Contact = () => {
 
         <div className="mt-24 pt-8 border-t border-gray-200/30 dark:border-white/10 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
           <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12">
-            <p className="text-gray-600 dark:text-white font-light tracking-wide text-sm text-center">
+            <p className={`${textConfig.text.base} text-sm ${textConfig.text.color} text-center`}>
               © 2025 Nidaa Fatimah Mungloo
             </p>
           </div>

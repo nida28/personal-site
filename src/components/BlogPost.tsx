@@ -3,6 +3,14 @@ import { Link, useLocation } from 'react-router-dom';
 import { format } from 'date-fns';
 import { MDXProvider } from '@mdx-js/react';
 import 'highlight.js/styles/github-dark.css';
+import { textConfig } from '../config/text';
+
+// Types for MDX components
+interface MDXProps {
+    children: React.ReactNode;
+    className?: string;
+    [key: string]: any;
+}
 
 // Types for MDX frontmatter and components
 interface Frontmatter {
@@ -37,37 +45,37 @@ const MDXWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 // MDX components with Tailwind styling
 const mdxComponents = {
     wrapper: MDXWrapper,
-    h1: (props: any) => (
-        <h1 {...props} className="text-5xl font-extralight text-blue-900 dark:text-white tracking-tight leading-[1.1] mt-16 mb-8" />
+    h1: (props: MDXProps) => (
+        <h1 {...props} className={`${textConfig.title.base} ${textConfig.title.size} ${textConfig.title.color} mt-16 mb-8`} />
     ),
-    h2: (props: any) => (
-        <h2 {...props} className="text-4xl font-light text-blue-900 dark:text-white tracking-tight leading-[1.1] mt-16 mb-8 pb-4 border-b border-gray-200 dark:border-gray-800" />
+    h2: (props: MDXProps) => (
+        <h2 {...props} className={`${textConfig.sectionTitle.base} ${textConfig.sectionTitle.size} ${textConfig.sectionTitle.color} mt-16 mb-8 pb-4 border-b border-gray-200 dark:border-gray-800`} />
     ),
-    h3: (props: any) => (
-        <h3 {...props} className="text-3xl font-light text-blue-900 dark:text-white tracking-tight leading-[1.1] mt-16 mb-8" />
+    h3: (props: MDXProps) => (
+        <h3 {...props} className={`${textConfig.sectionTitle.base} ${textConfig.sectionTitle.size} ${textConfig.sectionTitle.color} mt-16 mb-8`} />
     ),
-    p: (props: any) => {
+    p: (props: MDXProps) => {
         // Skip rendering if the content looks like frontmatter
         if (typeof props.children === 'string' && props.children.startsWith('title:')) {
             return null;
         }
         return (
-            <p {...props} className="text-2xl text-black dark:text-gray-300 font-light leading-relaxed mb-8" />
+            <p {...props} className={`${textConfig.text.base} ${textConfig.text.size} ${textConfig.text.color} mb-8`} />
         );
     },
-    a: (props: any) => (
+    a: (props: MDXProps) => (
         <a {...props} className="text-xl text-cyan-600 dark:text-cyan-400 font-normal hover:underline" />
     ),
-    ul: (props: any) => (
+    ul: (props: MDXProps) => (
         <ul {...props} className="list-disc pl-8 my-8 space-y-4" />
     ),
-    ol: (props: any) => (
+    ol: (props: MDXProps) => (
         <ol {...props} className="list-decimal pl-8 my-8 space-y-4" />
     ),
-    li: (props: any) => (
-        <li {...props} className="text-2xl text-black dark:text-gray-300 font-light leading-relaxed" />
+    li: (props: MDXProps) => (
+        <li {...props} className={`${textConfig.text.base} ${textConfig.text.size} ${textConfig.text.color}`} />
     ),
-    blockquote: (props: any) => (
+    blockquote: (props: MDXProps) => (
         <blockquote {...props} className="border-l-4 border-cyan-500 dark:border-pink-500 pl-8 py-4 my-12 italic text-xl font-light bg-gradient-to-r from-cyan-50 to-transparent dark:from-pink-900/10 dark:to-transparent" />
     ),
     pre: (props: any) => (
@@ -118,7 +126,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ post }) => {
                 )}
 
                 <div className="space-y-8">
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-blue-900 dark:text-white tracking-tight leading-[1.1]">
+                    <h1 className={`${textConfig.title.base} ${textConfig.title.size} ${textConfig.title.color}`}>
                         {frontmatter.title}
                     </h1>
 
@@ -137,7 +145,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ post }) => {
                         </div>
                     </div>
 
-                    <p className="text-2xl text-black dark:text-gray-300 font-light leading-relaxed border-l-4 border-cyan-500 dark:border-pink-500 pl-8 py-4 bg-gradient-to-r from-cyan-50 to-transparent dark:from-pink-900/10 dark:to-transparent">
+                    <p className={`${textConfig.subtitle.base} ${textConfig.subtitle.size} ${textConfig.subtitle.color} border-l-4 border-cyan-500 dark:border-pink-500 pl-8 py-4 bg-gradient-to-r from-cyan-50 to-transparent dark:from-pink-900/10 dark:to-transparent`}>
                         {frontmatter.excerpt}
                     </p>
                 </div>
