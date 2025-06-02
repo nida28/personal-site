@@ -11,36 +11,61 @@
 
     gtag('config', 'G-LM8K674WFH');
   </script>
+
+  <!-- Site Metadata -->
+  <script>
+    window.siteMetadata = {
+      title: 'Nidaa Mungloo',
+      description: 'Personal website and portfolio of Nidaa Mungloo, a Full Stack Developer specializing in web development, React, TypeScript, and modern software engineering.',
+      url: 'https://www.nidaamungloo.com/',
+      author: 'Nidaa Mungloo'
+    };
+    document.title = siteMetadata.title;
+  </script>
+
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" href="/favicon.png" />
   <link rel="apple-touch-icon" href="/favicon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nidaa Mungloo - Full Stack Developer & Software Engineer</title>
-  <meta name="description"
-    content="Personal website and portfolio of Nidaa Mungloo, a Full Stack Developer specializing in web development, React, TypeScript, and modern software engineering." />
-  <meta name="author" content="Nidaa Mungloo" />
+  <meta name="description" content="" id="meta-description" />
+  <meta name="author" content="" id="meta-author" />
   <meta name="keywords"
     content="Nidaa Mungloo, Full Stack Developer, Software Engineer, Web Development, React, TypeScript, JavaScript, Frontend Development, Backend Development" />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.nidaamungloo.com/" />
-  <meta property="og:title" content="Nidaa Mungloo - Full Stack Developer & Software Engineer" />
-  <meta property="og:description"
-    content="Personal website and portfolio of Nidaa Mungloo, a Full Stack Developer specializing in web development, React, TypeScript, and modern software engineering." />
+  <meta property="og:url" content="" id="meta-og-url" />
+  <meta property="og:title" content="" id="meta-og-title" />
+  <meta property="og:description" content="" id="meta-og-description" />
   <meta property="og:image" content="/og-image.png" />
-  <meta property="og:site_name" content="Nidaa Mungloo" />
+  <meta property="og:site_name" content="" id="meta-og-site-name" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content="https://www.nidaamungloo.com/" />
-  <meta name="twitter:title" content="Nidaa Mungloo - Full Stack Developer & Software Engineer" />
-  <meta name="twitter:description"
-    content="Personal website and portfolio of Nidaa Mungloo, a Full Stack Developer specializing in web development, React, TypeScript, and modern software engineering." />
+  <meta name="twitter:url" content="" id="meta-twitter-url" />
+  <meta name="twitter:title" content="" id="meta-twitter-title" />
+  <meta name="twitter:description" content="" id="meta-twitter-description" />
   <meta name="twitter:image" content="/og-image.png" />
 
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://www.nidaamungloo.com/" />
+  <link rel="canonical" href="" id="canonical-url" />
+
+  <!-- Initialize metadata -->
+  <script>
+    window.addEventListener('load', function () {
+      const metadata = window.siteMetadata;
+      document.getElementById('meta-description').content = metadata.description;
+      document.getElementById('meta-author').content = metadata.author;
+      document.getElementById('meta-og-url').content = metadata.url;
+      document.getElementById('meta-og-title').content = metadata.title;
+      document.getElementById('meta-og-description').content = metadata.description;
+      document.getElementById('meta-og-site-name').content = metadata.title;
+      document.getElementById('meta-twitter-url').content = metadata.url;
+      document.getElementById('meta-twitter-title').content = metadata.title;
+      document.getElementById('meta-twitter-description').content = metadata.description;
+      document.getElementById('canonical-url').href = metadata.url;
+    });
+  </script>
 
   <!-- Start Single Page Apps for GitHub Pages -->
   <script type="text/javascript">
