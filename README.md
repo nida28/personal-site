@@ -1,4 +1,4 @@
-# Nidaa Mungloo's Personal Website
+# Nidaa's Personal Website
 
 A modern, responsive personal website and portfolio built with React, TypeScript, and TailwindCSS. Visit the live site at [www.nidaamungloo.com](https://www.nidaamungloo.com).
 
