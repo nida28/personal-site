@@ -23,7 +23,7 @@ const Blog = () => {
   }, []);
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50/95 via-blue-50/20 to-blue-50/15 dark:from-slate-900/98 dark:via-slate-900/95 dark:to-slate-800/90 text-gray-700 dark:text-white relative overflow-x-hidden">
+    <section className={`${textConfig.spacing.section.home.full} bg-gradient-to-br from-gray-50/95 via-blue-50/20 to-blue-50/15 dark:from-slate-900/98 dark:via-slate-900/95 dark:to-slate-800/90 text-gray-700 dark:text-white relative overflow-x-hidden`}>
       {/* Dark mode ambient lighting */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-slate-900/90 to-slate-800/85 dark:block hidden"></div>
 
@@ -35,7 +35,7 @@ const Blog = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-gray-50/95 via-blue-50/30 to-blue-50/25 dark:hidden block"></div>
 
       <div className="container mx-auto relative z-10">
-        <div className="text-center mb-20">
+        <div className={`text-center ${textConfig.spacing.title.home}`}>
           <h2 className={`${textConfig.title.base} ${textConfig.title.size} ${textConfig.title.color} mb-6`}>
             Latest Insights
           </h2>

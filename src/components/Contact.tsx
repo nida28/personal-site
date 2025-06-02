@@ -5,7 +5,7 @@ import { textConfig } from '../config/text';
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-gray-50/98 via-blue-50/20 to-blue-50/15 dark:from-slate-900/98 dark:via-slate-900/95 dark:to-slate-800/90 text-gray-700 dark:text-white relative overflow-hidden">
+    <section id="contact" className={`${textConfig.spacing.section.home.full} bg-gradient-to-br from-gray-50/98 via-blue-50/20 to-blue-50/15 dark:from-slate-900/98 dark:via-slate-900/95 dark:to-slate-800/90 text-gray-700 dark:text-white relative overflow-hidden`}>
       {/* Dark mode ambient lighting */}
       <div className="absolute -top-1/2 right-0 w-[900px] h-[900px] bg-gradient-to-r from-blue-600/5 via-cyan-600/8 to-blue-600/10 rounded-full blur-[180px] dark:from-purple-600/10 dark:via-fuchsia-600/15 dark:to-pink-600/20"></div>
       <div className="absolute -bottom-1/2 left-0 w-[900px] h-[900px] bg-gradient-to-r from-blue-600/10 via-cyan-600/8 to-blue-600/5 rounded-full blur-[180px] dark:from-pink-600/20 dark:via-fuchsia-600/15 dark:to-purple-600/10"></div>
@@ -16,7 +16,7 @@ const Contact = () => {
 
       <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="space-y-12">
-          <div className="space-y-8 text-center">
+          <div className={`space-y-8 text-center ${textConfig.spacing.title.home}`}>
             <h2 className={`${textConfig.title.base} ${textConfig.title.size} ${textConfig.title.color} mb-8`}>
               Let's Connect
             </h2>

@@ -1,4 +1,20 @@
 export const textConfig = {
+    // Spacing configuration for sections
+    spacing: {
+        section: {
+            default: "py-32",
+            home: {
+                top: "pt-12",
+                bottom: "pb-16",
+                full: "pt-8 pb-16"
+            }
+        },
+        title: {
+            wrapper: "mb-20",
+            home: "mb-8"
+        }
+    },
+
     // Main page title styling
     title: {
         base: "font-light tracking-tight",
