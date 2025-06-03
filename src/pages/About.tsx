@@ -30,9 +30,9 @@ const About = () => {
             <div className="relative">
               {/* Profile Photo Section - Floating left */}
               <div className="float-left mr-6 sm:mr-12 mb-8 relative z-20">
-                <div className="w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 rounded-3xl overflow-hidden border-4 border-white/20 dark:border-white/10 shadow-2xl bg-white dark:bg-slate-800">
+                <div className="w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 rounded-3xl overflow-hidden border-2 border-gray-200/20 dark:border-white/10 shadow-2xl bg-white dark:bg-slate-800">
                   <img
-                    src={`${import.meta.env.BASE_URL}a3a6eabd-1e64-410d-b301-5b26869cd2bb.png`}
+                    src={`${import.meta.env.BASE_URL}nidaa-new.jpeg`}
                     alt="Nidaa"
                     className="w-full h-full object-cover"
                   />
