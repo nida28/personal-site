@@ -11,14 +11,14 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-slate-900/90 to-slate-800/85 dark:block hidden"></div>
 
       {/* Subtle fuchsia ambient lighting for dark mode */}
-      <div className="absolute top-1/4 left-1/4 max-w-[500px] w-full h-[500px] bg-gradient-to-r from-fuchsia-600/10 to-purple-600/15 rounded-full blur-[100px] dark:block hidden"></div>
-      <div className="absolute bottom-1/4 right-1/4 max-w-[500px] w-full h-[500px] bg-gradient-to-r from-purple-600/15 to-fuchsia-600/10 rounded-full blur-[100px] dark:block hidden"></div>
+      <div className="absolute top-1/4 left-1/4 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-gradient-to-r from-fuchsia-600/10 to-purple-600/15 rounded-full blur-[60px] sm:blur-[100px] dark:block hidden"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-gradient-to-r from-purple-600/15 to-fuchsia-600/10 rounded-full blur-[60px] sm:blur-[100px] dark:block hidden"></div>
 
       {/* Light mode gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-50/95 via-blue-50/30 to-blue-50/25 dark:hidden block"></div>
-      <div className="absolute top-1/4 left-1/4 max-w-[600px] w-full h-[600px] bg-gradient-to-r from-blue-200/15 to-cyan-200/20 rounded-full blur-[120px] dark:hidden block"></div>
-      <div className="absolute bottom-1/4 right-1/4 max-w-[600px] w-full h-[600px] bg-gradient-to-r from-blue-200/20 to-cyan-200/25 rounded-full blur-[120px] dark:hidden block"></div>
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-[800px] w-full h-[800px] bg-gradient-to-r from-cyan-100/10 to-blue-100/15 rounded-full blur-[150px] dark:hidden block"></div>
+      <div className="absolute top-1/4 left-1/4 w-[350px] sm:w-[600px] h-[350px] sm:h-[600px] bg-gradient-to-r from-blue-200/15 to-cyan-200/20 rounded-full blur-[80px] sm:blur-[120px] dark:hidden block"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-[350px] sm:w-[600px] h-[350px] sm:h-[600px] bg-gradient-to-r from-blue-200/20 to-cyan-200/25 rounded-full blur-[80px] sm:blur-[120px] dark:hidden block"></div>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] sm:w-[800px] h-[500px] sm:h-[800px] bg-gradient-to-r from-cyan-100/10 to-blue-100/15 rounded-full blur-[100px] sm:blur-[150px] dark:hidden block"></div>
 
       <div className="container mx-auto text-center relative z-10">
         <div className="animate-fade-in space-y-8 duration-1000">
@@ -42,22 +42,26 @@ const Hero = () => {
 
           <div className="flex flex-row justify-center pt-2 pb-8 sm:pt-12 sm:pb-0">
             <Link to="/about" className="group relative w-[9rem] sm:w-auto px-0 sm:px-10 py-5 text-center 
-              bg-white/30 shadow-lg hover:bg-gradient-to-r hover:from-cyan-200/40 hover:via-blue-200/40 hover:to-blue-300/50 
-              dark:bg-white/8 dark:hover:bg-gradient-to-r dark:hover:from-blue-500/25 dark:hover:via-purple-500/30 dark:hover:to-fuchsia-500/40 
+              bg-gradient-to-r from-blue-300/50 via-blue-400/40 to-cyan-300/50 
+              hover:from-blue-300/60 hover:via-blue-400/50 hover:to-cyan-300/60
+              dark:bg-gradient-to-r dark:from-blue-500/25 dark:via-purple-500/30 dark:to-fuchsia-500/40 
+              dark:hover:from-blue-500/35 dark:hover:via-purple-500/40 dark:hover:to-fuchsia-500/50
               backdrop-blur-sm border border-gray-300/60 hover:border-blue-300/60 dark:border-white/15 dark:hover:border-fuchsia-400/50
-              text-blue-600  dark:text-white rounded-2xl font-medium 
-              transition-all duration-300 transform hover:scale-[1.02] hover:shadow-2xl tracking-wide text-lg">
-              <span className="relative z-10">Learn More</span>
+              rounded-2xl font-medium shadow-lg hover:shadow-xl
+              transition-all duration-500 transform hover:scale-[1.02] tracking-wide text-lg">
+              <span className={`${textConfig.heroButton.base} ${textConfig.heroButton.size} ${textConfig.heroButton.color}`}>Learn More</span>
             </Link>
 
             <Link to="/blog" className="group relative w-[9rem] sm:w-auto px-0 sm:px-10 py-5 text-center
-              bg-white/20 shadow-lg hover:bg-gradient-to-r hover:from-cyan-200/25 hover:via-blue-200/25 hover:to-blue-300/35
-              dark:bg-white/3 dark:hover:bg-gradient-to-r dark:hover:from-blue-500/15 dark:hover:via-purple-500/20 dark:hover:to-fuchsia-500/30 
+              bg-gradient-to-r from-blue-300/35 via-blue-400/30 to-cyan-300/35
+              hover:from-blue-300/45 hover:via-blue-400/40 hover:to-cyan-300/45
+              dark:bg-gradient-to-r dark:from-blue-500/15 dark:via-purple-500/20 dark:to-fuchsia-500/30
+              dark:hover:from-blue-500/25 dark:hover:via-purple-500/30 dark:hover:to-fuchsia-500/40
               backdrop-blur-sm border border-gray-300/40 hover:border-blue-300/40 dark:border-white/8 dark:hover:border-fuchsia-400/35
-              text-blue-500 dark:text-white rounded-2xl font-medium 
-              transition-all duration-300 transform hover:scale-[1.02] hover:shadow-2xl tracking-wide text-lg
+              rounded-2xl font-medium shadow-lg hover:shadow-xl
+              transition-all duration-500 transform hover:scale-[1.02] tracking-wide text-lg
               ml-6">
-              <span className="relative z-10">Read My Blog</span>
+              <span className={`${textConfig.heroButtonSecondary.base} ${textConfig.heroButtonSecondary.size} ${textConfig.heroButtonSecondary.color}`}>Read My Blog</span>
             </Link>
           </div>
         </div>

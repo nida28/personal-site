@@ -61,7 +61,7 @@ const Projects = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={socialConfig.bgbBot.demo.label}
-                      className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 dark:bg-blue-600 dark:hover:bg-blue-700 text-white rounded-xl font-medium transition-colors duration-300 text-xl"
+                      className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 dark:bg-blue-600 dark:hover:bg-blue-700 text-white rounded-xl font-medium transition-colors duration-300 text-lg"
                     >
                       <ExternalLink className="w-4 h-4" />
                       Live Demo
@@ -71,7 +71,7 @@ const Projects = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={socialConfig.bgbBot.sourceCode.label}
-                      className="flex items-center gap-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-gray-800 dark:text-white rounded-xl font-medium transition-colors duration-300 text-xl"
+                      className="flex items-center gap-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-gray-800 dark:text-white rounded-xl font-medium transition-colors duration-300 text-lg"
                     >
                       <Github className="w-4 h-4" />
                       Source Code

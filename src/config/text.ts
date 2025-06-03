@@ -78,6 +78,20 @@ export const textConfig = {
         color: "text-gray-700 dark:text-gray-200",
     },
 
+    // Hero button text styling
+    heroButton: {
+        base: "font-medium tracking-wide relative z-10",
+        size: "text-lg",
+        color: "text-blue-700 dark:text-white",
+    },
+
+    // Second hero button (Blog) text styling
+    heroButtonSecondary: {
+        base: "font-medium tracking-wide relative z-10",
+        size: "text-lg",
+        color: "text-blue-700 dark:text-white",
+    },
+
     // Helper function to combine classes
     combine: (...classNames: (keyof typeof textConfig)[]) => {
         return classNames
