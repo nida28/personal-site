@@ -47,7 +47,7 @@ export const textConfig = {
     heroSubtitle: {
         base: "font-light leading-relaxed tracking-wide",
         size: "text-xl sm:text-2xl md:text-3xl",
-        color: "text-gray-400 dark:text-gray-200",
+        color: "text-blue-900 dark:text-gray-200",
     },
 
     // Subtitle styling

@@ -16,7 +16,7 @@ const Footer = () => {
         <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
           <div className="flex flex-col items-center space-y-6">
             {/* Social media icons */}
-            <div className="flex flex-col sm:flex-row items-center gap-8">
+            <div className="flex flex-row items-center gap-8">
               <SocialButton
                 href={socialConfig.linkedin.url}
                 label={socialConfig.linkedin.label}

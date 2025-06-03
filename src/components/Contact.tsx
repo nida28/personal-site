@@ -28,7 +28,7 @@ const Contact = () => {
             Feel free to reach out if you'd like to chat!
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-center pt-8">
+          <div className="flex flex-row gap-6 justify-center pt-8">
             <SocialButton
               href={socialConfig.linkedin.url}
               label={socialConfig.linkedin.label}

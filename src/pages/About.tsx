@@ -26,11 +26,11 @@ const About = () => {
           </div>
 
           {/* Newspaper-style layout */}
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6">
             <div className="relative">
               {/* Profile Photo Section - Floating left */}
-              <div className="float-left mr-12 mb-8 relative z-20">
-                <div className="w-64 h-64 rounded-3xl overflow-hidden border-4 border-white/20 dark:border-white/10 shadow-2xl bg-white dark:bg-slate-800">
+              <div className="float-left mr-6 sm:mr-12 mb-8 relative z-20">
+                <div className="w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 rounded-3xl overflow-hidden border-4 border-white/20 dark:border-white/10 shadow-2xl bg-white dark:bg-slate-800">
                   <img
                     src={`${import.meta.env.BASE_URL}a3a6eabd-1e64-410d-b301-5b26869cd2bb.png`}
                     alt="Nidaa"
@@ -40,7 +40,7 @@ const About = () => {
               </div>
 
               {/* Text content flowing around image */}
-              <div className="space-y-8">
+              <div className="prose prose-base sm:prose-lg dark:prose-invert max-w-none">
                 <div>
                   <h2 className={`${textConfig.sectionTitle.base} ${textConfig.sectionTitle.size} ${textConfig.sectionTitle.color} mb-6`}>
                     My Story
@@ -74,7 +74,6 @@ const About = () => {
                   </div>
                 </div>
               </div>
-              <div className="clear-both"></div>
             </div>
           </div>
         </div>
