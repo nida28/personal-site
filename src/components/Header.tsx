@@ -4,6 +4,8 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import ThemeToggle from './ThemeToggle';
 import { useTheme } from '../contexts/ThemeContext';
 import { textConfig } from '../config/text';
+import NavLink from './common/NavLink';
+import MobileNavLink from './common/MobileNavLink';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -48,59 +50,9 @@ const Header = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="flex items-center space-x-1">
-              <Link
-                to="/blog"
-                className={`${textConfig.toolbar.base} ${textConfig.toolbar.size} ${textConfig.toolbar.color} relative px-8 py-4 hover:text-gray-700 dark:hover:text-white transition-all duration-300 rounded-xl hover:bg-gray-100/70 dark:hover:bg-white/10 group hover:shadow-lg dark:hover:shadow-white/5 border border-transparent hover:border-cyan-200/30 dark:hover:border-pink-400/30 hover:shadow-cyan-500/10 dark:hover:shadow-pink-500/20`}
-                style={{
-                  boxShadow: 'none',
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.boxShadow = theme === 'dark'
-                    ? '0 0 20px rgba(236, 72, 153, 0.3), 0 0 40px rgba(236, 72, 153, 0.2), 0 0 60px rgba(236, 72, 153, 0.1)'
-                    : '0 0 20px rgba(6, 182, 212, 0.3), 0 0 40px rgba(6, 182, 212, 0.2), 0 0 60px rgba(6, 182, 212, 0.1)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.boxShadow = 'none';
-                }}
-              >
-                Blog
-              </Link>
-
-              <Link
-                to="/projects"
-                className={`${textConfig.toolbar.base} ${textConfig.toolbar.size} ${textConfig.toolbar.color} relative px-8 py-4 hover:text-gray-700 dark:hover:text-white transition-all duration-300 rounded-xl hover:bg-gray-100/70 dark:hover:bg-white/10 group hover:shadow-lg dark:hover:shadow-white/5 border border-transparent hover:border-cyan-200/30 dark:hover:border-pink-400/30 hover:shadow-cyan-500/10 dark:hover:shadow-pink-500/20`}
-                style={{
-                  boxShadow: 'none',
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.boxShadow = theme === 'dark'
-                    ? '0 0 20px rgba(236, 72, 153, 0.3), 0 0 40px rgba(236, 72, 153, 0.2), 0 0 60px rgba(236, 72, 153, 0.1)'
-                    : '0 0 20px rgba(6, 182, 212, 0.3), 0 0 40px rgba(6, 182, 212, 0.2), 0 0 60px rgba(6, 182, 212, 0.1)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.boxShadow = 'none';
-                }}
-              >
-                Projects
-              </Link>
-
-              <Link
-                to="/about"
-                className={`${textConfig.toolbar.base} ${textConfig.toolbar.size} ${textConfig.toolbar.color} relative px-8 py-4 hover:text-gray-700 dark:hover:text-white transition-all duration-300 rounded-xl hover:bg-gray-100/70 dark:hover:bg-white/10 group hover:shadow-lg dark:hover:shadow-white/5 border border-transparent hover:border-cyan-200/30 dark:hover:border-pink-400/30 hover:shadow-cyan-500/10 dark:hover:shadow-pink-500/20`}
-                style={{
-                  boxShadow: 'none',
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.boxShadow = theme === 'dark'
-                    ? '0 0 20px rgba(236, 72, 153, 0.3), 0 0 40px rgba(236, 72, 153, 0.2), 0 0 60px rgba(236, 72, 153, 0.1)'
-                    : '0 0 20px rgba(6, 182, 212, 0.3), 0 0 40px rgba(6, 182, 212, 0.2), 0 0 60px rgba(6, 182, 212, 0.1)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.boxShadow = 'none';
-                }}
-              >
-                About
-              </Link>
+              <NavLink to="/blog">Blog</NavLink>
+              <NavLink to="/projects">Projects</NavLink>
+              <NavLink to="/about">About</NavLink>
 
               <div className="ml-4 pl-4 border-l border-gray-300/50 dark:border-slate-600/40 flex items-center">
                 <ThemeToggle />
@@ -124,29 +76,9 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden border-t border-gray-300/50 dark:border-slate-600/40 bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl">
             <div className="px-4 py-6 space-y-2">
-              <Link
-                to="/blog"
-                onClick={() => setIsMenuOpen(false)}
-                className="block w-full text-left px-6 py-4 text-gray-500 dark:text-white hover:text-gray-700 dark:hover:text-white text-xl font-light tracking-wide transition-all duration-300 rounded-xl hover:bg-gray-100/70 dark:hover:bg-white/10 hover:shadow-md dark:hover:shadow-white/5"
-              >
-                Blog
-              </Link>
-
-              <Link
-                to="/projects"
-                onClick={() => setIsMenuOpen(false)}
-                className="block w-full text-left px-6 py-4 text-gray-500 dark:text-white hover:text-gray-700 dark:hover:text-white text-xl font-light tracking-wide transition-all duration-300 rounded-xl hover:bg-gray-100/70 dark:hover:bg-white/10 hover:shadow-md dark:hover:shadow-white/5"
-              >
-                Projects
-              </Link>
-
-              <Link
-                to="/about"
-                onClick={() => setIsMenuOpen(false)}
-                className="block w-full text-left px-6 py-4 text-gray-500 dark:text-white hover:text-gray-700 dark:hover:text-white text-xl font-light tracking-wide transition-all duration-300 rounded-xl hover:bg-gray-100/70 dark:hover:bg-white/10 hover:shadow-md dark:hover:shadow-white/5"
-              >
-                About
-              </Link>
+              <MobileNavLink to="/blog" onClick={() => setIsMenuOpen(false)}>Blog</MobileNavLink>
+              <MobileNavLink to="/projects" onClick={() => setIsMenuOpen(false)}>Projects</MobileNavLink>
+              <MobileNavLink to="/about" onClick={() => setIsMenuOpen(false)}>About</MobileNavLink>
             </div>
           </div>
         )}
