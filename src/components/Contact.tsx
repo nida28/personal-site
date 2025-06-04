@@ -24,8 +24,7 @@ const Contact = () => {
           </div>
 
           <p className={`${textConfig.subtitle.base} ${textConfig.subtitle.size} ${textConfig.subtitle.color} max-w-4xl mx-auto text-center`}>
-            I'm always interested in connecting with fellow developers and hearing your thoughts.
-            Feel free to reach out if you'd like to chat!
+            Have thoughts, questions, or just want to say hi? I’d love to hear from you.
           </p>
 
           <div className="flex flex-row gap-6 justify-center pt-8">
