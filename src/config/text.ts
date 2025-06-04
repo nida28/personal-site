@@ -68,7 +68,7 @@ export const textConfig = {
     text: {
         base: "font-light leading-relaxed",
         size: "text-xl",
-        color: "text-gray-700 dark:text-gray-200",
+        color: "text-gray-700 dark:text-gray-100",
     },
 
     // Section title (h2) styling

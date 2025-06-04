@@ -39,8 +39,8 @@ const About = () => {
       <main className="flex-1 pt-32 bg-gradient-to-br from-gray-50 via-gray-100/30 to-blue-50/20 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 text-gray-900 dark:text-white relative">
         {/* Gradient background elements positioned to not interfere with image */}
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-100/20 via-blue-100/10 to-blue-200/20 dark:from-pink-900/20 dark:via-blue-900/30 dark:to-purple-900/20 pointer-events-none"></div>
-        <div className="absolute top-1/2 right-1/4 max-w-[300px] w-full h-[300px] bg-gradient-to-r from-cyan-200/15 to-blue-300/15 dark:from-pink-500/10 dark:to-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
-        <div className="absolute bottom-1/3 left-1/4 max-w-[250px] w-full h-[250px] bg-gradient-to-r from-blue-300/15 to-blue-400/15 dark:from-blue-500/10 dark:to-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div className="absolute top-1/2 right-1/4 w-[200px] sm:w-[250px] md:w-[300px] aspect-square bg-gradient-to-r from-cyan-200/15 to-blue-300/15 dark:from-pink-500/10 dark:to-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div className="absolute bottom-1/3 left-1/4 w-[150px] sm:w-[200px] md:w-[250px] aspect-square bg-gradient-to-r from-blue-300/15 to-blue-400/15 dark:from-blue-500/10 dark:to-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
         <div className="container mx-auto relative z-10">
           <div className="text-center mb-12 md:mb-20">
@@ -69,7 +69,7 @@ const About = () => {
 
               {/* Short version - Single sentence next to image */}
               <div className="prose prose-base sm:prose-lg dark:prose-invert max-w-none">
-                <h2 className={`${textConfig.aboutSubtitle.base} text-xl md:${textConfig.aboutSubtitle.size} ${textConfig.aboutSubtitle.color} mb-3 md:mb-4`}>
+                <h2 className={`${textConfig.aboutSubtitle.base} ${textConfig.aboutSubtitle.size} ${textConfig.aboutSubtitle.color} mb-3 md:mb-4`}>
                   The Short Version
                 </h2>
                 <p className={`${textConfig.text.base} text-xl md:text-2xl ${textConfig.text.color} mb-6 md:mb-8`}>
@@ -83,7 +83,7 @@ const About = () => {
                   The Longer Version
                 </h2>
 
-                <div className={`${textConfig.text.base} ${textConfig.text.size} text-black dark:text-white space-y-6 leading-relaxed text-justify`}>
+                <div className={`${textConfig.text.base} ${textConfig.text.size} text-black dark:text-white space-y-6 leading-relaxed text-left md:text-justify`}>
                   <p>
                     I was born and raised on the beautiful island of Mauritius, where I completed my secondary schooling. I studied the sciences, math, and sociology –  the latter being my favorite subject and still one of my core interests.
                   </p>
@@ -145,7 +145,7 @@ const About = () => {
               </div>
 
               {/* FAQ Section */}
-              <div className="mt-12 mb-20">
+              <div className="mt-10 md:mt-12 mb-20">
                 <h2 className={`${textConfig.aboutSubtitle.base} ${textConfig.aboutSubtitle.size} ${textConfig.aboutSubtitle.color} mb-2`}>
                   FAQs
                 </h2>
@@ -172,7 +172,7 @@ const About = () => {
                   />
                   <FAQItem
                     question={<>Wait – you're from an island that's <a href="https://www.goodreads.com/quotes/9241672-mauritius-was-made-first-and-then-heaven-and-heaven-was" target="_blank" rel="noopener noreferrer" className="text-cyan-600 dark:text-cyan-400 hover:underline">literally called paradise</a>. What on earth are you doing here in cold, grey Berlin???</>}
-                    answer={<>Yup. Trust me, I know. <br />But as Rebecca Bunch from my all-time favorite show <i><a href="https://www.youtube.com/watch?v=qzY3EaJTuJk&ab_channel=racheldoesstuff" target="_blank" rel="noopener noreferrer" className="text-cyan-600 dark:text-cyan-400 hover:underline">Crazy Ex-Girlfriend</a></i> would say... the situation's a lot more nuanced than that.<br /> Like many Mauritians, I went abroad for university, partly because higher education options back home are limited – although now this is rapidly changing – and partly because there's real value in stepping outside a small island to explore the world, learn from other cultures, and grow in ways you simply can't by staying in one place your whole life. <br />That said, returning isn't always simple. The job market in Mauritius is limited, and many of us end up building our lives elsewhere, not out of rejection of home, but because opportunity often lives somewhere else. <br />That said, even a decade later it's still not easy being away from home. I miss my large extended family, but also the food, the sea, the pace of life, and the sense of belonging that can only come from your origins – even when I've adjusted to life elsewhere. I don't have fixed long-term plans, but one thing that I do know for sure: staying connected to Mauritius – and being able to visit easily and often – will always be a priority for me. <img src="https://flagcdn.com/w40/mu.png" alt="Mauritius Flag" className="inline-block align-middle ml-1" style={{ height: '1em' }} /></>}
+                    answer={<>Yup. Trust me, I know. <br />But as Rebecca Bunch from my all-time favorite show <i><a href="https://www.youtube.com/watch?v=qzY3EaJTuJk&ab_channel=racheldoesstuff" target="_blank" rel="noopener noreferrer" className="text-cyan-600 dark:text-cyan-400 hover:underline">Crazy Ex-Girlfriend</a></i> would say... the situation's a lot more nuanced than that.<br /> Like many Mauritians, I went abroad for university, partly because higher education options back home are limited – although now this is rapidly changing – and partly because there's real value in stepping outside a small island to explore the world, learn from other cultures, and grow in ways you simply can't by staying in one place your whole life. <br />That said, returning isn't always simple. The job market in Mauritius is limited, and many of us end up building our lives elsewhere, not out of rejection of home, but because opportunity often lives somewhere else. <br />Still, even after a decade being away from home is bittersweet. I miss my large extended family, but also the food, the sea, the pace of life, and the sense of belonging that can only come from your origins – even when I've adjusted to life elsewhere. I don't have fixed long-term plans, but one thing that I do know for sure: staying connected to Mauritius – and being able to visit easily and often – will always be a priority for me. <img src="https://flagcdn.com/w40/mu.png" alt="Mauritius Flag" className="inline-block align-middle ml-1" style={{ height: '1em' }} /></>}
                   />
 
                 </div>
