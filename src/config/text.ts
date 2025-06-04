@@ -15,6 +15,12 @@ export const textConfig = {
         }
     },
 
+    // Highlight colors for important terms
+    highlight: {
+        base: "font-medium",
+        color: "text-blue-600 dark:text-pink-500"
+    },
+
     // Main page title styling
     title: {
         base: "font-light tracking-tight",

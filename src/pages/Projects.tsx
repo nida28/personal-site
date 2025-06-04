@@ -11,7 +11,7 @@ const Projects = () => {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-cyan-50 dark:from-slate-900 dark:via-gray-900 dark:to-black overflow-x-hidden">
       <Helmet>
         <title>Projects | Nidaa Mungloo</title>
-        <meta name="description" content="Some things I’ve made, broken, and rebuilt (with love)." />
+        <meta name="description" content="Some things I've made, broken, and rebuilt (with love)." />
       </Helmet>
       <Header />
 
@@ -30,11 +30,11 @@ const Projects = () => {
           {/* Page Header */}
           <div className="text-center mb-12">
             <h1 className={`${textConfig.title.base} ${textConfig.title.size} ${textConfig.title.color} mb-6`}>
-              Featured Project
+              Project Spotlight
             </h1>
             <div className="w-24 h-px bg-gradient-to-r from-transparent via-gray-400 dark:via-white/30 to-transparent mx-auto mb-8"></div>
             <p className={`${textConfig.subtitle.base} ${textConfig.subtitle.size} ${textConfig.subtitle.color} max-w-3xl mx-auto`}>
-              A glimpse into my latest work — ideas turned into code (and sometimes chaos).
+              Solving real-world challenges through applied AI and thoughtful design.
             </p>
           </div>
 
@@ -66,18 +66,19 @@ const Projects = () => {
 
                 <div className="space-y-6">
                   <p className={`${textConfig.text.base} ${textConfig.text.size} ${textConfig.text.color}`}>
-                    BGB Bot is an intelligent automation solution built with cutting-edge technologies.
-                    This project represents a sophisticated approach to bot development, combining
-                    artificial intelligence with seamless user interactions.
+                    The BGB ChatBot is a legal Q&A assistant that helps users understand everyday rights under the German Civil Code (Bürgerliches Gesetzbuch). I built it to make legal information more accessible — especially for immigrants or non-German speakers — by combining retrieval-augmented generation (RAG) with open-source LLMs.
                   </p>
                   <p className={`${textConfig.text.base} ${textConfig.text.size} ${textConfig.text.color}`}>
-                    The bot features automated response systems, smart integrations with various
-                    platforms, and advanced natural language processing capabilities. It's designed
-                    to handle complex queries while maintaining a conversational and intuitive interface.
+                    So far, I've:
                   </p>
-                  <p className={`${textConfig.text.base} ${textConfig.text.size} ${textConfig.text.color}`}>
-                    Built with scalability in mind, the architecture supports real-time processing,
-                    machine learning adaptations, and seamless deployment across multiple environments.
+                  <ul className={`${textConfig.text.base} ${textConfig.text.size} ${textConfig.text.color} list-disc pl-12 space-y-2 mt-2`}>
+                    <li>Parsed and embedded the <span className={`${textConfig.highlight.base} ${textConfig.highlight.color}`}>BGB</span> into searchable chunks</li>
+                    <li>Built a chatbot interface using <span className={`${textConfig.highlight.base} ${textConfig.highlight.color}`}>Gradio</span> and <span className={`${textConfig.highlight.base} ${textConfig.highlight.color}`}>OpenAI</span> embeddings</li>
+                    <li>Deployed it publicly on <span className={`${textConfig.highlight.base} ${textConfig.highlight.color}`}>Hugging Face Spaces</span></li>
+                    <li>Presented the project at <span className={`${textConfig.highlight.base} ${textConfig.highlight.color}`}>GDG Berlin</span> and <span className={`${textConfig.highlight.base} ${textConfig.highlight.color}`}>GDG Cloud</span></li>
+                  </ul>
+                  <p className={`${textConfig.text.base} ${textConfig.text.size} ${textConfig.text.color} mt-4`}>
+                    Next, I’m working on automating knowledge updates with a web crawler to keep the data fresh and relevant — turning the bot into a continuously evolving legal assistant.
                   </p>
                 </div>
 

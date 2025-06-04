@@ -41,11 +41,11 @@ const Blog = () => {
           {/* Page Header */}
           <div className="text-center mb-20">
             <h1 className={`${textConfig.title.base} ${textConfig.title.size} ${textConfig.title.color} mb-6`}>
-              Latest Insights
+              Notes & Recs
             </h1>
             <div className="w-24 h-px bg-gradient-to-r from-transparent via-gray-400 dark:via-white/30 to-transparent mx-auto mb-8"></div>
             <p className={`${textConfig.subtitle.base} ${textConfig.subtitle.size} ${textConfig.subtitle.color} max-w-3xl mx-auto`}>
-              Thoughts, tutorials, and insights from my journey as a developer.
+              Ideas I’m exploring, things I’ve built, and what I’ve been enjoying lately.
             </p>
           </div>
 

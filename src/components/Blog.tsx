@@ -37,11 +37,11 @@ const Blog = () => {
       <div className="container mx-auto relative z-10">
         <div className={`text-center ${textConfig.spacing.title.home}`}>
           <h2 className={`${textConfig.title.base} ${textConfig.title.size} ${textConfig.title.color} mb-6`}>
-            Notes & Recs
+            Blog & Beyond
           </h2>
           <div className="w-24 h-px bg-gradient-to-r from-transparent via-gray-400 dark:via-white/30 to-transparent mx-auto mb-8"></div>
-          <p className={`${textConfig.subtitle.base} ${textConfig.subtitle.size} ${textConfig.subtitle.color} max-w-3xl mx-auto`}>
-            Ideas I’m exploring, things I’ve built, and what I’ve been enjoying lately.
+          <p className={`${textConfig.subtitle.base} ${textConfig.subtitle.size} ${textConfig.subtitle.color} max-w-4xl mx-auto`}>
+            Reflections, experiments, and lessons from my journey as I build and learn.
           </p>
         </div>
 
