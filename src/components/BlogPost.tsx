@@ -12,6 +12,10 @@ interface MDXProps {
     [key: string]: any;
 }
 
+interface MDXWrapperProps {
+    children: React.ReactElement;
+}
+
 // Types for MDX frontmatter and components
 interface Frontmatter {
     title: string;
@@ -30,12 +34,15 @@ interface BlogPostProps {
     post: MDXPost;
 }
 
+interface MDXElementProps {
+    children: string;
+}
+
 // Wrapper component to skip frontmatter content
 const MDXWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     if (React.isValidElement(children)) {
-        // Skip rendering if the content looks like frontmatter
-        const content = children.props.children;
-        if (typeof content === 'string' && content.startsWith('title:')) {
+        const element = children as React.ReactElement<MDXElementProps>;
+        if (typeof element.props.children === 'string' && element.props.children.startsWith('title:')) {
             return null;
         }
     }
@@ -46,13 +53,13 @@ const MDXWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 const mdxComponents = {
     wrapper: MDXWrapper,
     h1: (props: MDXProps) => (
-        <h1 {...props} className={`${textConfig.title.base} ${textConfig.title.size} ${textConfig.title.color} mt-16 mb-8`} />
+        <h1 {...props} className={`${textConfig.title.base} ${textConfig.title.size} ${textConfig.title.color} my-6`} />
     ),
     h2: (props: MDXProps) => (
-        <h2 {...props} className={`${textConfig.sectionTitle.base} ${textConfig.sectionTitle.size} ${textConfig.sectionTitle.color} mt-16 mb-8 pb-4 border-b border-gray-200 dark:border-gray-800`} />
+        <h2 {...props} className={`${textConfig.sectionTitle.base} ${textConfig.sectionTitle.size} ${textConfig.sectionTitle.color} my-6 pb-4 border-b border-gray-200 dark:border-gray-800`} />
     ),
     h3: (props: MDXProps) => (
-        <h3 {...props} className={`${textConfig.sectionTitle.base} ${textConfig.sectionTitle.size} ${textConfig.sectionTitle.color} mt-16 mb-8`} />
+        <h3 {...props} className={`${textConfig.sectionTitle.base} ${textConfig.sectionTitle.size} ${textConfig.sectionTitle.color} my-6`} />
     ),
     p: (props: MDXProps) => {
         // Skip rendering if the content looks like frontmatter
@@ -60,23 +67,23 @@ const mdxComponents = {
             return null;
         }
         return (
-            <p {...props} className={`${textConfig.text.base} ${textConfig.text.size} ${textConfig.text.color} mb-8`} />
+            <p {...props} className={`${textConfig.text.base} ${textConfig.text.size} ${textConfig.text.color} mb-4`} />
         );
     },
     a: (props: MDXProps) => (
         <a {...props} className="text-xl text-cyan-600 dark:text-cyan-400 font-normal hover:underline" />
     ),
     ul: (props: MDXProps) => (
-        <ul {...props} className="list-disc pl-8 my-8 space-y-4" />
+        <ul {...props} className="list-disc pl-8 my-4 space-y-2" />
     ),
     ol: (props: MDXProps) => (
-        <ol {...props} className="list-decimal pl-8 my-8 space-y-4" />
+        <ol {...props} className="list-decimal pl-8 my-4 space-y-2" />
     ),
     li: (props: MDXProps) => (
         <li {...props} className={`${textConfig.text.base} ${textConfig.text.size} ${textConfig.text.color}`} />
     ),
     blockquote: (props: MDXProps) => (
-        <blockquote {...props} className="border-l-4 border-cyan-500 dark:border-pink-500 pl-8 py-4 my-12 italic text-xl font-light bg-gradient-to-r from-cyan-50 to-transparent dark:from-pink-900/10 dark:to-transparent" />
+        <blockquote {...props} className="border-l-4 border-cyan-500 dark:border-pink-500 pl-8 py-4 my-6 italic text-xl font-light bg-gradient-to-r from-cyan-50 to-transparent dark:from-pink-900/10 dark:to-transparent" />
     ),
     pre: (props: any) => (
         <pre {...props} className="bg-gray-900 dark:bg-gray-800 p-8 rounded-lg text-gray-100 my-12 text-lg shadow-xl leading-relaxed font-normal" />
@@ -112,47 +119,49 @@ const BlogPost: React.FC<BlogPostProps> = ({ post }) => {
     };
 
     return (
-        <article className="max-w-3xl mx-auto px-6 py-16">
+        <article className="max-w-5xl mx-auto px-6 py-16">
             {/* Header */}
             <header className="mb-20">
-                {frontmatter.coverImage && (
-                    <div className="relative w-full aspect-[21/9] mb-16 rounded-2xl overflow-hidden shadow-2xl">
-                        <img
-                            src={frontmatter.coverImage}
-                            alt={frontmatter.title}
-                            className="absolute inset-0 w-full h-full object-cover"
-                        />
-                    </div>
-                )}
-
-                <div className="space-y-8">
-                    <h1 className={`${textConfig.title.base} ${textConfig.title.size} ${textConfig.title.color}`}>
-                        {frontmatter.title}
-                    </h1>
-
-                    <div className="flex items-center gap-8 text-gray-600 dark:text-gray-400 text-base font-light">
-                        <div className="flex items-center gap-2">
-                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                            </svg>
-                            <span>{formattedDate}</span>
+                <div className="flex gap-12 items-start">
+                    {frontmatter.coverImage && (
+                        <div className="relative w-2/5 flex-shrink-0 rounded-2xl overflow-hidden shadow-2xl">
+                            <img
+                                src={frontmatter.coverImage}
+                                alt={frontmatter.title}
+                                className="w-full h-auto"
+                            />
                         </div>
-                        <div className="flex items-center gap-2">
-                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                            </svg>
-                            <span>{frontmatter.author}</span>
-                        </div>
-                    </div>
+                    )}
 
-                    <p className={`${textConfig.subtitle.base} ${textConfig.subtitle.size} ${textConfig.subtitle.color} border-l-4 border-cyan-500 dark:border-pink-500 pl-8 py-4 bg-gradient-to-r from-cyan-50 to-transparent dark:from-pink-900/10 dark:to-transparent`}>
-                        {frontmatter.excerpt}
-                    </p>
+                    <div className="flex-1 space-y-8">
+                        <h1 className={`${textConfig.title.base} ${textConfig.title.size} ${textConfig.title.color}`}>
+                            {frontmatter.title}
+                        </h1>
+
+                        <div className="flex items-center gap-8 text-gray-600 dark:text-gray-400 text-base font-light">
+                            <div className="flex items-center gap-2">
+                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                                <span>{formattedDate}</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                </svg>
+                                <span>{frontmatter.author}</span>
+                            </div>
+                        </div>
+
+                        <p className={`${textConfig.subtitle.base} ${textConfig.subtitle.size} ${textConfig.subtitle.color} border-l-4 border-cyan-500 dark:border-pink-500 pl-8 py-4 bg-gradient-to-r from-cyan-50 to-transparent dark:from-pink-900/10 dark:to-transparent`}>
+                            {frontmatter.excerpt}
+                        </p>
+                    </div>
                 </div>
             </header>
 
             {/* Content */}
-            <div className="prose prose-lg max-w-none dark:prose-invert">
+            <div className="prose prose-lg max-w-none dark:prose-invert mt-4">
                 <MDXProvider components={mdxComponents}>
                     <MDXContent />
                 </MDXProvider>

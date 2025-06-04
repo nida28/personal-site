@@ -47,8 +47,8 @@ const BlogPostPage: React.FC = () => {
         <Header />
         <div className="max-w-4xl mx-auto px-6 py-32 text-center">
           <div className="animate-pulse">
-            <div className="h-8 bg-gray-200 dark:bg-gray-700 rounded-full w-3/4 mx-auto mb-8"></div>
-            <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded-full w-1/2 mx-auto mb-4"></div>
+            <div className="h-8 bg-gray-200 dark:bg-gray-700 rounded-full w-3/4 mx-auto mb-6"></div>
+            <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded-full w-1/2 mx-auto mb-2"></div>
             <div className="space-y-4">
               {[...Array(3)].map((_, i) => (
                 <div key={i} className="h-4 bg-gray-200 dark:bg-gray-700 rounded-full w-full"></div>

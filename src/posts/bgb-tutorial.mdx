@@ -1,0 +1,124 @@
+---
+title: "From Static to Smart: Building a Legal Chatbot with RAG"
+date: "2025-05-30"
+author: "Nidaa Mungloo"
+excerpt: "How I built a retrieval-augmented chatbot to make German law a little more accessible."
+coverImage: "/public/chatbot.jpg"
+---
+Time and time again, as an immigrant in Germany, I have found myself googling my rights — around tenancy, employment, and more. Each time, I kept running into dense legal paragraphs, cryptic citations, and explanations clearly written for experts — not for everyday people, and definitely not for non-native speakers.
+
+Google Translate could only take me so far. What I really needed wasn’t just a translation — it was context. Something that broke things down, added clarity, and helped me actually understand what the law meant for me.
+
+After a lot of searching, I couldn’t find any free tools that did what I needed — so I decided to build one myself. That’s how the BGB ChatBot came to life.
+
+---
+## What I Built (and Why)
+
+The BGB ChatBot is a legal Q&A assistant built on Retrieval-Augmented Generation (RAG). It helps users understand German civil law in plain English — with real sources to back it up.
+
+What it does:
+- Answers questions about tenancy, employment, family law, and more
+- Links directly to the relevant paragraph in the BGB
+- Focuses on factual information — not legal interpretation
+- Not a lawyer, just a guide
+---
+
+Below is a breakdown of how I built the BGB Bot.
+
+### Step 1: Laying the Foundation
+
+I started with the official ENglish HTML version of the Bürgerliches Gesetzbuch (BGB). It was structured... inconsistently. Some sections had clear anchors like `p0069`, others relied on `<br>` tags.
+
+I wrote a custom C# parser to:
+
+- Detect and extract legal sections
+- Group subparagraphs under the right heading
+- Preserve the hierarchy of the law (sections → subsections → clauses)
+
+### Step 2: Embed the Text
+
+Each chunk of legal text was:
+
+- Split based on length and semantic boundaries
+- Embedded using OpenAI’s `text-embedding-3-small`
+- Stored with metadata like `section: §573c`
+
+These embeddings power semantic search using cosine similarity — comparing the meaning of the user’s query to the legal chunks.
+
+---
+
+## Step 3: Querying the Law
+
+When someone asks something like:
+
+> Can my landlord terminate my lease mid-contract?
+
+The bot:
+
+1. Embeds the question
+2. Searches for the most relevant chunks
+3. Builds a prompt that includes:
+   - Retrieved legal content
+   - The original user query
+   - A system instruction to stay factual and say “I don’t know” when unsure
+4. Sends the prompt to an LLM to generate a grounded answer
+
+Each answer links to:
+
+- A static page I built for that legal paragraph
+- The official BGB site (in English and German)
+
+---
+
+## Why RAG?
+
+Traditional LLMs are powerful — but they guess. Sometimes very convincingly.
+
+They:
+
+- Make up fake laws
+- Don’t know your local legal context
+- Can’t cite real sources
+
+By grounding the model with real data (RAG), I was able to guide it toward accurate, useful responses based on real law — not assumptions.
+
+---
+
+## What’s Next
+
+In part two of the project, I’m exploring ways to keep the chatbot’s knowledge fresh:
+
+- Setting up a web crawler to pull from government and legal websites (e.g., BMAS)
+- Scheduling regular updates with AWS Lambda or Cloud Functions
+- Using diffing logic to detect when content changes
+- Figuring out whether to version the law or overwrite old data
+
+The idea is to go from a static bot to a living, evolving system that stays up-to-date with legal developments.
+
+---
+
+## Challenges Along the Way
+
+- Parsing HTML was messy. Legal websites aren’t built for devs.
+- Chunking had to be careful — too much or too little ruins relevance.
+- Prompt tuning took trial and error.
+- I’m still figuring out how best to host the embeddings.
+
+---
+
+## Want to Try It?
+
+You can check out the demo and code here:
+
+- [BGB ChatBot](https://huggingface.co/spaces/nfm1708/BGBChatBot)  
+- [Code + Docs](https://github.com/nida28)
+
+---
+
+## Why This Matters
+
+I built this tool because I believe legal information should be easier to understand — especially for people navigating systems in a new country.
+
+I’m still learning and experimenting, but I hope this helps someone feel a little less lost in the fine print.
+
+Got thoughts or ideas? Feel free to reach out — I’d love to hear them.
