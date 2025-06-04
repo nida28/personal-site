@@ -155,7 +155,7 @@ const About = () => {
                   FAQs
                 </h2>
                 <p className={`${textConfig.subtitle.base} ${textConfig.text.size} text-blue-900 dark:text-gray-200 mb-6`}>
-                  After sharing my story, I am almost always asked the same questions so I've preemptively answered them here.
+                  After sharing my story, I am almost always asked the same questions so I've preemptively compiled and answered them here.
                 </p>
                 <div className="space-y-4">
                   <FAQItem
@@ -181,6 +181,9 @@ const About = () => {
                   />
 
                 </div>
+                <p className={`${textConfig.subtitle.base} ${textConfig.text.size} text-blue-900 dark:text-gray-200 mt-10`}>
+                  Got a question I missed? Let’s connect!
+                </p>
               </div>
             </div>
           </div>

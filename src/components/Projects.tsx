@@ -25,7 +25,7 @@ const Projects = () => {
           </h2>
           <div className="w-24 h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-white/30 to-transparent mx-auto mb-8"></div>
           <p className={`${textConfig.subtitle.base} ${textConfig.subtitle.size} ${textConfig.subtitle.color} max-w-4xl lg:max-w-5xl mx-auto`}>
-            A glimpse into my latest work — experiments, solutions, and lessons along the way.
+            A glimpse into my latest work — experiments, solutions, and lessons learned along the way.
           </p>
         </div>
 
