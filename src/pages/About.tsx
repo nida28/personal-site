@@ -139,7 +139,7 @@ const About = () => {
 
                   <p>
                     If you've made it all the way here – thank you for reading! ☺️ <br />
-                    If there's anything here that may have resonated with you or sparked your interest, I'd love to hear from you.</p>
+                    If there's anything here that perhaps resonated with you or sparked your interest, I'd love to hear from you.</p>
                 </div>
 
               </div>
