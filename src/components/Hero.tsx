@@ -36,8 +36,7 @@ const Hero = () => {
           </div>
 
           <p className={`${textConfig.heroSubtitle.base} ${textConfig.heroSubtitle.size} ${textConfig.heroSubtitle.color} max-w-4xl mx-auto`}>
-            Welcome to my corner of the internet where I share my thoughts,
-            projects, and journey as a developer.
+            Welcome to my thinking space — where I document what I’m learning, building, and figuring out in real time.
           </p>
 
           <div className="flex flex-row justify-center pt-2 pb-8 sm:pt-12 sm:pb-0">
@@ -49,7 +48,7 @@ const Hero = () => {
               backdrop-blur-sm border border-gray-300/60 hover:border-blue-300/60 dark:border-white/15 dark:hover:border-fuchsia-400/50
               rounded-2xl font-medium shadow-lg hover:shadow-xl
               transition-all duration-500 transform hover:scale-[1.02] tracking-wide text-lg">
-              <span className={`${textConfig.heroButton.base} ${textConfig.heroButton.size} ${textConfig.heroButton.color}`}>Learn More</span>
+              <span className={`${textConfig.heroButton.base} ${textConfig.heroButton.size} ${textConfig.heroButton.color}`}>About Me</span>
             </Link>
 
             <Link to="/blog" className="group relative w-[9rem] sm:w-auto px-0 sm:px-10 py-5 text-center
@@ -61,7 +60,7 @@ const Hero = () => {
               rounded-2xl font-medium shadow-lg hover:shadow-xl
               transition-all duration-500 transform hover:scale-[1.02] tracking-wide text-lg
               ml-6">
-              <span className={`${textConfig.heroButtonSecondary.base} ${textConfig.heroButtonSecondary.size} ${textConfig.heroButtonSecondary.color}`}>Read My Blog</span>
+              <span className={`${textConfig.heroButtonSecondary.base} ${textConfig.heroButtonSecondary.size} ${textConfig.heroButtonSecondary.color}`}>Blog Posts</span>
             </Link>
           </div>
         </div>

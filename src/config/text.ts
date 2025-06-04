@@ -57,6 +57,13 @@ export const textConfig = {
         color: "text-black dark:text-gray-300",
     },
 
+    // About page section subtitles
+    aboutSubtitle: {
+        base: "font-semibold leading-relaxed",
+        size: "text-2xl",
+        color: "text-teal-500 text-shadow-sm shadow-teal-200 dark:text-pink-500 dark:text-shadow-sm dark:shadow-pink-900/50",
+    },
+
     // Regular paragraph text
     text: {
         base: "font-light leading-relaxed",
