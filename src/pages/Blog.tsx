@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { getAllPosts, BlogPost } from '../utils/blog';
 import { textConfig } from '../config/text';
+import { Helmet } from 'react-helmet-async';
 
 const Blog = () => {
   const [posts, setPosts] = useState<BlogPost[]>([]);
@@ -26,6 +27,10 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen bg-white dark:bg-slate-900 transition-colors duration-300 overflow-x-hidden">
+      <Helmet>
+        <title>Blog | Nidaa Mungloo</title>
+        <meta name="description" content="Dev, Law & Life in Progress." />
+      </Helmet>
       <Header />
 
       {/* Background elements */}

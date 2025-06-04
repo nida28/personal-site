@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { textConfig } from '../config/text';
+import { Helmet } from 'react-helmet-async';
 
 const FAQItem = ({ question, answer }: { question: string | React.ReactNode; answer: React.ReactNode }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,6 +35,10 @@ const FAQItem = ({ question, answer }: { question: string | React.ReactNode; ans
 const About = () => {
   return (
     <div className="min-h-screen bg-white dark:bg-slate-900 transition-colors duration-300 overflow-x-hidden flex flex-col">
+      <Helmet>
+        <title>About Me | Nidaa Mungloo</title>
+        <meta name="description" content="Software developer from Mauritius, currently based in Berlin. Read about my journey from tropical sunshine to cold U-Bahn mornings." />
+      </Helmet>
       <Header />
 
       <main className="flex-1 pt-32 bg-gradient-to-br from-gray-50 via-gray-100/30 to-blue-50/20 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 text-gray-900 dark:text-white relative">

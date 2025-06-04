@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import BlogPostComponent from '../components/BlogPost';
 import { getPostBySlug, BlogPost } from '../utils/blog';
 import { textConfig } from '../config/text';
+import { Helmet } from 'react-helmet-async';
 
 const BlogPostPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -40,6 +41,9 @@ const BlogPostPage: React.FC = () => {
   if (loading) {
     return (
       <div className="min-h-screen bg-white dark:bg-slate-900 transition-colors duration-300">
+        <Helmet>
+          <title>Loading... | Nidaa Mungloo</title>
+        </Helmet>
         <Header />
         <div className="max-w-4xl mx-auto px-6 py-32 text-center">
           <div className="animate-pulse">
@@ -60,6 +64,9 @@ const BlogPostPage: React.FC = () => {
   if (!post) {
     return (
       <div className="min-h-screen bg-white dark:bg-slate-900 transition-colors duration-300">
+        <Helmet>
+          <title>Post Not Found | Nidaa Mungloo</title>
+        </Helmet>
         <Header />
         <div className="max-w-4xl mx-auto px-6 py-32 text-center">
           <h1 className={`${textConfig.sectionTitle.base} ${textConfig.sectionTitle.size} ${textConfig.sectionTitle.color} mb-4`}>
@@ -76,6 +83,10 @@ const BlogPostPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white dark:bg-slate-900 transition-colors duration-300">
+      <Helmet>
+        <title>{post.frontmatter.title} | Nidaa Mungloo</title>
+        <meta name="description" content={post.frontmatter.excerpt || `Read ${post.frontmatter.title} on Nidaa's blog.`} />
+      </Helmet>
       <Header />
       <main className="pt-24">
         <BlogPostComponent post={{ default: post.Component, frontmatter: post.frontmatter }} />

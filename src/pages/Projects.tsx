@@ -4,10 +4,15 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { socialConfig } from '../config/social';
 import { textConfig } from '../config/text';
+import { Helmet } from 'react-helmet-async';
 
 const Projects = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-cyan-50 dark:from-slate-900 dark:via-gray-900 dark:to-black overflow-x-hidden">
+      <Helmet>
+        <title>Projects | Nidaa Mungloo</title>
+        <meta name="description" content="Some things I’ve made, broken, and rebuilt (with love)." />
+      </Helmet>
       <Header />
 
       {/* Enhanced ambient background elements - Dark mode - Positioned to avoid cutoff */}
@@ -29,7 +34,7 @@ const Projects = () => {
             </h1>
             <div className="w-24 h-px bg-gradient-to-r from-transparent via-gray-400 dark:via-white/30 to-transparent mx-auto mb-8"></div>
             <p className={`${textConfig.subtitle.base} ${textConfig.subtitle.size} ${textConfig.subtitle.color} max-w-3xl mx-auto`}>
-              Showcasing my latest work and creative solution.
+              A glimpse into my latest work — ideas turned into code (and sometimes chaos).
             </p>
           </div>
 
