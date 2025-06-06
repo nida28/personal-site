@@ -33,8 +33,8 @@ const Header = () => {
               <img
                 src={
                   theme === 'dark'
-                    ? `${import.meta.env.BASE_URL}8e5d5b3b-7430-4ac6-8fa6-2c0c657a8cea.png`
-                    : `${import.meta.env.BASE_URL}52ee9a92-ee9b-4ee5-96a0-1f65c76586c6.png`
+                    ? `${import.meta.env.BASE_URL}pink_logo.png`
+                    : `${import.meta.env.BASE_URL}blue_logo.png`
                 }
                 alt="Nidaa Logo - Click to go home"
                 className="h-20 w-auto transition-all duration-300 group-hover:scale-105 group-hover:brightness-110 relative z-10"

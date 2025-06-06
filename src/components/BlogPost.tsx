@@ -151,7 +151,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ post }) => {
             {/* Main content */}
             <article className="prose prose-lg max-w-none dark:prose-invert">
                 {frontmatter.coverImage && (
-                    <div className="float-left mr-6 mb-2 mt-[0.8em] w-[180px] md:w-[280px] rounded-2xl overflow-hidden shadow-2xl">
+                    <div className="float-left mr-6 mt-[0.8em] w-[180px] md:w-[280px] rounded-2xl overflow-hidden shadow-2xl">
                         <img
                             src={frontmatter.coverImage}
                             alt={frontmatter.title}
