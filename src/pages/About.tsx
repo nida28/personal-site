@@ -13,9 +13,9 @@ const FAQItem = ({ question, answer }: { question: string | React.ReactNode; ans
         className={`flex justify-between items-center w-full py-4 text-left ${textConfig.text.base} text-blue-900 dark:text-gray-300 ${textConfig.text.size}`}
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span className="font-medium">{question}</span>
+        <span className="font-medium pr-8">{question}</span>
         <svg
-          className={`w-6 h-6 transform transition-transform ${isOpen ? 'rotate-180' : ''}`}
+          className={`w-6 h-6 flex-shrink-0 transform transition-transform ${isOpen ? 'rotate-180' : ''}`}
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -182,7 +182,7 @@ const About = () => {
 
                 </div>
                 <p className={`${textConfig.subtitle.base} ${textConfig.text.size} text-blue-900 dark:text-gray-200 mt-10`}>
-                  Got a question I didn't cover? Let’s connect!
+                  Got a question I didn't cover? Let's connect!
                 </p>
               </div>
             </div>
