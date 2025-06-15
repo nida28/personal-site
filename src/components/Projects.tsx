@@ -1,9 +1,11 @@
 import { ExternalLink, Github } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { socialConfig } from '../config/social';
 import { textConfig } from '../config/text';
 
 const Projects = () => {
+  const navigate = useNavigate();
+
   const projects = [
     {
       id: 1,
@@ -16,6 +18,10 @@ const Projects = () => {
       sourceUrl: socialConfig.bgbBot.sourceCode.url,
     },
   ];
+
+  const handleCardClick = () => {
+    navigate('/projects');
+  };
 
   return (
     <section id="projects" className={`${textConfig.spacing.section.home.full} bg-gray-50 dark:bg-slate-900 transition-colors duration-300`}>
@@ -33,10 +39,10 @@ const Projects = () => {
         <div className="flex justify-center">
           <div className="max-w-md">
             {projects.map((project, index) => (
-              <Link
+              <div
                 key={project.id}
-                to="/projects"
-                className="block"
+                className="block cursor-pointer"
+                onClick={handleCardClick}
               >
                 <div
                   className="group relative bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-sm dark:shadow-2xl border border-gray-100 dark:border-white/10 hover:shadow-2xl dark:hover:shadow-blue-500/20 transition-all duration-500 hover:scale-[1.02]"
@@ -86,7 +92,7 @@ const Projects = () => {
                     </div>
                   </div>
                 </div>
-              </Link>
+              </div>
             ))}
           </div>
         </div>

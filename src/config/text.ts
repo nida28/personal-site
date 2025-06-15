@@ -60,7 +60,7 @@ export const textConfig = {
     subtitle: {
         base: "font-light leading-relaxed",
         size: "text-2xl",
-        color: "text-black dark:text-gray-300",
+        color: "text-gray-700 dark:text-gray-300",
     },
 
     // About page section subtitles

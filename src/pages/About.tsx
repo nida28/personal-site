@@ -41,7 +41,7 @@ const About = () => {
       </Helmet>
       <Header />
 
-      <main className="flex-1 pt-32 bg-gradient-to-br from-gray-50 via-gray-100/30 to-blue-50/20 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 text-gray-900 dark:text-white relative">
+      <main className="flex-1 pt-32 bg-gradient-to-br from-gray-50 via-gray-100/30 to-blue-50/20 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 text-gray-800 dark:text-white relative">
         {/* Gradient background elements positioned to not interfere with image */}
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-100/20 via-blue-100/10 to-blue-200/20 dark:from-pink-900/20 dark:via-blue-900/30 dark:to-purple-900/20 pointer-events-none"></div>
         <div className="absolute top-1/2 right-1/4 w-[200px] sm:w-[250px] md:w-[300px] aspect-square bg-gradient-to-r from-cyan-200/15 to-blue-300/15 dark:from-pink-500/10 dark:to-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
@@ -88,7 +88,7 @@ const About = () => {
                   The Longer Version
                 </h2>
 
-                <div className={`${textConfig.text.base} ${textConfig.text.size} text-black dark:text-white space-y-6 leading-relaxed text-left md:text-justify`}>
+                <div className={`${textConfig.text.base} ${textConfig.text.size} space-y-6 leading-relaxed text-left md:text-justify`}>
                   <p>
                     I was born and raised on the beautiful island of Mauritius, where I completed my secondary schooling. I studied the sciences, math, and sociology –  the latter being my favorite subject and still one of my core interests.
                   </p>
