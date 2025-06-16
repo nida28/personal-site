@@ -71,7 +71,12 @@ const mdxComponents = {
         );
     },
     a: (props: MDXProps) => (
-        <a {...props} className="text-xl text-cyan-600 dark:text-cyan-400 font-normal hover:underline" />
+        <a
+            {...props}
+            className="text-xl text-cyan-600 dark:text-cyan-400 font-normal hover:underline"
+            target="_blank"
+            rel="noopener noreferrer"
+        />
     ),
     ul: (props: MDXProps) => (
         <ul {...props} className="list-disc pl-8 my-4 space-y-2" />
