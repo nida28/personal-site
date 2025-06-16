@@ -89,7 +89,7 @@ const BlogPostPage: React.FC = () => {
       </Helmet>
       <Header />
       <main className="pt-24">
-        <BlogPostComponent post={{ default: post.Component, frontmatter: post.frontmatter }} />
+        <BlogPostComponent post={{ default: post.Component, frontmatter: post.frontmatter }} slug={slug} />
       </main>
       <Footer />
     </div>

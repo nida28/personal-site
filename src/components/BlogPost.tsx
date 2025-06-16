@@ -32,6 +32,7 @@ interface MDXPost {
 
 interface BlogPostProps {
     post: MDXPost;
+    slug?: string;
 }
 
 interface MDXElementProps {
@@ -102,18 +103,20 @@ const mdxComponents = {
     },
 };
 
-const BlogPost: React.FC<BlogPostProps> = ({ post }) => {
+const BlogPost: React.FC<BlogPostProps> = ({ post, slug }) => {
     const { frontmatter } = post;
     const MDXContent = post.default;
     const formattedDate = format(new Date(frontmatter.date), 'MMMM dd, yyyy');
     const location = useLocation();
 
-    // Get the full URL for sharing
-    const currentUrl = window.location.origin + location.pathname;
+    // Use preview HTML for sharing if slug is provided
+    const previewUrl = slug
+        ? `${window.location.origin}/preview/${slug}.html`
+        : window.location.origin + location.pathname;
 
     const handleShare = (platform: 'linkedin' | 'x') => {
         const title = encodeURIComponent(frontmatter.title);
-        const url = encodeURIComponent(currentUrl);
+        const url = encodeURIComponent(previewUrl);
 
         const shareUrls = {
             linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${url}`,
