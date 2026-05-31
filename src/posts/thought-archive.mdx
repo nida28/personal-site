@@ -1,0 +1,67 @@
+---
+title: "Building a Personal Memory Archive"
+date: "2026-05-31"
+author: "Nidaa Mungloo"
+excerpt: "Turning two years of AI conversations into a searchable memory I can actually use."
+coverImage: "/archive.png"
+---
+
+
+Over the last two years, I've used ChatGPT and Claude as thinking partners.
+
+Not just for quick answers, but for real work: planning projects, working through decisions, and capturing ideas I didn’t want to lose.
+
+Over time, that produced something surprisingly valuable: a huge archive of conversations containing ideas, lessons learned, half-finished projects, and moments of genuine insight.
+
+The problem was that none of it was easy to find.
+
+I often knew I had already thought through a problem before, but I couldn't remember where. So I'd end up asking the same questions again, rebuilding context from scratch, and spending time rediscovering things I'd already figured out months earlier.
+
+This project started as an attempt to break that cycle.
+
+I'm building a personal memory and search system that can look through my past conversations and surface the pieces most relevant to what I'm thinking about today.
+
+---
+
+## What I've Built So Far
+
+So far, I've collected and processed roughly two years of chat history from ChatGPT and Claude.
+
+The conversations are converted into a common format, split into smaller searchable chunks, and indexed so they can be searched together regardless of where they originally came from.
+
+When I ask a question, the system doesn't just look for exact keywords. Instead, it searches for conversations that are semantically related to the topic I'm asking about.
+
+In practical terms, that means I can ask questions like:
+
+* "What was I most stressed about last year?"
+* "What ideas have I had for side projects?"
+* "What conclusions did I reach about X problem?"
+* "What have I learned about Y topic?"
+
+and retrieve relevant discussions from months or even years ago.
+
+This is essentially Retrieval-Augmented Generation (RAG) applied to my own history: retrieve relevant context first, then use that context to generate a more informed answer.
+
+---
+
+## What's Coming Next
+
+Right now, the focus is less on adding more data and more on making the results genuinely useful.
+
+I'm working on better filtering by time, topic, and source so I can ask more targeted questions and get more precise answers.
+
+I'm also improving how retrieved conversations are presented. Instead of digging through walls of text, I want to be able to quickly scan the evidence, understand why it was selected, and spot patterns across multiple conversations.
+
+Another priority is trustworthy summarization.
+
+I don't want generic AI-generated reflections. I want summaries that are clearly grounded in things I actually said, thought, or discussed, with enough context that I can verify where the conclusions came from.
+
+Longer term, the goal is a simple personal search experience:
+
+- Ask a question.
+
+- See the most relevant parts of my past thinking.
+
+- Leave with something useful in a few minutes.
+
+> This project is still in progress. There is no public demo or source code yet. If you would like to learn more, feel free to reach out!

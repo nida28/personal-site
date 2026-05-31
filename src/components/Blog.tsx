@@ -6,6 +6,15 @@ import { getAllPosts, BlogPost } from '../utils/blog';
 const Blog = () => {
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
+  const orderedPosts = (() => {
+    const next = [...posts];
+    const index = next.findIndex((post) => post.slug === 'thought-archive');
+    if (index > -1) {
+      const [thoughtArchive] = next.splice(index, 1);
+      next.splice(2, 0, thoughtArchive);
+    }
+    return next;
+  })();
 
   useEffect(() => {
     async function loadPosts() {
@@ -66,7 +75,7 @@ const Blog = () => {
         {/* Blog Posts Grid */}
         {!loading && (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {posts.map((post) => (
+            {orderedPosts.map((post) => (
               <Link key={post.slug} to={`/blog/${post.slug}`} className="block group">
                 <article className="relative bg-white/80 dark:bg-slate-700/50 backdrop-blur-sm rounded-3xl p-8 hover:shadow-2xl hover:shadow-cyan-500/10 dark:hover:shadow-pink-500/20 transition-all duration-500 cursor-pointer h-full border border-gray-100/50 dark:border-white/10 hover:border-cyan-200/50 dark:hover:border-pink-400/30 hover:scale-[1.02] group">
                   {post.frontmatter.coverImage ? (

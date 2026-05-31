@@ -1,108 +1,61 @@
-﻿import { ExternalLink, Github } from 'lucide-react';
+﻿import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { socialConfig } from '../config/social';
 import { textConfig } from '../config/text';
 import { Helmet } from 'react-helmet-async';
+import { getAllProjects } from '../utils/projects';
 
 const Projects = () => {
+  const projects = getAllProjects();
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-cyan-50 dark:from-slate-900 dark:via-gray-900 dark:to-black overflow-x-hidden">
+    <div className="min-h-screen bg-white dark:bg-slate-900 transition-colors duration-300 overflow-x-hidden">
       <Helmet>
         <title>Projects | Nidaa Mungloo</title>
-        <meta name="description" content="Some things I've made, broken, and rebuilt (with love)." />
+        <meta name="description" content="Projects I am building and experimenting with." />
       </Helmet>
       <Header />
 
-      {/* Enhanced ambient background elements - Dark mode - Positioned to avoid cutoff */}
-      <div className="fixed inset-0 bg-gradient-to-br from-pink-900/20 via-blue-900/30 to-purple-900/20 dark:block hidden pointer-events-none"></div>
-      <div className="fixed top-1/2 left-1/4 max-w-[400px] w-full h-[400px] bg-gradient-to-r from-pink-500/10 to-blue-500/10 rounded-full blur-3xl dark:block hidden pointer-events-none"></div>
-      <div className="fixed bottom-1/3 right-1/4 max-w-[400px] w-full h-[400px] bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-full blur-3xl dark:block hidden pointer-events-none"></div>
-
-      {/* Enhanced ambient background elements - Light mode - Positioned to avoid cutoff */}
-      <div className="fixed inset-0 bg-gradient-to-br from-cyan-100/40 via-blue-100/30 to-blue-200/40 dark:hidden block pointer-events-none"></div>
-      <div className="fixed top-1/2 left-1/4 max-w-[400px] w-full h-[400px] bg-gradient-to-r from-cyan-200/20 to-blue-300/20 rounded-full blur-3xl dark:hidden block pointer-events-none"></div>
-      <div className="fixed bottom-1/3 right-1/4 max-w-[400px] w-full h-[400px] bg-gradient-to-r from-blue-300/20 to-blue-400/20 rounded-full blur-3xl dark:hidden block pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-cyan-50/50 to-blue-50/30 dark:from-pink-900/10 dark:to-blue-900/10"></div>
 
       <main className="relative z-10 pt-32 pb-20">
         <div className="container mx-auto">
-          {/* Page Header */}
-          <div className="text-center mb-12">
+          <div className="text-center mb-20">
             <h1 className={`${textConfig.title.base} ${textConfig.title.size} ${textConfig.title.color} mb-6`}>
-              Project Spotlight
+              Projects
             </h1>
             <div className="w-24 h-px bg-gradient-to-r from-transparent via-gray-400 dark:via-white/30 to-transparent mx-auto mb-8"></div>
             <p className={`${textConfig.subtitle.base} ${textConfig.subtitle.size} ${textConfig.subtitle.color} max-w-3xl mx-auto`}>
-              A practical legal assistant designed to make everyday rights easier to understand.
+              A mix of live products and work in progress.
             </p>
           </div>
 
-          {/* BGB Bot Project Details */}
-          <div className="max-w-6xl mx-auto">
-            {/* Layout similar to About page - Image on left, content on right */}
-            <div className="flex flex-col lg:flex-row gap-12 items-start">
-              {/* Project Image Section - Left side */}
-              <div className="flex-shrink-0 relative z-20">
-                <div className="group relative">
-                  <div className="w-64 h-64 overflow-hidden rounded-3xl shadow-2xl">
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {projects.map((project) => (
+              <Link key={project.slug} to={`/projects/${project.slug}`} className="block group">
+                <article className="relative h-full flex flex-col bg-white/80 dark:bg-slate-700/50 backdrop-blur-sm rounded-3xl p-8 hover:shadow-2xl hover:shadow-cyan-500/10 dark:hover:shadow-pink-500/20 transition-all duration-500 cursor-pointer border border-gray-100/50 dark:border-white/10 hover:border-cyan-200/50 dark:hover:border-pink-400/30 hover:scale-[1.02] group">
+                  <div className="relative w-full aspect-[16/9] mb-8 rounded-2xl overflow-hidden">
                     <img
-                      src={`${import.meta.env.BASE_URL}58aa78a2-4988-4ff6-a51a-fdfeafa16e35.png`}
-                      alt="BGB Bot"
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      src={project.image}
+                      alt={project.title}
+                      className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
-                  <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 dark:from-pink-500/40 dark:to-blue-500/40 rounded-3xl blur opacity-30"></div>
-                </div>
-              </div>
 
-              {/* Project Information - Right side */}
-              <div className="flex-grow space-y-8">
-                <div>
-                  <h2 className={`${textConfig.sectionTitle.base} ${textConfig.sectionTitle.size} ${textConfig.sectionTitle.color} mb-6`}>
-                    BGB Bot
-                  </h2>
-                </div>
+                  <h3 className={`${textConfig.sectionTitle.base} ${textConfig.sectionTitle.size} ${textConfig.sectionTitle.color} mb-4 group-hover:text-cyan-600 dark:group-hover:text-pink-400 transition-colors duration-300 leading-tight`}>
+                    {project.title}
+                  </h3>
 
-                <div className="space-y-6">
-                  <p className={`${textConfig.text.base} ${textConfig.text.size} ${textConfig.text.color}`}>
-                    The BGB ChatBot is a legal Q&A assistant that helps users understand everyday rights under the German Civil Code (Bürgerliches Gesetzbuch). I built it to make legal information more accessible — especially for immigrants or non-German speakers — by combining retrieval-augmented generation (RAG) with open-source LLMs.
+                  <p className={`${textConfig.text.base} ${textConfig.text.size} ${textConfig.text.color} mb-6`}>
+                    {project.summary}
                   </p>
-                  <p className={`${textConfig.text.base} ${textConfig.text.size} ${textConfig.text.color}`}>
-                    Users can ask legal questions and upload documents (PDF/DOCX) to get clearer, context-aware explanations.
-                  </p>
-                  <ul className={`${textConfig.text.base} ${textConfig.text.size} ${textConfig.text.color} list-disc pl-12 space-y-2 mt-2`}>
-                    <li>Built around the German Civil Code (BGB)</li>
-                    <li>Supports document upload for more personalized answers</li>
-                    <li>Live and publicly accessible for real-world use</li>
-                    <li>Continuously improved for clarity and reliability</li>
-                  </ul>
-                </div>
 
-                {/* Project Links */}
-                <div className="flex gap-4 pt-4">
-                  <a
-                    href={socialConfig.bgbBot.demo.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={socialConfig.bgbBot.demo.label}
-                    className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 dark:from-pink-600 dark:to-blue-600 dark:hover:from-pink-700 dark:hover:to-blue-700 text-white rounded-xl font-medium transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl text-xl"
-                  >
-                    <ExternalLink className="w-5 h-5" />
-                    <span>Live Demo</span>
-                  </a>
-                  <a
-                    href={socialConfig.bgbBot.sourceCode.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={socialConfig.bgbBot.sourceCode.label}
-                    className="flex items-center gap-2 px-6 py-3 bg-white dark:bg-slate-800 hover:bg-gray-50 dark:hover:bg-slate-700 text-gray-800 dark:text-white rounded-xl font-medium transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl border border-gray-200 dark:border-white/10 text-xl"
-                  >
-                    <Github className="w-5 h-5" />
-                    <span>Source Code</span>
-                  </a>
-                </div>
-              </div>
-            </div>
+                  <div className="inline-flex self-start items-center rounded-xl bg-gray-100 dark:bg-slate-700 px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 mt-auto">
+                    {project.status === 'wip' ? 'Work in Progress' : 'Live Project'}
+                  </div>
+                </article>
+              </Link>
+            ))}
           </div>
         </div>
       </main>
