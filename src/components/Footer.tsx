@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail } from 'lucide-react';
+ï»¿import { Github, Linkedin, Mail } from 'lucide-react';
 import { useLocation } from 'react-router-dom';
 import { socialConfig } from '../config/social';
 import SocialButton from './common/SocialButton';
@@ -6,6 +6,7 @@ import SocialButton from './common/SocialButton';
 const Footer = () => {
   const location = useLocation();
   const isMainPage = location.pathname === '/';
+  const currentYear = new Date().getFullYear();
 
   return (
     <footer className={`${isMainPage
@@ -40,7 +41,7 @@ const Footer = () => {
             {/* Copyright text */}
             <div className="w-full text-center pb-4">
               <p className="text-gray-600 dark:text-gray-400 font-light text-sm">
-                © 2025 Nidaa Fatimah Mungloo
+                {'\u00A9'} {currentYear} Nidaa Fatimah Mungloo
               </p>
             </div>
           </div>

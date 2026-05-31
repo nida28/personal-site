@@ -128,7 +128,7 @@ const About = () => {
                     In 2017, I was incredibly lucky –  and privileged –  to land my first job before graduation, something I remain endlessly grateful for. That's when I really started learning what it means to be a developer –  something far more scattered and collaborative than the academic version of programming I'd known up to that point.
                   </p>
                   <p>
-                    In my next role, I had the opportunity to relocate to Berlin in 2021. What was meant to be a one-year experiment turned into something much more –  I fell in love with the city and decided to stay. It's now been four years and counting.
+                    In my next role, I had the opportunity to relocate to Berlin in 2021. What was meant to be a one-year experiment turned into something much more –  I fell in love with the city and decided to stay. It's now been five years and counting.
                   </p>
                   {/* Third Image - Floating Left */}
                   <div className="float-left mr-6 sm:mr-12 mb-6 md:mb-8 relative z-20">
