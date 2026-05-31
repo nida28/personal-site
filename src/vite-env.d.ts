@@ -6,6 +6,6 @@ declare module '*.md' {
 }
 
 declare module 'front-matter' {
-    function frontMatter<T = any>(str: string): { attributes: T; body: string };
+    function frontMatter<T = unknown>(str: string): { attributes: T; body: string };
     export default frontMatter;
 }

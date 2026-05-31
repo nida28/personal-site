@@ -1,10 +1,7 @@
 import { Link } from 'react-router-dom';
-import { useTheme } from '../contexts/ThemeContext';
 import { textConfig } from '../config/text';
 
 const Hero = () => {
-  const { theme } = useTheme();
-
   return (
     <section id="home" className="min-h-[60vh] sm:min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50/90 via-blue-50/30 to-blue-50/20 dark:from-slate-900 dark:via-slate-900/95 dark:to-slate-800/90 text-gray-700 dark:text-white relative overflow-hidden">
       {/* Dark mode background - very dark to match toolbar */}

@@ -40,7 +40,7 @@ const Footer = () => {
             {/* Copyright text */}
             <div className="w-full text-center pb-4">
               <p className="text-gray-600 dark:text-gray-400 font-light text-sm">
-                Â© 2025 Nidaa Fatimah Mungloo
+                © 2025 Nidaa Fatimah Mungloo
               </p>
             </div>
           </div>

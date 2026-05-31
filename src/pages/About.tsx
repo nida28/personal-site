@@ -1,15 +1,16 @@
-import React, { useState } from 'react';
+import { useState, type ReactNode } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { textConfig } from '../config/text';
 import { Helmet } from 'react-helmet-async';
 
-const FAQItem = ({ question, answer }: { question: string | React.ReactNode; answer: React.ReactNode }) => {
+const FAQItem = ({ question, answer }: { question: string | ReactNode; answer: ReactNode }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="border-b border-gray-200 dark:border-gray-700">
       <button
+        type="button"
         className={`flex justify-between items-center w-full py-4 text-left ${textConfig.text.base} text-blue-900 dark:text-gray-300 ${textConfig.text.size}`}
         onClick={() => setIsOpen(!isOpen)}
       >
@@ -53,9 +54,9 @@ const About = () => {
               My Story
             </h1>
             <div className="w-24 h-px bg-gradient-to-r from-transparent via-cyan-400/60 dark:via-white/30 to-transparent mx-auto mb-6 md:mb-8"></div>
-            <p className={`${textConfig.subtitle.base} hidden md:block text-[1.625rem] text-blue-900 dark:text-gray-300 md:max-w-4xl lg:max-w-5xl mx-auto whitespace-normal md:whitespace-nowrap`}>
+            {/* <p className={`${textConfig.subtitle.base} hidden md:block text-[1.625rem] text-blue-900 dark:text-gray-300 md:max-w-4xl lg:max-w-5xl mx-auto whitespace-normal md:whitespace-nowrap`}>
               From tropical sunshine to cold U-Bahn mornings – and everything in between.
-            </p>
+            </p> */}
           </div>
 
           {/* Newspaper-style layout */}
@@ -139,9 +140,7 @@ const About = () => {
                       />
                     </div>
                   </div>
-                  <p>Today, I live in Charlotten<wbr />burg with my two very solemn cats –  Richie and Osi –  who are father and son. I enjoy baking, reading (mostly nonfiction but some fiction too), and I have a longstanding daily ritual of watching one TV show episode while having lunch. From time to time, I explore the city through cafés, pâtisseries, and parks. I sometimes attend meetups that interest me, and I'm a regular at the Berlin Zoo; the <a href="https://www.zootier-lexikon.org/saeugetiere-mammalia/spitzhoernchen-halbaffen-und-affen/gibbons-und-menschenaffen-hominoidea/siamang#zoo" target="_blank" rel="noopener noreferrer" className="text-cyan-600 dark:text-cyan-400 hover:underline">Siamang</a> pair in the monkey enclosure have my heart. Watching them swing feels like a spiritual experience to me.</p>
-                  <p>While my career path shifted toward tech, I never really stopped caring about the law. Over the years I've watched courtroom dramas, legal thrillers, and procedural shows (feel free to send your favorites!) – perhaps as a way to stay connected to the part of me who really wanted to be involved in the legal field. And in 2025, things came full circle when I discovered the University of London's part-time <a href="https://www.london.ac.uk/study/courses/undergraduate/llb-bachelor-laws" target="_blank" rel="noopener noreferrer" className="text-cyan-600 dark:text-cyan-400 hover:underline">LLB program</a>, and I enrolled. I don't know how exactly it fits into the bigger picture; I don't have a five-year plan for it. I just knew the longing hadn't gone away –  and sometimes, that's enough of a reason to begin. </p>
-
+                  <p>Today, I live in Charlotten<wbr />burg with my two very solemn cats –  Richie and Osi –  who are father and son. I enjoy baking, reading (mostly nonfiction but some fiction too), and I have a longstanding daily ritual of watching one TV show episode while having lunch. From time to time, I explore the city through cafés, pâtisseries, and parks. </p>
                   <p>
                     If you've made it all the way here – thank you for reading! ☺️ <br />
                     If there's anything that perhaps resonated with you or sparked your interest, I'd love to hear from you.</p>
@@ -169,7 +168,7 @@ const About = () => {
                   <FAQItem
                     question="Why leave the U.S.? Why Germany? Which one is better?"
                     answer={<>I didn't really "leave" the U.S. so much as I followed a(nother) whim. I'd always wanted to live in Europe – having almost studied in the U.K. – so when I joined a company that happened to have a branch in Berlin, I took it as a chance to explore. <br />
-                      I made this decision in 2020 – right in the middle of COVID, at a time when lots of people were making drastic life choices anyway 😄 <br />As for which country is "better" – I really don't think there's a universal answer. Both countries have their own pros and cons, and the right place depends on your values, priorities, and where you are in life. I'm incredibly grateful for everything I gained in the U.S., and I haven't entirely ruled out going back someday. <br />But for now, Berlin makes the most sense for me.
+                      As for which country is "better" – I really don't think there's a universal answer. Both countries have their own pros and cons, and the right place depends on your values, priorities, and where you are in life. I'm incredibly grateful for everything I gained in the U.S., and I haven't entirely ruled out going back someday. <br />But for now, Berlin makes the most sense for me.
 
                       No single place can be perfect, of course. "Better" is personal, and it changes over time. Sorry if that's not a clean, satisfying answer – but it's the honest one.
 

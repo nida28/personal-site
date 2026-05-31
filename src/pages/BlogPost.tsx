@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState, type FC } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -7,7 +7,7 @@ import { getPostBySlug, BlogPost } from '../utils/blog';
 import { textConfig } from '../config/text';
 import { Helmet } from 'react-helmet-async';
 
-const BlogPostPage: React.FC = () => {
+const BlogPostPage: FC = () => {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
   const [post, setPost] = useState<BlogPost | null>(null);

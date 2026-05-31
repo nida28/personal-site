@@ -1,4 +1,4 @@
-import React from 'react';
+import { isValidElement, type ComponentType, type FC, type HTMLAttributes, type ReactElement, type ReactNode } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { format } from 'date-fns';
 import { MDXProvider } from '@mdx-js/react';
@@ -7,13 +7,9 @@ import { textConfig } from '../config/text';
 
 // Types for MDX components
 interface MDXProps {
-    children: React.ReactNode;
+    children: ReactNode;
     className?: string;
-    [key: string]: any;
-}
-
-interface MDXWrapperProps {
-    children: React.ReactElement;
+    [key: string]: unknown;
 }
 
 // Types for MDX frontmatter and components
@@ -26,7 +22,7 @@ interface Frontmatter {
 }
 
 interface MDXPost {
-    default: React.ComponentType;
+    default: ComponentType;
     frontmatter: Frontmatter;
 }
 
@@ -40,9 +36,9 @@ interface MDXElementProps {
 }
 
 // Wrapper component to skip frontmatter content
-const MDXWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-    if (React.isValidElement(children)) {
-        const element = children as React.ReactElement<MDXElementProps>;
+const MDXWrapper: FC<{ children: ReactNode }> = ({ children }) => {
+    if (isValidElement(children)) {
+        const element = children as ReactElement<MDXElementProps>;
         if (typeof element.props.children === 'string' && element.props.children.startsWith('title:')) {
             return null;
         }
@@ -91,10 +87,10 @@ const mdxComponents = {
     blockquote: (props: MDXProps) => (
         <blockquote {...props} className="border-l-4 border-cyan-500 dark:border-pink-500 pl-8 py-4 my-6 italic text-xl font-light bg-gradient-to-r from-cyan-50 to-transparent dark:from-pink-900/10 dark:to-transparent" />
     ),
-    pre: (props: any) => (
+    pre: (props: HTMLAttributes<HTMLPreElement>) => (
         <pre {...props} className="bg-gray-900 dark:bg-gray-800 p-8 rounded-lg text-gray-100 my-12 text-lg shadow-xl leading-relaxed font-normal" />
     ),
-    code: ({ children, className }: { children: React.ReactNode; className?: string }) => {
+    code: ({ children, className }: { children: ReactNode; className?: string }) => {
         return className ? (
             <code className={`${className} text-lg`}>{children}</code>
         ) : (
@@ -103,7 +99,7 @@ const mdxComponents = {
     },
 };
 
-const BlogPost: React.FC<BlogPostProps> = ({ post, slug }) => {
+const BlogPost: FC<BlogPostProps> = ({ post, slug }) => {
     const { frontmatter } = post;
     const MDXContent = post.default;
     const formattedDate = format(new Date(frontmatter.date), 'MMMM dd, yyyy');

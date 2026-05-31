@@ -1,9 +1,8 @@
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import ThemeToggle from './ThemeToggle';
 import { useTheme } from '../contexts/ThemeContext';
-import { textConfig } from '../config/text';
 import NavLink from './common/NavLink';
 import MobileNavLink from './common/MobileNavLink';
 

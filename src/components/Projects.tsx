@@ -1,5 +1,5 @@
 import { ExternalLink, Github } from 'lucide-react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { socialConfig } from '../config/social';
 import { textConfig } from '../config/text';
 
