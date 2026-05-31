@@ -3,6 +3,18 @@ import { Link, useLocation } from 'react-router-dom';
 import { format } from 'date-fns';
 import { MDXProvider } from '@mdx-js/react';
 import 'highlight.js/styles/github-dark.css';
+import { textConfig } from '../config/text';
+
+// Types for MDX components
+interface MDXProps {
+    children: React.ReactNode;
+    className?: string;
+    [key: string]: any;
+}
+
+interface MDXWrapperProps {
+    children: React.ReactElement;
+}
 
 // Types for MDX frontmatter and components
 interface Frontmatter {
@@ -20,14 +32,18 @@ interface MDXPost {
 
 interface BlogPostProps {
     post: MDXPost;
+    slug?: string;
+}
+
+interface MDXElementProps {
+    children: string;
 }
 
 // Wrapper component to skip frontmatter content
 const MDXWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     if (React.isValidElement(children)) {
-        // Skip rendering if the content looks like frontmatter
-        const content = children.props.children;
-        if (typeof content === 'string' && content.startsWith('title:')) {
+        const element = children as React.ReactElement<MDXElementProps>;
+        if (typeof element.props.children === 'string' && element.props.children.startsWith('title:')) {
             return null;
         }
     }
@@ -37,63 +53,70 @@ const MDXWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 // MDX components with Tailwind styling
 const mdxComponents = {
     wrapper: MDXWrapper,
-    h1: (props: any) => (
-        <h1 {...props} className="text-4xl font-extralight text-gray-900 dark:text-white tracking-tight leading-[1.1] mt-16 mb-8" />
+    h1: (props: MDXProps) => (
+        <h1 {...props} className={`${textConfig.title.base} ${textConfig.title.size} ${textConfig.title.color} my-6`} />
     ),
-    h2: (props: any) => (
-        <h2 {...props} className="text-3xl font-light text-gray-900 dark:text-white tracking-tight leading-[1.1] mt-16 mb-8 pb-4 border-b border-gray-200 dark:border-gray-800" />
+    h2: (props: MDXProps) => (
+        <h2 {...props} className={`${textConfig.sectionTitle.base} ${textConfig.sectionTitle.size} ${textConfig.sectionTitle.color} my-6 pb-4 border-b border-gray-200 dark:border-gray-800`} />
     ),
-    h3: (props: any) => (
-        <h3 {...props} className="text-2xl font-light text-gray-900 dark:text-white tracking-tight leading-[1.1] mt-16 mb-8" />
+    h3: (props: MDXProps) => (
+        <h3 {...props} className={`${textConfig.sectionTitle.base} ${textConfig.sectionTitle.size} ${textConfig.sectionTitle.color} my-6`} />
     ),
-    p: (props: any) => {
+    p: (props: MDXProps) => {
         // Skip rendering if the content looks like frontmatter
         if (typeof props.children === 'string' && props.children.startsWith('title:')) {
             return null;
         }
         return (
-            <p {...props} className="text-lg text-gray-600 dark:text-gray-300 font-light leading-relaxed mb-8" />
+            <p {...props} className={`${textConfig.text.base} ${textConfig.text.size} ${textConfig.text.color} mb-4`} />
         );
     },
-    a: (props: any) => (
-        <a {...props} className="text-cyan-600 dark:text-cyan-400 font-normal hover:underline" />
+    a: (props: MDXProps) => (
+        <a
+            {...props}
+            className="text-xl text-cyan-600 dark:text-cyan-400 font-normal hover:underline"
+            target="_blank"
+            rel="noopener noreferrer"
+        />
     ),
-    ul: (props: any) => (
-        <ul {...props} className="list-disc pl-8 my-8 space-y-3" />
+    ul: (props: MDXProps) => (
+        <ul {...props} className="list-disc pl-8 my-4 space-y-2" />
     ),
-    ol: (props: any) => (
-        <ol {...props} className="list-decimal pl-8 my-8 space-y-3" />
+    ol: (props: MDXProps) => (
+        <ol {...props} className="list-decimal pl-8 my-4 space-y-2" />
     ),
-    li: (props: any) => (
-        <li {...props} className="text-lg text-gray-600 dark:text-gray-300 font-light leading-relaxed" />
+    li: (props: MDXProps) => (
+        <li {...props} className={`${textConfig.text.base} ${textConfig.text.size} ${textConfig.text.color}`} />
     ),
-    blockquote: (props: any) => (
-        <blockquote {...props} className="border-l-4 border-cyan-500 dark:border-pink-500 pl-8 py-4 my-12 italic text-lg font-light bg-gradient-to-r from-cyan-50 to-transparent dark:from-pink-900/10 dark:to-transparent" />
+    blockquote: (props: MDXProps) => (
+        <blockquote {...props} className="border-l-4 border-cyan-500 dark:border-pink-500 pl-8 py-4 my-6 italic text-xl font-light bg-gradient-to-r from-cyan-50 to-transparent dark:from-pink-900/10 dark:to-transparent" />
     ),
     pre: (props: any) => (
-        <pre {...props} className="bg-gray-900 dark:bg-gray-800 p-8 rounded-lg text-gray-100 my-12 text-[15px] shadow-xl leading-relaxed font-normal" />
+        <pre {...props} className="bg-gray-900 dark:bg-gray-800 p-8 rounded-lg text-gray-100 my-12 text-lg shadow-xl leading-relaxed font-normal" />
     ),
     code: ({ children, className }: { children: React.ReactNode; className?: string }) => {
         return className ? (
-            <code className={className}>{children}</code>
+            <code className={`${className} text-lg`}>{children}</code>
         ) : (
-            <code className="text-cyan-600 dark:text-cyan-400 bg-cyan-50 dark:bg-cyan-900/20 px-2 py-1 rounded-md font-normal">{children}</code>
+            <code className="text-lg text-cyan-600 dark:text-cyan-400 bg-cyan-50 dark:bg-cyan-900/20 px-2 py-1 rounded-md font-normal">{children}</code>
         );
     },
 };
 
-const BlogPost: React.FC<BlogPostProps> = ({ post }) => {
+const BlogPost: React.FC<BlogPostProps> = ({ post, slug }) => {
     const { frontmatter } = post;
     const MDXContent = post.default;
     const formattedDate = format(new Date(frontmatter.date), 'MMMM dd, yyyy');
     const location = useLocation();
 
-    // Get the full URL for sharing
-    const currentUrl = window.location.origin + location.pathname;
+    // Use preview HTML for sharing if slug is provided
+    const previewUrl = slug
+        ? `${window.location.origin}/preview/${slug}.html`
+        : window.location.origin + location.pathname;
 
     const handleShare = (platform: 'linkedin' | 'x') => {
         const title = encodeURIComponent(frontmatter.title);
-        const url = encodeURIComponent(currentUrl);
+        const url = encodeURIComponent(previewUrl);
 
         const shareUrls = {
             linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${url}`,
@@ -104,25 +127,15 @@ const BlogPost: React.FC<BlogPostProps> = ({ post }) => {
     };
 
     return (
-        <article className="max-w-3xl mx-auto px-6 py-16">
+        <article className="max-w-5xl mx-auto px-6 py-16">
             {/* Header */}
-            <header className="mb-20">
-                {frontmatter.coverImage && (
-                    <div className="relative w-full aspect-[21/9] mb-16 rounded-2xl overflow-hidden shadow-2xl">
-                        <img
-                            src={frontmatter.coverImage}
-                            alt={frontmatter.title}
-                            className="absolute inset-0 w-full h-full object-cover"
-                        />
-                    </div>
-                )}
-
-                <div className="space-y-8">
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-gray-900 dark:text-white tracking-tight leading-[1.1]">
+            <header className="mb-8">
+                <div>
+                    <h1 className={`${textConfig.title.base} ${textConfig.title.size} ${textConfig.title.color} mb-6`}>
                         {frontmatter.title}
                     </h1>
 
-                    <div className="flex items-center gap-8 text-gray-600 dark:text-gray-400 text-base font-light">
+                    <div className="flex items-center gap-8 text-gray-600 dark:text-gray-400 text-base font-light mb-6">
                         <div className="flex items-center gap-2">
                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -137,18 +150,27 @@ const BlogPost: React.FC<BlogPostProps> = ({ post }) => {
                         </div>
                     </div>
 
-                    <p className="text-xl text-gray-600 dark:text-gray-300 font-light leading-relaxed border-l-4 border-cyan-500 dark:border-pink-500 pl-8 py-4 bg-gradient-to-r from-cyan-50 to-transparent dark:from-pink-900/10 dark:to-transparent">
+                    <p className={`${textConfig.subtitle.base} ${textConfig.subtitle.size} ${textConfig.subtitle.color} border-l-4 border-cyan-500 dark:border-pink-500 pl-8 py-4 bg-gradient-to-r from-cyan-50 to-transparent dark:from-pink-900/10 dark:to-transparent`}>
                         {frontmatter.excerpt}
                     </p>
                 </div>
             </header>
 
-            {/* Content */}
-            <div className="prose prose-lg max-w-none dark:prose-invert">
+            {/* Main content */}
+            <article className="prose prose-lg max-w-none dark:prose-invert">
+                {frontmatter.coverImage && (
+                    <div className="float-left mr-6 mt-[0.8em] w-[180px] md:w-[280px] rounded-2xl overflow-hidden shadow-2xl">
+                        <img
+                            src={frontmatter.coverImage}
+                            alt={frontmatter.title}
+                            className="w-full h-auto"
+                        />
+                    </div>
+                )}
                 <MDXProvider components={mdxComponents}>
                     <MDXContent />
                 </MDXProvider>
-            </div>
+            </article>
 
             {/* Share and Navigation */}
             <footer className="mt-20 pt-8 border-t border-gray-200 dark:border-gray-800">

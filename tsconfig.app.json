@@ -16,6 +16,10 @@
     "moduleDetection": "force",
     "noEmit": true,
     "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "types": [
+      "react/jsx-runtime"
+    ],
     /* Linting */
     "strict": false,
     "noUnusedLocals": false,
@@ -30,6 +34,7 @@
     }
   },
   "include": [
-    "src"
+    "src",
+    "src/types/*.d.ts"
   ]
 }

@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { getAllPosts, BlogPost } from '../utils/blog';
+import { textConfig } from '../config/text';
+import { Helmet } from 'react-helmet-async';
 
 const Blog = () => {
   const [posts, setPosts] = useState<BlogPost[]>([]);
@@ -25,6 +27,10 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen bg-white dark:bg-slate-900 transition-colors duration-300 overflow-x-hidden">
+      <Helmet>
+        <title>Blog | Nidaa Mungloo</title>
+        <meta name="description" content="Dev, Law & Life in Progress." />
+      </Helmet>
       <Header />
 
       {/* Background elements */}
@@ -34,12 +40,12 @@ const Blog = () => {
         <div className="container mx-auto">
           {/* Page Header */}
           <div className="text-center mb-20">
-            <h1 className="text-5xl md:text-6xl font-light text-gray-500 dark:text-white mb-6 tracking-tight">
-              Latest Insights
+            <h1 className={`${textConfig.title.base} ${textConfig.title.size} ${textConfig.title.color} mb-6`}>
+              Notes & Recs
             </h1>
             <div className="w-24 h-px bg-gradient-to-r from-transparent via-gray-400 dark:via-white/30 to-transparent mx-auto mb-8"></div>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto font-light leading-relaxed">
-              Thoughts, tutorials, and insights from my journey as a developer.
+            <p className={`${textConfig.subtitle.base} ${textConfig.subtitle.size} ${textConfig.subtitle.color} max-w-3xl mx-auto`}>
+              Ideas I’m exploring, things I’ve built, and what I’ve been enjoying lately.
             </p>
           </div>
 
@@ -86,11 +92,11 @@ const Blog = () => {
                       </div>
                     )}
 
-                    <h3 className="text-2xl font-light text-gray-900 dark:text-white mb-4 group-hover:text-cyan-600 dark:group-hover:text-pink-400 transition-colors duration-300 leading-tight tracking-wide">
+                    <h3 className={`${textConfig.sectionTitle.base} ${textConfig.sectionTitle.size} ${textConfig.sectionTitle.color} mb-4 group-hover:text-cyan-600 dark:group-hover:text-pink-400 transition-colors duration-300 leading-tight`}>
                       {post.frontmatter.title}
                     </h3>
 
-                    <p className="text-gray-600 dark:text-white mb-6 leading-relaxed font-light">
+                    <p className={`${textConfig.text.base} ${textConfig.text.size} ${textConfig.text.color} mb-6`}>
                       {post.frontmatter.excerpt}
                     </p>
 
