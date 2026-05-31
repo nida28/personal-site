@@ -1,9 +1,11 @@
-import { Github, Linkedin, Mail } from 'lucide-react';
+﻿import { Github, Linkedin, Mail } from 'lucide-react';
 import { socialConfig } from '../config/social';
 import SocialButton from './common/SocialButton';
 import { textConfig } from '../config/text';
 
 const Contact = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <section id="contact" className={`${textConfig.spacing.section.home.full} bg-gradient-to-br from-gray-50/98 via-blue-50/20 to-blue-50/15 dark:from-slate-900/98 dark:via-slate-900/95 dark:to-slate-800/90 text-gray-700 dark:text-white relative overflow-hidden`}>
       {/* Dark mode ambient lighting */}
@@ -24,7 +26,7 @@ const Contact = () => {
           </div>
 
           <p className={`${textConfig.subtitle.base} ${textConfig.subtitle.size} ${textConfig.subtitle.color} max-w-4xl mx-auto text-center`}>
-            Have thoughts, questions, or just want to say hi? I’d love to hear from you.
+            Have thoughts, questions, or just want to say hi? I'd love to hear from you.
           </p>
 
           <div className="flex flex-row gap-6 justify-center pt-8">
@@ -52,7 +54,7 @@ const Contact = () => {
         <div className="mt-24 pt-8 border-t border-gray-200/30 dark:border-white/10 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
           <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12">
             <p className={`${textConfig.text.base} text-sm ${textConfig.text.color} text-center`}>
-              © 2025 Nidaa Fatimah Mungloo
+              {'\u00A9'} {currentYear} Nidaa Fatimah Mungloo
             </p>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import { ExternalLink, Github } from 'lucide-react';
+﻿import { ExternalLink, Github } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { socialConfig } from '../config/social';
@@ -33,7 +33,7 @@ const Projects = () => {
             </h1>
             <div className="w-24 h-px bg-gradient-to-r from-transparent via-gray-400 dark:via-white/30 to-transparent mx-auto mb-8"></div>
             <p className={`${textConfig.subtitle.base} ${textConfig.subtitle.size} ${textConfig.subtitle.color} max-w-3xl mx-auto`}>
-              Solving real-world challenges through applied AI and thoughtful design.
+              A practical legal assistant designed to make everyday rights easier to understand.
             </p>
           </div>
 
@@ -68,17 +68,14 @@ const Projects = () => {
                     The BGB ChatBot is a legal Q&A assistant that helps users understand everyday rights under the German Civil Code (Bürgerliches Gesetzbuch). I built it to make legal information more accessible — especially for immigrants or non-German speakers — by combining retrieval-augmented generation (RAG) with open-source LLMs.
                   </p>
                   <p className={`${textConfig.text.base} ${textConfig.text.size} ${textConfig.text.color}`}>
-                    So far, I've:
+                    Users can ask legal questions and upload documents (PDF/DOCX) to get clearer, context-aware explanations.
                   </p>
                   <ul className={`${textConfig.text.base} ${textConfig.text.size} ${textConfig.text.color} list-disc pl-12 space-y-2 mt-2`}>
-                    <li>Parsed and embedded the <span className={`${textConfig.highlight.base} ${textConfig.highlight.color}`}>BGB</span> into searchable chunks</li>
-                    <li>Built a chatbot interface using <span className={`${textConfig.highlight.base} ${textConfig.highlight.color}`}>Gradio</span> and <span className={`${textConfig.highlight.base} ${textConfig.highlight.color}`}>OpenAI</span> embeddings</li>
-                    <li>Deployed it publicly on <span className={`${textConfig.highlight.base} ${textConfig.highlight.color}`}>Hugging Face Spaces</span></li>
-                    <li>Presented the project at <span className={`${textConfig.highlight.base} ${textConfig.highlight.color}`}>GDG Berlin</span> and <span className={`${textConfig.highlight.base} ${textConfig.highlight.color}`}>GDG Cloud</span></li>
+                    <li>Built around the German Civil Code (BGB)</li>
+                    <li>Supports document upload for more personalized answers</li>
+                    <li>Live and publicly accessible for real-world use</li>
+                    <li>Continuously improved for clarity and reliability</li>
                   </ul>
-                  <p className={`${textConfig.text.base} ${textConfig.text.size} ${textConfig.text.color} mt-4`}>
-                    Next, I’m working on automating knowledge updates with a web crawler to keep the data fresh and relevant — turning the bot into a continuously evolving legal assistant.
-                  </p>
                 </div>
 
                 {/* Project Links */}
