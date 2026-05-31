@@ -1,0 +1,191 @@
+---
+title: "Building a Document-Aware Legal Assistant"
+date: "2026-05-31"
+author: "Nidaa Mungloo"
+excerpt: "How I evolved the BGB Bot from statute-only retrieval to document-aware Q&A."
+coverImage: "/v2bot.png"
+---
+
+
+## The Next Evolution of the BGB Bot
+
+I originally built this project to solve a practical problem: understanding German civil law in plain language without spending hours decoding legal text. Read more [here](/#/blog/bgb-tutorial).
+
+
+---
+
+
+## Iteration 1: BGB-Only Retrieval
+
+The first version focused on a single knowledge source: embedded BGB chunks.
+
+Pipeline (v1):
+```text
+User Question
+   ->
+Embed Query
+   ->
+Retrieve BGB Chunks
+   ->
+Build Prompt
+   ->
+LLM Answer
+```
+
+The system parsed the BGB, split it into searchable chunks, generated embeddings, and used Retrieval-Augmented Generation (RAG) to answer questions while remaining grounded in the original legal text.
+
+This worked surprisingly well for general questions involving tenancy, contracts or consumer rights.
+
+I deployed the project publicly, presented it at GDG and GDG Cloud Berlin, and received valuable feedback from a variety of people who were interested in the project.
+
+But over time I noticed a limitation: most users are not asking abstract legal questions. They are trying to understand a specific document, such as:
+
+         - a landlord letter
+         - a rental agreement
+         - a termination notice
+         - an employment contract
+
+> The law provides the framework. The document provides the context.
+> To make the chatbot more useful in real-world situations, I needed it to understand both.
+
+---
+
+## Iteration 2: Document-Aware Q&A
+
+The biggest upgrade in this iteration was adding document upload support directly into the chat experience.
+
+Users can now upload:
+
+- PDF files
+- DOCX files
+
+The bot then answers questions using:
+
+- relevant chunks from the uploaded document
+- relevant chunks from the BGB knowledge base
+
+Pipeline (v2):
+
+```text
+User Question (+ optional file)
+   ->
+Extract + chunk uploaded document
+   ->
+Embed + store in memory
+   ->
+Retrieve uploaded chunks + BGB chunks
+   ->
+Merge context
+   ->
+LLM Answer
+```
+
+This shifted the product from a legal search assistant into a more practical document-aware legal explainer.
+
+Instead of only answering questions about the law in general, the bot can now explain how the law relates to a document a user actually received.
+
+---
+
+## What Changed in the Application
+
+This iteration introduced several major improvements.
+
+### 1. Multimodal Chat Input
+
+Users can now attach documents directly within the conversation instead of relying solely on text-based questions.
+
+### 2. Document Parsing Pipeline
+
+A dedicated parsing pipeline was added to support PDF and DOCX files.
+
+The pipeline handles:
+
+- file validation
+- text extraction
+- normalization
+- chunking with overlap
+
+This transforms uploaded documents into a format suitable for retrieval.
+
+### 3. In-Memory Document Store
+
+Uploaded chunks are embedded and stored in memory so they can immediately participate in retrieval.
+
+This keeps the workflow simple while enabling document-specific search during a conversation.
+
+### 4. Dual Retrieval Strategy
+
+Query handling was extended to retrieve information from two sources:
+
+1. Uploaded document context
+2. Embedded BGB content
+
+Uploaded document matches are retrieved first and then supplemented with relevant legal sections from the BGB.
+
+The resulting context is merged before being sent to the language model.
+
+### 5. Upload API
+
+In addition to chat-based uploads, the application now exposes a dedicated upload endpoint for explicit file ingestion.
+
+This provides a foundation for future integrations and alternative user interfaces.
+
+---
+
+### 6. Improving Operational Visibility
+
+This iteration wasn't just about adding features - it was also about making the system easier to operate, monitor, and debug.
+
+As more moving parts were introduced, I wanted better visibility into what was happening throughout the request lifecycle.
+
+To support this, I added:
+
+- structured JSON logging
+- request tracing
+- upload/retrieval diagnostics
+- failure logging
+- health monitoring
+
+A dedicated `/healthz` endpoint was also added to support deployment and runtime checks.
+
+These additions make troubleshooting significantly easier and provide a clearer picture of how the application behaves in production.
+
+---
+
+### 7. From Hugging Face to Google Cloud Run
+
+The original version of the project was hosted on Hugging Face Spaces, which was an excellent platform for validating the idea and sharing an early prototype.
+
+As the project evolved, however, I wanted a deployment setup that looked more like a real application and less like a demo.
+
+Around the same time I was adding document uploads, health checks, observability, and configuration management, I migrated the application to Google Cloud Run.
+
+---
+
+## What's Next
+
+There are still plenty of directions I would like to explore.
+
+Some possibilities include:
+
+- persistent vector storage (e.g. Chroma)
+- hybrid keyword + vector search
+- richer citation surfacing
+- multi-document sessions
+- broader legal source coverage beyond the BGB
+
+The long-term vision remains unchanged:
+
+Make legal information in Germany easier to access, easier to understand, and more useful for people navigating systems in a non-native language.
+
+The first version could explain German civil law.
+
+The second version can explain German civil law in the context of a document that a user actually received.
+
+Check out the v2 [here](https://bgb-bot-230904575198.europe-west1.run.app/)
+
+[Source code](https://github.com/nida28)
+
+It's a relatively small architectural change, but it moves the project much closer to the original goal: helping people understand what legal information means for their own situation.
+
+> Got questions or any feedback? Feel free to reach out — I’d love to hear them.

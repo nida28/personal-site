@@ -13,7 +13,7 @@ export const socialConfig = {
     },
     bgbBot: {
         demo: {
-            url: 'https://huggingface.co/spaces/nfm1708/BGBChatBot',
+            url: 'https://bgb-bot-230904575198.europe-west1.run.app/',
             label: 'BGB Bot Live Demo'
         },
         sourceCode: {
