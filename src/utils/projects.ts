@@ -42,11 +42,11 @@ const projects: Project[] = [
     title: "Thought Archive",
     summary:
       "A personal memory project turning two years of ChatGPT and Claude archives into a searchable RAG brain.",
-    image: `${import.meta.env.BASE_URL}archive.png`,
+    image: `${import.meta.env.BASE_URL}thoughts.png`,
     status: "wip",
     body: {
       intro:
-        "Thought Archive is my work-in-progress personal memory project for revisiting and reusing ideas from AI chat history.",
+        "Thought Archive is a personal memory project for revisiting and reusing ideas from my AI chat history.",
       details:
         "I am building it around two years of ChatGPT and Claude archives so important insights are easier to find, connect, and apply over time.",
       bullets: [
