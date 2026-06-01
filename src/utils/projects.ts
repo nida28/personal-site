@@ -46,7 +46,7 @@ const projects: Project[] = [
     status: "wip",
     body: {
       intro:
-        "Thought Archive is a personal memory project for revisiting and reusing ideas from my AI chat history.",
+        "Thought Archive is my \"second brain\" that I use for revisiting and reusing ideas from my AI chat history.",
       details:
         "I am building it around two years of ChatGPT and Claude archives so important insights are easier to find, connect, and apply over time.",
       bullets: [
